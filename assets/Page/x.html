@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barcode Scanner</title>
+    <script src="https://unpkg.com/@zxing/library@latest"></script>
+  </head>
+  <body>
+    <h1>Scan Barcode</h1>
+
+    <h2>Upload Image</h2>
+    <input
+      type="file"
+      accept="image/*"
+      id="upload"
+      onchange="handleFileSelect(event)"
+    />
+    <button onclick="processImage()" style="margin-top: 10px">Submit</button>
+
+    <h2>Scan with Camera</h2>
+    <button onclick="startCamera()" style="margin-top: 10px">
+      Start Camera
+    </button>
+    <video id="video" width="300" height="200" style="display: none"></video>
+
+    <p>Result: <span id="result"></span></p>
+
+    <audio
+      id="success-sound"
+      src="https://www.soundjay.com/button/beep-07.wav"
+      preload="auto"
+    ></audio>
+
+    <script>
+      let selectedFile;
+      let codeReader = new ZXing.BrowserBarcodeReader();
+
+      function handleFileSelect(event) {
+        selectedFile = event.target.files[0];
+        document.getElementById("result").innerText = ""; // Clear previous result
+      }
+
+      async function processImage() {
+        if (selectedFile) {
+          const resultElement = document.getElementById("result");
+          resultElement.innerText = "Processing...";
+
+          try {
+            const imgElement = document.createElement("img");
+            imgElement.src = URL.createObjectURL(selectedFile);
+
+            imgElement.onload = async () => {
+              try {
+                const result = await codeReader.decodeFromImageElement(
+                  imgElement
+                );
+                resultElement.innerText = result.text; // Display the result
+                playSound(); // Play sound on success
+              } catch (error) {
+                resultElement.innerText = "Failed to read barcode.";
+                console.error("Image scan error:", error);
+              }
+            };
+          } catch (error) {
+            resultElement.innerText = "Failed to read barcode.";
+            console.error("Error initializing barcode reader:", error);
+          }
+        } else {
+          document.getElementById("result").innerText =
+            "Please select an image first.";
+        }
+      }
+
+      async function startCamera() {
+        const videoElement = document.getElementById("video");
+        const resultElement = document.getElementById("result");
+        videoElement.style.display = "block";
+
+        try {
+          const stream = await navigator.mediaDevices.getUserMedia({
+            video: { facingMode: "environment" },
+          });
+          videoElement.srcObject = stream;
+          videoElement.play();
+
+          codeReader.decodeFromVideoDevice(
+            null,
+            videoElement,
+            (result, err) => {
+              if (result) {
+                resultElement.innerText = result.text; // Display the result
+                playSound(); // Play sound on success
+                codeReader.reset(); // Stop scanning
+                stream.getTracks().forEach((track) => track.stop()); // Stop video stream
+              }
+              if (err && !(err instanceof ZXing.NotFoundException)) {
+                console.error(err);
+              }
+            }
+          );
+        } catch (error) {
+          console.error("Error accessing camera:", error);
+          resultElement.innerText = "Error accessing camera.";
+        }
+      }
+
+      function playSound() {
+        const sound = document.getElementById("success-sound");
+        sound.play();
+      }
+    </script>
+  </body>
+</html>

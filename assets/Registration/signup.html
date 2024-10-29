@@ -1,137 +1,109 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html lang="en">
   <head>
-    <title>Buy Muze Sign Up Page using Bootstrap 5</title>
     <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Presenting Muze, All-in-one Bootstrap 5 Sign Up Admin Dashboard, 30+ Premium HTML Pages, 500+ components, dark mode, RTL. Starts @ Only $35
-"
-    />
-    <meta
-      name="title"
-      content="Muze Bootstrap 5 Sign Up Templates, Themes, & Dashboard"
-    />
-    <meta
-      name="keywords"
-      content="bootstrap 5 sign up form, bootstrap signup page template, signup page in bootstrap, signup page using bootstrap"
-    />
-    <meta name="author" content="Muze Dashboard" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
-    <!-- Muze Favicon -->
-    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <!-- Muze Theme CSS -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <link
-      href="../Style/main.css"
       rel="stylesheet"
-      type="text/css"
-      media="all"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
     />
   </head>
-  <body class="signup-simple-template bg-gray-100">
-    <!-- Muze Sign up, Muze Bg Primary, Muze Signup Header, Muze Text Center -->
-    <div class="bg-primary signup-header text-center">
-      <div class="container">
-        <a href="#"
-          ><img src="../assets/svg/brand/logo-white@150.svg" alt="Muze"
-        /></a>
-      </div>
-    </div>
-    <div class="container">
-      <div class="simple-login-form rounded-12 shadow-dark-80 bg-white">
-        <h2 class="mb-3">Create Account</h2>
-        <div class="pt-sm-1 pt-md-2 pb-2">
-          <a
-            href="#"
-            class="text-gray-700 font-weight-semibold border rounded px-sm-4 py-2 d-flex align-items-center justify-content-center bg-white"
-          >
-            <img src="../assets/svg/icons/google-icon.svg" alt="Google" />
-            <span class="ps-2 py-1 my-1 lh-sm">Sign in with Google</span>
-          </a>
-        </div>
-        <div class="position-relative">
-          <hr class="bg-gray-200 border-gray-200 opacity-100" />
-          <span
-            class="position-absolute top-0 start-50 translate-middle text-gray-600 small bg-white px-2 px-xxl-4 text-nowrap"
-            >Or sign up with email</span
-          >
-        </div>
-        <form class="pt-3">
-          <div class="row">
-            <div class="col-md-6 mb-4 pb-md-2">
-              <label class="form-label form-label-lg" for="FirstName"
-                >First name</label
-              >
-              <input
-                type="text"
-                class="form-control form-control-xl"
-                id="FirstName"
-                placeholder="First name"
+  <body>
+    <main>
+      <div class="page-container">
+        <div class="grid-container">
+          <div class="left-side">
+            <div class="img-and-text">
+              <img
+                class="cart-illustration"
+                src="img/cart-illustration.png"
+                alt=""
               />
-            </div>
-            <div class="col-md-6 mb-4 pb-md-2">
-              <label class="form-label form-label-lg" for="LastName"
-                >Last name</label
-              >
-              <input
-                type="text"
-                class="form-control form-control-xl"
-                id="LastName"
-                placeholder="Last name"
-              />
+              <h1>Start for free and get attractive offers.</h1>
             </div>
           </div>
-          <div class="mb-4 pb-md-2">
-            <label class="form-label form-label-lg" for="EmailAddress"
-              >Email address</label
-            >
-            <input
-              type="email"
-              class="form-control form-control-xl"
-              id="EmailAddress"
-              placeholder="Your email"
-            />
-          </div>
-          <div class="mb-4 pb-md-2">
-            <label class="form-label form-label-lg" for="Password"
-              >Password</label
-            >
-            <input
-              type="password"
-              class="form-control form-control-xl"
-              id="Password"
-              placeholder="••••••••••••••••"
-            />
-          </div>
-          <div class="d-grid">
-            <button type="button" class="btn btn-xl btn-primary">
-              Sign up
-            </button>
-          </div>
-          <div class="my-3 my-sm-4 d-flex pb-1">
-            <div class="form-check form-check-sm mb-0">
-              <input class="form-check-input" type="checkbox" id="gridCheck" />
-            </div>
-            <label class="form-check-label small text-gray-600" for="gridCheck">
-              By clicking “<a href="#0" class="text-gray-600">Sign</a>” up I am
-              confirming I am 16 or older and I accept the
-              <a href="#0" class="text-gray-600"><u>Terms of Use</u></a>
-            </label>
-          </div>
-          <div class="border-top border-gray-200 pt-3 pt-sm-4 text-center">
-            <span class="text-gray-700"
-              >Already have an account?
-              <a href="#" class="link-primary">Sign in</a></span
-            >
-          </div>
-        </form>
-      </div>
-    </div>
+          <div class="right-side">
+            <div class="wrapper">
+              <h2>Get started.</h2>
+              <p>Already have an account? <a href="#">Log in</a></p>
+              <div class="sign-up-buttons">
+                <button id="sign-up">
+                  <img src="img/google-icon.png" /> Sign up with Google
+                </button>
+                <button id="sign-up-facebook">
+                  <img src="img/facebook-icon.svg" width="16px" /> Sign up with
+                  facebook
+                </button>
+              </div>
+              <p class="socials-divider"><span>or</span></p>
 
-    <!-- Muze Javascript Plugins -->
-    <script src="../Script/bootstrap.bundle.min.js"></script>
+              <form action="">
+                <label for="email">Full Name</label>
+                <div class="email-input-container">
+                  <i class="fi fi-rr-user icon-email"></i>
+                  <input
+                    type="email"
+                    name="Full Name"
+                    placeholder="Ammar Ahmed"
+                    id="email"
+                  />
+                </div>
+
+                <label for="email">Email address</label>
+                <div class="email-input-container">
+                  <i class="fi fi-rr-envelope icon-email"></i>
+                  <input
+                    type="email"
+                    name="email_address"
+                    placeholder="exemple@gmail.com"
+                    id="email"
+                  />
+                </div>
+                <label for="password">Password</label>
+
+                <div class="password-input-container">
+                  <i class="fi fi-rr-lock icon-password"></i>
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Your password"
+                    id="password"
+                  />
+                </div>
+              </form>
+
+              <div class="agreement-check">
+                <input
+                  type="checkbox"
+                  name="terms_of_service_and_privacy_policy"
+                />
+                <span class="terms-of-use-text"
+                  >I agree to Plataform's <a href="#">Terms of Service</a> and
+                  <a href="#">Privacy Policy</a>
+                </span>
+              </div>
+
+              <button id="register-button" type="submit">Register</button>
+              <p class="credits">
+                Made with ❤️ by
+                <a href="https://github.com/aluizamendes" target="_blank"
+                  >aluizamendes</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="../Registration/css/reset.css" />
+
+    <link rel="stylesheet" href="../Registration/css/main.css" />
+
     <link
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css"
@@ -26,7 +28,7 @@
             <div class="img-and-text">
               <img
                 class="cart-illustration"
-                src="img/cart-illustration.png"
+                src="../Registration/img/cart-illustration.png"
                 alt=""
               />
               <h1>Start for free and get attractive offers.</h1>
@@ -36,10 +38,33 @@
             <div class="wrapper">
               <h2>Get started.</h2>
               <p>Already have an account? <a href="#">Log in</a></p>
-
+              <div class="sign-up-buttons">
+                <button id="sign-up">
+                  <img src="../Registration/img/google-icon.png" /> Sign up with
+                  Google
+                </button>
+                <button id="sign-up-facebook">
+                  <img
+                    src="../Registration/img/facebook-icon.svg"
+                    width="16px"
+                  />
+                  Sign up with facebook
+                </button>
+              </div>
               <p class="socials-divider"><span>or</span></p>
 
               <form action="">
+                <label for="email">Full Name</label>
+                <div class="email-input-container">
+                  <i class="fi fi-rr-user icon-email"></i>
+                  <input
+                    type="email"
+                    name="Full Name"
+                    placeholder="Ammar Ahmed"
+                    id="email"
+                  />
+                </div>
+
                 <label for="email">Email address</label>
                 <div class="email-input-container">
                   <i class="fi fi-rr-envelope icon-email"></i>
@@ -48,6 +73,17 @@
                     name="email_address"
                     placeholder="exemple@gmail.com"
                     id="email"
+                  />
+                </div>
+                <label for="password">Password</label>
+
+                <div class="password-input-container">
+                  <i class="fi fi-rr-lock icon-password"></i>
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Your password"
+                    id="password"
                   />
                 </div>
               </form>
