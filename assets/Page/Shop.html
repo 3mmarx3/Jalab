@@ -265,7 +265,8 @@
     </div>
 
     <!-- Muze Default Sidebar, Muze Navbar, Muze Navbar Vertical, Muze Navbar Expand Lg, Muze Navbar Light -->
-<div id="nav_"></div>
+    <div id="nav_"></div>
+
     <!-- Muze Main Content -->
     <div class="main-content">
       <div class="header border-bottom border-gray-200 header-fixed">
@@ -2842,7 +2843,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="new-project.html">New project</a>
+                <a class="nav-link" href="./option.html">New project</a>
               </li>
            
               <li class="nav-item">
@@ -2850,57 +2851,448 @@
               </li>
             </ul>
           </div>
+          <div class="pb-2 pt-3 mb-4 mb-xl-5">
+              <div class="row align-items-center">
+                <div class="col">
+                  <div
+                    class="input-group input-group-xl bg-white border border-gray-300 rounded px-3 me-2 me-xl-4"
+                  >
+                    <button type="button" class="border-0 bg-transparent p-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#ffff" class="bi bi-upload" viewBox="0 0 16 16">
+                            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                            <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708z"/>
+                          </svg>
+                    </button>
+                
+
+                    <input
+                    type="file"
+                    accept="image/*"
+                    class="form-control border-0 file_i"
+
+                    id="upload"
+                    onchange="handleFileSelect(event)"
+                  />
+
+                  </div>
+                </div>
+                <div class="col-12 col-md-auto mt-3 mt-md-0 d-grid">
+
+                    <button onclick="processImage()"                      class="btn btn-xl btn-primary text-nowrap ms-xl-2"
+                    > <svg
+                        class="me-2"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 14 14"
+                      >
+                        <rect
+                          data-name="Icons/Tabler/Add background"
+                          width="14"
+                          height="14"
+                          fill="none"
+                        />
+                        <path
+                          d="M6.329,13.414l-.006-.091V7.677H.677A.677.677,0,0,1,.585,6.329l.092-.006H6.323V.677A.677.677,0,0,1,7.671.585l.006.092V6.323h5.646a.677.677,0,0,1,.091,1.348l-.091.006H7.677v5.646a.677.677,0,0,1-1.348.091Z"
+                          fill="#ffffff"
+                        />
+                      </svg>Submit</button>
+
+
+                </div>
+   
+          </div>
+
+          <br />
+          <br />
+          <br />
+          <script src="https://unpkg.com/@zxing/library@latest"></script>
+          <style>
+            table {
+              width: 100%;
+              border-collapse: collapse;
+              margin-top: 20px;
+            }
+            th,
+            td {
+              border: 1px solid #ccc;
+              padding: 8px;
+              text-align: left;
+            }
+            th {
+              background-color: #f2f2f2;
+            }
+          </style>
+        </head>
+        <body>
+     
+    
       
-          <div class="tiles">
-            <article class="tile">
-                <div class="tile-header">
-                    <i class="ph-lightning-light"></i>
-                    <h3>
-                        <span>Electricity</span>
-                        <span>UrkEnergo LTD.</span>
-                    </h3>
+
+
+
+          <video id="video" width="300" height="200" style="display: none"></video>
+      
+
+      
+      
+          <audio
+            id="success-sound"
+            src="https://www.soundjay.com/button/beep-07.wav"
+            preload="auto"
+          ></audio>
+      
+      
+      
+          <script>
+            let selectedFile;
+            let codeReader = new ZXing.BrowserBarcodeReader();
+      
+            function handleFileSelect(event) {
+              selectedFile = event.target.files[0];
+              document.getElementById("result").innerText = ""; // Clear previous result
+            }
+      
+            async function processImage() {
+              if (selectedFile) {
+                const resultElement = document.getElementById("result");
+                resultElement.innerText = "Processing...";
+      
+                try {
+                  const imgElement = document.createElement("img");
+                  imgElement.src = URL.createObjectURL(selectedFile);
+      
+                  imgElement.onload = async () => {
+                    try {
+                      const result = await codeReader.decodeFromImageElement(
+                        imgElement
+                      );
+                      resultElement.innerText = result.text; // Display the result
+                      // Add barcode to list with additional fields
+                      addBarcodeToList(
+                        result.text,
+                        "0.00",
+                        "N/A",
+                        "N/A",
+                        "0",
+                        "N/A",
+                        "N/A"
+                      );
+                      playSound(); // Play sound on success
+                    } catch (error) {
+                      resultElement.innerText = "Failed to read barcode.";
+                      console.error("Image scan error:", error);
+                    }
+                  };
+                } catch (error) {
+                  resultElement.innerText = "Failed to read barcode.";
+                  console.error("Error initializing barcode reader:", error);
+                }
+              } else {
+                document.getElementById("result").innerText =
+                  "Please select an image first.";
+              }
+            }
+      
+            async function startCamera() {
+              const videoElement = document.getElementById("video");
+              const resultElement = document.getElementById("result");
+              videoElement.style.display = "block";
+      
+              try {
+                const stream = await navigator.mediaDevices.getUserMedia({
+                  video: { facingMode: "environment" },
+                });
+                videoElement.srcObject = stream;
+                videoElement.play();
+      
+                codeReader.decodeFromVideoDevice(
+                  null,
+                  videoElement,
+                  (result, err) => {
+                    if (result) {
+                      resultElement.innerText = result.text; // Display the result
+                      // Add barcode to list with additional fields
+                      addBarcodeToList(
+                        result.text,
+                        "0.00",
+                        "N/A",
+                        "N/A",
+                        "0",
+                        "N/A",
+                        "N/A"
+                      );
+                      playSound(); // Play sound on success
+                      codeReader.reset(); // Stop scanning
+                      stream.getTracks().forEach((track) => track.stop()); // Stop video stream
+                    }
+                    if (err && !(err instanceof ZXing.NotFoundException)) {
+                      console.error(err);
+                    }
+                  }
+                );
+              } catch (error) {
+                console.error("Error accessing camera:", error);
+                resultElement.innerText = "Error accessing camera.";
+              }
+            }
+      
+            function playSound() {
+              const sound = document.getElementById("success-sound");
+              sound.play();
+            }
+      
+            function addBarcodeToList(
+              barcode,
+              price,
+              size,
+              color,
+              quantity,
+              fitName,
+              style
+            ) {
+              const barcodeList = document.getElementById("barcode-list");
+              const row = document.createElement("tr");
+              row.innerHTML = `
+                <td>${barcode}</td>
+                <td contenteditable="true">${price}</td>
+                <td contenteditable="true">${size}</td>
+                <td contenteditable="true">${color}</td>
+                <td contenteditable="true">${quantity}</td>
+                <td contenteditable="true">${fitName}</td>
+                <td contenteditable="true">${style}</td>
+                <td contenteditable="true">N/A</td>
+                <td><button     onclick="removeBarcode(this)" class="exit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                  </svg>
+                
+                
+                </button></td>
+              `;
+              barcodeList.appendChild(row);
+            }
+      
+            function removeBarcode(button) {
+              const row = button.parentElement.parentElement;
+              row.remove();
+            }
+      
+            function searchBarcode() {
+              const searchValue = document
+                .getElementById("search-barcode")
+                .value.trim()
+                .toLowerCase(); // تحويل القيمة إلى حروف صغيرة
+              const rows = document.querySelectorAll("#barcode-list tr");
+              let found = false;
+      
+              rows.forEach((row) => {
+                const barcodeCell = row.cells[0].innerText.toLowerCase(); // تحويل القيمة إلى حروف صغيرة
+      
+                // إذا كانت قيمة الباركود تحتوي على السلسلة المدخلة، نضيء الصف
+                if (barcodeCell.includes(searchValue)) {
+                  row.style.backgroundColor = "#e0ffe0"; // تمييز الصف الذي تم العثور عليه
+                  found = true;
+                } else {
+                  row.style.backgroundColor = ""; // إعادة تعيين خلفية الصفوف الأخرى
+                }
+              });
+      
+              if (!found) {
+                alert("Barcode not found.");
+              }
+            }
+      
+            function saveData() {
+              const barcodeList = [];
+              const rows = document.querySelectorAll("#barcode-list tr");
+      
+              rows.forEach((row) => {
+                const barcode = row.cells[0].innerText;
+                const price = row.cells[1].innerText;
+                const size = row.cells[2].innerText;
+                const color = row.cells[3].innerText;
+                const quantity = row.cells[4].innerText;
+                const fitName = row.cells[5].innerText;
+                const style = row.cells[6].innerText;
+                const notes = row.cells[7].innerText;
+      
+                barcodeList.push({
+                  barcode,
+                  price,
+                  size,
+                  color,
+                  quantity,
+                  fitName,
+                  style,
+                  notes,
+                });
+              });
+      
+              localStorage.setItem("barcodeData", JSON.stringify(barcodeList));
+              alert("Data saved successfully!");
+            }
+      
+            function loadData() {
+              const barcodeData = JSON.parse(localStorage.getItem("barcodeData"));
+              const barcodeList = document.getElementById("barcode-list");
+              barcodeList.innerHTML = ""; // Clear existing rows
+      
+              if (barcodeData) {
+                barcodeData.forEach(
+                  ({
+                    barcode,
+                    price,
+                    size,
+                    color,
+                    quantity,
+                    fitName,
+                    style,
+                    notes,
+                  }) => {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                    <td>${barcode}</td>
+                    <td contenteditable="true">${price}</td>
+                    <td contenteditable="true">${size}</td>
+                    <td contenteditable="true">${color}</td>
+                    <td contenteditable="true">${quantity}</td>
+                    <td contenteditable="true">${fitName}</td>
+                    <td contenteditable="true">${style}</td>
+                    <td contenteditable="true">${notes}</td>
+                    <td><button onclick="removeBarcode(this)">Remove</button></td>
+                  `;
+                    barcodeList.appendChild(row);
+                  }
+                );
+              }
+            }
+          </script>
+ 
+
+          <div class="pb-2 mb-4 mb-xl-5">
+            <ul class="nav nav-segment nav-pills mb-7" role="tablist">
+              <li class="nav-item">
+       
+
+      
+
+
+
+          <button onclick="startCamera()"    class="nav-link active" >
+            Start Camera
+          </button>
+
+              </li>
+              <li class="nav-item">
+              
+
+
+                <button onclick="saveData()"                    class="nav-link"
+                >Save Data</button>
+             
+
+              </li>
+              <li class="nav-item">
+                <button onclick="loadData()"               class="nav-link"
+                >Load Data</button>
+              </li>
+              <li class="nav-item">
+              
+                
+                <p   class="nav-link">Result : <span id="result"></span></p>
+
+
+              </li>
+            </ul>
+          </div>
+          <div class="row">
+            <div class="col-12 mb-4">
+              <div class="card rounded-12 shadow-dark-80">
+                <div class="d-flex align-items-center px-3 px-md-4 py-3">
+                  <h5
+                    class="card-header-title mb-0 ps-md-2 font-weight-semibold"
+                  >
+                    Sources
+                  </h5>
+
+
+
+                  <!-- mero -->
+
+            
+
+                  <div class="dropdown export-dropdown ms-auto pe-md-2">
+              
+                    <div class="ser">
+                        <input
+                        type="text"
+                        id="search-barcode"
+                        placeholder="Enter barcode to search"
+                      />
+                      <button  class="sear" onclick="searchBarcode()" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                      </svg></button>
+                     </div>
+                  
+                  </div>
                 </div>
-                <a href="#">
-                    <span>Go to service</span>
-                    <span class="icon-button">
-                        <i class="ph-caret-right-bold"></i>
-                    </span>
-                </a>
-            </article>
-            <article class="tile">
-                <div class="tile-header">
-                    <i class="ph-fire-simple-light"></i>
-                    <h3>
-                        <span>Heating Gas</span>
-                        <span>Gazprom UA</span>
-                    </h3>
+
+                <div class="table-responsive mb-0">
+
+       
+      
+                  <table class="table card-table table-nowrap overflow-hidden" id="barcode-table">
+                    <thead>
+                        <tr>
+                            <th>Barcode</th>
+                            <th>Price</th>
+                            <th>Size</th>
+                            <th>Color</th>
+                            <th>Quantity</th>
+                            <th>Fit Name</th>
+                            <th>Style</th>
+                            <th>Notes</th>
+                            <th>Actions</th>
+                          </tr>
+                    </thead>
+
+         
+                    <tbody id="barcode-list"></tbody>
+
+                    
+                  </table>
                 </div>
-                <a href="#">
-                    <span>Go to service</span>
-                    <span class="icon-button">
-                        <i class="ph-caret-right-bold"></i>
-                    </span>
-                </a>
-            </article>
-            <article class="tile">
-                <div class="tile-header">
-                    <i class="ph-file-light"></i>
-                    <h3>
-                        <span>Tax online</span>
-                        <span>Kharkov 62 str.</span>
-                    </h3>
+                <div
+                  class="d-flex align-items-center p-3 p-md-4 border-top border-gray-200"
+                >
+                  <a
+                    href="#"
+                    class="my-1 tiny font-weight-semibold mx-auto btn btn-link link-dark"
+                    >View all<svg
+                      class="ms-1"
+                      data-name="icons/tabler/chevron right"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10"
+                      height="10"
+                      viewBox="0 0 16 16"
+                    >
+                      <rect
+                        data-name="Icons/Tabler/Chevron Right background"
+                        width="16"
+                        height="16"
+                        fill="none"
+                      ></rect>
+                      <path
+                        d="M.26.26A.889.889,0,0,1,1.418.174l.1.086L8.629,7.371a.889.889,0,0,1,.086,1.157l-.086.1L1.517,15.74A.889.889,0,0,1,.174,14.582l.086-.1L6.743,8,.26,1.517A.889.889,0,0,1,.174.36Z"
+                        transform="translate(4)"
+                        fill="#1e1e1e"
+                      ></path></svg
+                  ></a>
                 </div>
-                <a href="#">
-                    <span>Go to service</span>
-                    <span class="icon-button">
-                        <i class="ph-caret-right-bold"></i>
-                    </span>
-                </a>
-            </article>
+              </div>
+            </div>
+          </div>
         </div>
-
-          <!-- moraaa -->
-
         <footer class="pt-xl-5 mt-lg-2">
           <div
             class="container-fluid px-0 border-top border-gray-200 pt-2 pt-lg-3"
@@ -2931,426 +3323,6 @@
     <script src="../Script/apexcharts.min.js"></script>
     <script src="../Script/simplebar.min.js"></script>
     <script src="../Script/theme-custom.js"></script>
+    <script src="../Script/nav.js"></script>
   </body>
 </html>
-
-
-
-<style>
-    @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-:root {
-  --c-gray-900: #000000;
-  --c-gray-800: #1f1f1f;
-  --c-gray-700: #2e2e2e;
-  --c-gray-600: #313131;
-  --c-gray-500: #969593;
-  --c-gray-400: #a6a6a6;
-  --c-gray-300: #bdbbb7;
-  --c-gray-200: #f1f1f1;
-  --c-gray-100: #ffffff;
-  --c-green-500: #45ffbc;
-  --c-olive-500: #e3ffa8;
-  --c-white: var(--c-gray-100);
-  --c-text-primary: var(--c-gray-100);
-  --c-text-secondary: var(--c-gray-200);
-  --c-text-tertiary: var(--c-gray-500);
-}
-
-
-
-
-
-.app-header-actions {
-  display: flex;
-  align-items: center;
-}
-@media (max-width: 1200px) {
-  .app-header-actions {
-    display: none;
-  }
-}
-
-.app-header-actions-buttons {
-  display: flex;
-  border-left: 1px solid var(--c-gray-600);
-  margin-left: 2rem;
-  padding-left: 2rem;
-}
-.app-header-actions-buttons > * + * {
-  margin-left: 1rem;
-}
-
-.app-header-mobile {
-  display: none;
-}
-@media (max-width: 1200px) {
-  .app-header-mobile {
-    display: flex;
-  }
-}
-
-.app-body {
-  height: 100%;
-  display: grid;
-  grid-template-columns: minmax(-webkit-min-content, 175px) minmax(-webkit-max-content, 1fr) minmax(-webkit-min-content, 400px);
-  grid-template-columns: minmax(min-content, 175px) minmax(max-content, 1fr) minmax(min-content, 400px);
-  -moz-column-gap: 4rem;
-       column-gap: 4rem;
-  padding-top: 2.5rem;
-}
-@media (max-width: 1200px) {
-  .app-body {
-    grid-template-columns: 1fr;
-  }
-  .app-body > * {
-    margin-bottom: 3.5rem;
-  }
-}
-
-.app-body-navigation {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-@media (max-width: 1200px) {
-  .app-body-navigation {
-    display: none;
-  }
-}
-
-.footer {
-  margin-top: auto;
-}
-.footer h1 {
-  font-size: 1.5rem;
-  line-height: 1.125;
-  display: flex;
-  align-items: flex-start;
-}
-.footer h1 small {
-  font-size: 0.5em;
-  margin-left: 0.25em;
-}
-.footer div {
-  border-top: 1px solid var(--c-gray-600);
-  margin-top: 1.5rem;
-  padding-top: 1rem;
-  font-size: 0.75rem;
-  color: var(--c-text-tertiary);
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-  border-bottom: 1px solid var(--c-gray-600);
-}
-@media (max-width: 1200px) {
-  .logo {
-    border-bottom: 0;
-  }
-}
-
-.logo-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-}
-
-.logo-title {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.25;
-  margin-left: 0.75rem;
-}
-.logo-title span:first-child {
-  color: var(--c-text-primary);
-}
-.logo-title span:last-child {
-  color: var(--c-text-tertiary);
-}
-
-.navigation {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  color: var(--c-text-tertiary);
-}
-.navigation a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  transition: 0.25s ease;
-}
-.navigation a * {
-  transition: 0.25s ease;
-}
-.navigation a i {
-  margin-right: 0.75rem;
-  font-size: 1.25em;
-  flex-shrink: 0;
-}
-.navigation a + a {
-  margin-top: 1.25rem;
-}
-.navigation a:hover, .navigation a:focus {
-  transform: translateX(4px);
-  color: var(--c-text-primary);
-}
-
-.tabs {
-  display: flex;
-  justify-content: space-between;
-  color: var(--c-text-tertiary);
-  border-bottom: 1px solid var(--c-gray-600);
-}
-.tabs a {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  text-decoration: none;
-  border-top: 2px solid transparent;
-  display: inline-flex;
-  transition: 0.25s ease;
-}
-.tabs a.active, .tabs a:hover, .tabs a:focus {
-  color: var(--c-text-primary);
-  border-color: var(--c-text-primary);
-}
-
-.user-profile {
-  display: flex;
-  align-items: center;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-  color: var(--c-text-tertiary);
-  transition: 0.25s ease;
-}
-.user-profile:hover, .user-profile:focus {
-  color: var(--c-text-primary);
-}
-.user-profile:hover span:last-child, .user-profile:focus span:last-child {
-  box-shadow: 0 0 0 4px var(--c-gray-800), 0 0 0 5px var(--c-text-tertiary);
-}
-.user-profile span:first-child {
-  display: flex;
-  font-size: 1.125rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--c-gray-600);
-  font-weight: 300;
-}
-.user-profile span:last-child {
-  transition: 0.25s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-left: 1.5rem;
-  flex-shrink: 0;
-}
-
-.icon-button {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 0;
-  background-color: transparent;
-  border: 1px solid var(--c-gray-500);
-  color: var(--c-text-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: 0.25s ease;
-  flex-shrink: 0;
-}
-.icon-button.large {
-  width: 42px;
-  height: 42px;
-  font-size: 1.25em;
-}
-.icon-button i {
-  transition: 0.25s ease;
-}
-.icon-button:hover, .icon-button:focus {
-  background-color: var(--c-gray-600);
-  box-shadow: 0 0 0 4px var(--c-gray-800), 0 0 0 5px var(--c-text-tertiary);
-}
-
-.tiles {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
-  row-gap: 1rem;
-  margin-top: 1.25rem;
-}
-@media (max-width: 700px) {
-  .tiles {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-.tile {
-  padding: 1rem;
-  border-radius: 8px;
-  background-color: var(--c-olive-500);
-  color: var(--c-gray-900);
-  min-height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  transition: 0.25s ease;
-}
-.tile:hover {
-  transform: translateY(-5px);
-}
-.tile:focus-within {
-  box-shadow: 0 0 0 2px var(--c-gray-800), 0 0 0 4px var(--c-olive-500);
-}
-.tile:nth-child(2) {
-  background-color: var(--c-green-500);
-}
-.tile:nth-child(2):focus-within {
-  box-shadow: 0 0 0 2px var(--c-gray-800), 0 0 0 4px var(--c-green-500);
-}
-.tile:nth-child(3) {
-  background-color: var(--c-gray-300);
-}
-.tile:nth-child(3):focus-within {
-  box-shadow: 0 0 0 2px var(--c-gray-800), 0 0 0 4px var(--c-gray-300);
-}
-.tile a {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: 600;
-}
-.tile a .icon-button {
-  color: inherit;
-  border-color: inherit;
-}
-.tile a .icon-button:hover, .tile a .icon-button:focus {
-  background-color: transparent;
-}
-.tile a .icon-button:hover i, .tile a .icon-button:focus i {
-  transform: none;
-}
-.tile a:focus {
-  box-shadow: none;
-}
-.tile a:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.tile-header {
-  display: flex;
-  align-items: center;
-}
-.tile-header i {
-  font-size: 2.5em;
-}
-.tile-header h3 {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.375;
-  margin-left: 0.5rem;
-}
-.tile-header h3 span:first-child {
-  font-weight: 600;
-}
-.tile-header h3 span:last-child {
-  font-size: 0.825em;
-  font-weight: 200;
-}
-
-.service-section > h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.25rem;
-}
-
-.service-section-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.service-section-header > * + * {
-  margin-left: 1.25rem;
-}
-@media (max-width: 1000px) {
-  .service-section-header {
-    display: none;
-  }
-}
-
-.service-section-footer {
-  color: var(--c-text-tertiary);
-  margin-top: 1rem;
-}
-
-.search-field {
-  display: flex;
-  flex-grow: 1;
-  position: relative;
-}
-.search-field input {
-  width: 100%;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  border: 0;
-  border-bottom: 1px solid var(--c-gray-600);
-  background-color: transparent;
-  padding-left: 1.5rem;
-}
-.search-field i {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.dropdown-field {
-  display: flex;
-  flex-grow: 1;
-  position: relative;
-}
-.dropdown-field select {
-  width: 100%;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  border: 0;
-  border-bottom: 1px solid var(--c-gray-600);
-  background-color: transparent;
-  padding-right: 1.5rem;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  color: var(--c-text-tertiary);
-  width: 100%;
-}
-.dropdown-field i {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-</style>
-
-
-<script src="../Script/nav.js"></script>

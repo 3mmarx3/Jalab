@@ -562,7 +562,7 @@ progress {
   .container-lg,
   .container-md,
   .container-sm {
-    max-width: 960px;
+    max-width: 100%;
   }
 }
 @media (min-width: 1200px) {
@@ -15502,9 +15502,9 @@ footer .navbar li a:hover {
 .muze-dark-mode.calendar-template .calendar-box a {
   color: #ced4da;
 }
-.muze-dark-mode.all-projects-template .nav-pills .nav-link {
+/* .muze-dark-mode.all-projects-template .nav-pills .nav-link {
   color: #e9ecef;
-}
+} */
 .muze-dark-mode.all-projects-template form .input-group.border-gray-300 {
   border-color: #343a40 !important;
 }
@@ -18324,4 +18324,50 @@ body.container .bg-blue-50.alert-dismissible .ps-xl-3 h2 {
   overflow-y: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
+}
+
+/*  */
+
+input#upload {
+  background: none;
+  color: white;
+  margin: 0;
+  padding: 0;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  height: -webkit-fill-available;
+  padding: 20px;
+}
+
+button.nav-link.active {
+  border: none;
+  outline: none;
+}
+
+input#search-barcode {
+  padding: 5px;
+  border-radius: 5px;
+  background: no-repeat;
+  border: 1px solid #343a40;
+  color: white;
+}
+
+ul.nav.nav-segment.nav-pills.mb-7 {
+  gap: 10px !important;
+}
+
+button.sear {
+  margin: 0 10px;
+  border-radius: 50%;
+  background: none;
+  border: none;
+  color: #343a40;
+  border: 1px solid;
+}
+
+button.exit {
+  background: no-repeat;
+  color: white;
+  border: none;
 }
