@@ -35,19 +35,22 @@
           <div class="right-side">
             <div class="wrapper">
               <h2>Get started.</h2>
-              <p>Already have an account? <a href="#">Log in</a></p>
+              <p>
+                Already have an account ? <a href="./ Login.html">Log in</a>
+              </p>
 
               <p class="socials-divider"><span>or</span></p>
 
               <form action="">
-                <label for="email">Email address</label>
+                <label for="email">Verify Code</label>
                 <div class="email-input-container">
-                  <i class="fi fi-rr-envelope icon-email"></i>
+                  <i class="fi fi-rr-badge-check icon-verify icon-email"></i>
+
                   <input
-                    type="email"
+                    type="text"
                     name="email_address"
-                    placeholder="exemple@gmail.com"
-                    id="email"
+                    placeholder="----"
+                    id="Verify"
                   />
                 </div>
               </form>
@@ -63,11 +66,11 @@
                 </span>
               </div>
 
-              <button id="register-button" type="submit">Register</button>
+              <button id="register-button" type="submit">Verify</button>
               <p class="credits">
                 Made with ❤️ by
                 <a href="https://github.com/aluizamendes" target="_blank"
-                  >aluizamendes</a
+                  >Appnest</a
                 >
               </p>
             </div>
@@ -75,5 +78,11 @@
         </div>
       </div>
     </main>
+
+    <style>
+      input#Verify {
+        text-align: center;
+      }
+    </style>
   </body>
 </html>

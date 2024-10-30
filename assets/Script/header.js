@@ -1,274 +1,5 @@
-<!DOCTYPE html>
-<html dir="ltr" lang="en">
-  <head>
-    <title>Buy Muze Bootstrap 5 Project Page</title>
-    <meta charset="UTF-8" />
-    <meta
-      name="description"
-      content="Presenting Muze, All-in-one Bootstrap 5 Project Admin Dashboard, 30+ Premium HTML Pages, 500+ components, dark mode, RTL. Starts @ Only $35"
-    />
-    <meta
-      name="title"
-      content="Muze Bootstrap 5 Project Templates, Themes, & Dashboard"
-    />
-    <meta
-      name="keywords"
-      content="bootstrap project template, bootstrap 5 project page, projects page design, projects gallery"
-    />
-    <meta name="author" content="Muze Dashboard" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
-    <!-- Muze Favicon -->
-    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <!-- Muze Plugins CSS -->
-    <link
-      href="../Style/main.css"
-      rel="stylesheet"
-      type="text/css"
-      media="all"
-    />
-    <!-- Muze Theme CSS -->
-    <link
-      href="../assets/css/theme.min.css"
-      rel="stylesheet"
-      type="text/css"
-      media="all"
-    />
-  </head>
-
-  <body class="bg-gray-100 all-projects-template">
-    <!-- Muze Customize Sidebar -->
-    <div class="customize-sidebar">
-      <div class="border-bottom border-gray-200 p-3 p-md-4">
-        <div class="text-end">
-          <a
-            href="javascript:void(0);"
-            class="btn btn-light btn-icon rounded-pill customize-close"
-          >
-            <svg
-              data-name="icons/tabler/close"
-              xmlns="http://www.w3.org/2000/svg"
-              width="15"
-              height="15"
-              viewBox="0 0 16 16"
-            >
-              <rect
-                data-name="Icons/Tabler/Close background"
-                width="16"
-                height="16"
-                fill="none"
-              ></rect>
-              <path
-                d="M.82.1l.058.05L6,5.272,11.122.151A.514.514,0,0,1,11.9.82l-.05.058L6.728,6l5.122,5.122a.514.514,0,0,1-.67.777l-.058-.05L6,6.728.878,11.849A.514.514,0,0,1,.1,11.18l.05-.058L5.272,6,.151.878A.514.514,0,0,1,.75.057Z"
-                transform="translate(2 2)"
-                fill="#1E1E1E"
-              ></path>
-            </svg>
-          </a>
-        </div>
-        <div class="px-2 px-md-4">
-          <h3 class="mb-0">
-            <img src="../assets/svg/icons/tio-tune2.svg" alt="Tio Tune" />
-            Customize
-          </h3>
-          <p class="text-gray-700 mb-0 lh-lg">Choose your style and settings</p>
-        </div>
-      </div>
-      <div class="customize-body" data-simplebar>
-        <div class="p-4 px-lg-5 border-bottom border-gray-200">
-          <h6 class="font-weight-semibold pb-3">Select Skin</h6>
-          <div class="d-flex muze-skins customizer-controls">
-            <div class="text-center pe-4">
-              <div
-                class="form-check-lg bg-white shadow-dark-80 p-4 rounded-circle avatar avatar-xl d-flex align-items-center justify-content-center"
-              >
-                <input
-                  class="form-check-input mx-0 rounded-circle"
-                  type="radio"
-                  name="MuzeSkins"
-                  id="LightMode"
-                  value="muze-light-mode"
-                  checked="checked"
-                />
-              </div>
-              <label for="LightMode" class="text-gray-700 mt-2"
-                >Light mode</label
-              >
-            </div>
-            <div class="text-center ps-4 dark-radio">
-              <div
-                class="form-check-lg bg-gray-800 shadow-dark-80 p-4 rounded-circle avatar avatar-xl d-flex align-items-center justify-content-center"
-              >
-                <input
-                  class="form-check-input mx-0 rounded-circle"
-                  type="radio"
-                  name="MuzeSkins"
-                  id="DarkMode"
-                  value="muze-dark-mode"
-                />
-              </div>
-              <label for="DarkMode" class="text-gray-700 mt-2">Dark mode</label>
-            </div>
-          </div>
-        </div>
-        <div class="p-4 px-lg-5 border-bottom border-gray-200">
-          <div class="d-flex align-items-center">
-            <h6 class="font-weight-semibold mb-0">RTL Mode</h6>
-            <div class="form-check form-switch mb-0 ms-auto">
-              <input
-                class="form-check-input me-0"
-                type="checkbox"
-                id="RTLMode"
-                value="muze-rtl"
-              />
-            </div>
-          </div>
-          <p class="text-gray-600 pt-2 mb-0">Switch layout direction</p>
-        </div>
-        <div class="p-4 px-lg-5 border-bottom border-gray-200">
-          <div class="d-flex align-items-center">
-            <h6 class="font-weight-semibold mb-0">Fluid Layout</h6>
-            <div class="form-check form-switch mb-0 me-0 ms-auto">
-              <input
-                class="form-check-input me-0"
-                type="checkbox"
-                id="FluidLayout"
-                value="container"
-              />
-            </div>
-          </div>
-          <p class="text-gray-600 pt-2 mb-0">
-            Toggle between full width and contained layouts
-          </p>
-        </div>
-        <div
-          class="p-4 px-lg-5 border-bottom border-gray-200 muze-headers customizer-controls"
-        >
-          <h6 class="font-weight-semibold pb-3">Header Style</h6>
-          <div class="form-check form-check-sm form-check-inline mb-0">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="HeaderStyles"
-              id="HeaderVertical"
-              value="default-header"
-              checked="checked"
-            />
-            <label class="form-check-label" for="HeaderVertical"
-              >Vertical</label
-            >
-          </div>
-          <div class="form-check form-check-sm form-check-inline mb-0">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="HeaderStyles"
-              id="HeaderTop"
-              value="top-header"
-            />
-            <label class="form-check-label" for="HeaderTop">Top</label>
-          </div>
-          <div class="form-check form-check-sm form-check-inline mb-0">
-            <input
-              class="form-check-input"
-              type="radio"
-              name="HeaderStyles"
-              id="HeaderDouble"
-              value="double-header"
-            />
-            <label class="form-check-label" for="HeaderDouble">Double</label>
-          </div>
-        </div>
-        <div class="p-4 px-lg-5">
-          <h6 class="font-weight-semibold pb-3">Sidebar Style</h6>
-          <div class="d-flex muze-sidebars customizer-controls">
-            <div class="me-3 sidebar-style">
-              <div class="form-check form-check-sm me-0">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="SidebarStyles"
-                  id="SidebarDefault"
-                  value="default-sidebar"
-                  checked="checked"
-                />
-                <label class="form-check-label" for="SidebarDefault"
-                  ><img
-                    src="../assets/img/sidebar-default.svg"
-                    alt="Sidebar Default"
-                    class="rounded mb-2 border-gray-400 border"
-                  /><span>Default</span></label
-                >
-              </div>
-            </div>
-            <div class="me-3 sidebar-style">
-              <div class="form-check form-check-sm me-0">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="SidebarStyles"
-                  id="SidebarCompact"
-                  value="sidebar-compact"
-                />
-                <label class="form-check-label" for="SidebarCompact"
-                  ><img
-                    src="../assets/img/sidebar-compact.svg"
-                    alt="Sidebar Compact"
-                    class="rounded mb-2 border-gray-400 border"
-                  /><span>Compact</span></label
-                >
-              </div>
-            </div>
-            <div class="me-3 sidebar-style">
-              <div class="form-check form-check-sm me-0">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="SidebarStyles"
-                  id="SidebarIcons"
-                  value="sidebar-icons"
-                />
-                <label class="form-check-label" for="SidebarIcons"
-                  ><img
-                    src="../assets/img/sidebar-icons.svg"
-                    alt="Sidebar Icons"
-                    class="rounded mb-2 border-gray-400 border"
-                  /><span>Icons</span></label
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="p-4 px-lg-5 border-top border-gray-200 bg-white">
-        <div class="row">
-          <div class="col-6 d-grid">
-            <a
-              href="Javascript:void(0);"
-              class="btn btn-xl btn-outline-dark"
-              id="ResetCustomizer"
-              >Reset</a
-            >
-          </div>
-          <div class="col-6 d-grid">
-            <a
-              href="Javascript:void(0);"
-              class="btn btn-xl btn-primary"
-              id="CustomizerPreview"
-              >Preview</a
-            >
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Muze Default Sidebar, Muze Navbar, Muze Navbar Vertical, Muze Navbar Expand Lg, Muze Navbar Light -->
-<div id="nav_"></div>
-    <!-- Muze Main Content -->
-    <div class="main-content">
-      <div class="header border-bottom border-gray-200 header-fixed">
+header = `
+   <div class="header border-bottom border-gray-200 header-fixed">
         <div class="container-fluid px-0">
           <div class="header-body px-3 px-xxl-5 py-3 py-lg-4">
             <div class="row align-items-center">
@@ -320,7 +51,30 @@
                     </g>
                   </svg>
                 </a>
-           
+                <div class="ps-3 header-search">
+                  <span class="muze-search d-lg-none ms-3">
+                    <svg
+                      id="icons_tabler_close"
+                      data-name="icons/tabler/close"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 16 16"
+                    >
+                      <rect
+                        data-name="Icons/Tabler/Close background"
+                        width="16"
+                        height="16"
+                        fill="none"
+                      />
+                      <path
+                        d="M.82.1l.058.05L6,5.272,11.122.151A.514.514,0,0,1,11.9.82l-.05.058L6.728,6l5.122,5.122a.514.514,0,0,1-.67.777l-.058-.05L6,6.728.878,11.849A.514.514,0,0,1,.1,11.18l.05-.058L5.272,6,.151.878A.514.514,0,0,1,.75.057Z"
+                        transform="translate(2 2)"
+                        fill="#1e1e1e"
+                      />
+                    </svg>
+                  </span>
+                </div>
                 <nav
                   class="navbar navbar-expand-lg navbar-light top-header-nav"
                 >
@@ -377,7 +131,7 @@
                               >
                             </li>
                             <li class="nav-item">
-                              <a href="festive.html" class="nav-link"
+                              <a href="festive.html" class="nav-link active"
                                 >Festive</a
                               >
                             </li>
@@ -523,9 +277,7 @@
                               >
                                 <ul class="nav nav-sm flex-column">
                                   <li class="nav-item">
-                                    <a
-                                      href="all-projects.html"
-                                      class="nav-link active"
+                                    <a href="all-projects.html" class="nav-link"
                                       >All projects</a
                                     >
                                   </li>
@@ -841,7 +593,7 @@
               <div
                 class="col-auto d-flex flex-wrap align-items-center icon-blue-hover ps-0"
               >
-                <a href="javascript:void(0);" class="d-lg-none muze-search">
+                <a href="#" class="d-lg-none muze-search">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -1011,9 +763,7 @@
                               ><span class="ms-2">JSON</span></a
                             >
                           </li>
-                          <li>
-                            <hr class="dropdown-divider" />
-                          </li>
+                          <li><hr class="dropdown-divider" /></li>
                           <li>
                             <a class="dropdown-item" href="#"
                               ><svg
@@ -1564,9 +1314,7 @@
                               ><span class="ms-2">JSON</span></a
                             >
                           </li>
-                          <li>
-                            <hr class="dropdown-divider" />
-                          </li>
+                          <li><hr class="dropdown-divider" /></li>
                           <li>
                             <a class="dropdown-item" href="#"
                               ><svg
@@ -1909,9 +1657,7 @@
                               ><span class="ms-2">JSON</span></a
                             >
                           </li>
-                          <li>
-                            <hr class="dropdown-divider" />
-                          </li>
+                          <li><hr class="dropdown-divider" /></li>
                           <li>
                             <a class="dropdown-item" href="#"
                               ><svg
@@ -2240,9 +1986,7 @@
                         ><span class="ms-2">Bookmarks</span></a
                       >
                     </li>
-                    <li>
-                      <hr class="dropdown-divider" />
-                    </li>
+                    <li><hr class="dropdown-divider" /></li>
                     <li>
                       <a class="dropdown-item" href="#"
                         ><svg
@@ -2341,7 +2085,9 @@
                           >
                         </li>
                         <li class="nav-item">
-                          <a href="festive.html" class="nav-link">Festive</a>
+                          <a href="festive.html" class="nav-link active"
+                            >Festive</a
+                          >
                         </li>
                       </ul>
                     </div>
@@ -2485,9 +2231,7 @@
                           >
                             <ul class="nav nav-sm flex-column">
                               <li class="nav-item">
-                                <a
-                                  href="all-projects.html"
-                                  class="nav-link active"
+                                <a href="all-projects.html" class="nav-link"
                                   >All projects</a
                                 >
                               </li>
@@ -2789,568 +2533,8 @@
             </nav>
           </div>
         </div>
-      </div>
-      <div
-        class="px-3 px-xxl-5 py-3 py-lg-4 border-bottom border-gray-200 after-header"
-      >
-        <div class="container-fluid px-0">
-          <div class="row align-items-center">
-            <div class="col">
-              <span
-                class="text-uppercase tiny text-gray-600 Montserrat-font font-weight-semibold"
-                >Projects</span
-              >
-              <h1 class="h2 mb-0 lh-sm">Shop</h1>
-            </div>
-            <div class="col-auto d-flex align-items-center my-2 my-sm-0">
-              <a href="#0" class="btn btn-lg btn-warning"
-                ><svg
-                  class="me-2"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="14.036"
-                  height="14.036"
-                  viewBox="0 0 14.036 14.036"
-                >
-                  <g transform="translate(0.036 0.036)">
-                    <rect
-                      data-name="Icons/Tabler/Adjustments background"
-                      width="14"
-                      height="14"
-                      fill="none"
-                    />
-                    <path
-                      d="M11.2,13.458l0-.057V5.117a2.2,2.2,0,0,1,0-4.233V.6A.6.6,0,0,1,12.4.543L12.4.6V.883a2.2,2.2,0,0,1,0,4.233V13.4a.6.6,0,0,1-1.2.057ZM10.8,3a1,1,0,1,0,1-1A1,1,0,0,0,10.8,3ZM6.4,13.458l0-.057V12.317a2.2,2.2,0,0,1,0-4.233V.6A.6.6,0,0,1,7.6.543L7.6.6V8.083a2.2,2.2,0,0,1,0,4.233V13.4a.6.6,0,0,1-1.2.057ZM6,10.2a1,1,0,1,0,1-1A1,1,0,0,0,6,10.2ZM1.6,13.458l0-.057V7.516a2.2,2.2,0,0,1,0-4.234V.6A.6.6,0,0,1,2.8.543L2.8.6V3.283a2.2,2.2,0,0,1,0,4.233V13.4a.6.6,0,0,1-1.2.057ZM1.2,5.4a1,1,0,1,0,1-1A1,1,0,0,0,1.2,5.4Z"
-                      transform="translate(-0.036 -0.036)"
-                      fill="#1e1e1e"
-                    />
-                  </g></svg
-                ><span>Account settings</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="p-3 p-xxl-5">
-        <div class="container-fluid px-0">
-          <div class="mb-2 mb-md-3 mb-xl-4 pb-3">
-            <ul
-              class="nav nav-tabs nav-tabs-md nav-tabs-line position-relative zIndex-0"
-            >
-              <li class="nav-item">
-                <a class="nav-link active" href="all-projects.html"
-                  >All projects (7)</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="new-project.html">New project</a>
-              </li>
-           
-              <li class="nav-item">
-                <a class="nav-link" href="teams.html">Teams</a>
-              </li>
-            </ul>
-          </div>
-      
-          <div class="tiles">
-            <article class="tile">
-                <div class="tile-header">
-                    <i class="ph-lightning-light"></i>
-                    <h3>
-                        <span>Electricity</span>
-                        <span>UrkEnergo LTD.</span>
-                    </h3>
-                </div>
-                <a href="#">
-                    <span>Go to service</span>
-                    <span class="icon-button">
-                        <i class="ph-caret-right-bold"></i>
-                    </span>
-                </a>
-            </article>
-            <article class="tile">
-                <div class="tile-header">
-                    <i class="ph-fire-simple-light"></i>
-                    <h3>
-                        <span>Heating Gas</span>
-                        <span>Gazprom UA</span>
-                    </h3>
-                </div>
-                <a href="#">
-                    <span>Go to service</span>
-                    <span class="icon-button">
-                        <i class="ph-caret-right-bold"></i>
-                    </span>
-                </a>
-            </article>
-            <article class="tile">
-                <div class="tile-header">
-                    <i class="ph-file-light"></i>
-                    <h3>
-                        <span>Tax online</span>
-                        <span>Kharkov 62 str.</span>
-                    </h3>
-                </div>
-                <a href="#">
-                    <span>Go to service</span>
-                    <span class="icon-button">
-                        <i class="ph-caret-right-bold"></i>
-                    </span>
-                </a>
-            </article>
-        </div>
+      </div>`;
 
-          <!-- moraaa -->
+let head = document.getElementById("header");
 
-        <footer class="pt-xl-5 mt-lg-2">
-          <div
-            class="container-fluid px-0 border-top border-gray-200 pt-2 pt-lg-3"
-          >
-            <div class="row align-items-center">
-              <div class="col-md-6">
-                <p class="fs-16 text-gray-600 my-2">
-                  2020 &copy; Fabrx Design - All rights reserved.
-                </p>
-              </div>
-              <div class="col-md-6">
-                <ul class="nav navbar">
-                  <li><a href="#0">About</a></li>
-                  <li><a href="#0">Support</a></li>
-                  <li><a href="#0">Contact</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </footer>
-      </div>
-    </div>
-
-    <!-- Muze Javascript Plugins -->
-    <script src="../Script/bootstrap.bundle.min.js"></script>
-    <script src="../Script/lodash.min.js"></script>
-    <script src="../Script/highmaps.js"></script>
-    <script src="../Script/apexcharts.min.js"></script>
-    <script src="../Script/simplebar.min.js"></script>
-    <script src="../Script/theme-custom.js"></script>
-  </body>
-</html>
-
-
-
-<style>
-    @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-:root {
-  --c-gray-900: #000000;
-  --c-gray-800: #1f1f1f;
-  --c-gray-700: #2e2e2e;
-  --c-gray-600: #313131;
-  --c-gray-500: #969593;
-  --c-gray-400: #a6a6a6;
-  --c-gray-300: #bdbbb7;
-  --c-gray-200: #f1f1f1;
-  --c-gray-100: #ffffff;
-  --c-green-500: #45ffbc;
-  --c-olive-500: #e3ffa8;
-  --c-white: var(--c-gray-100);
-  --c-text-primary: var(--c-gray-100);
-  --c-text-secondary: var(--c-gray-200);
-  --c-text-tertiary: var(--c-gray-500);
-}
-
-
-
-
-
-.app-header-actions {
-  display: flex;
-  align-items: center;
-}
-@media (max-width: 1200px) {
-  .app-header-actions {
-    display: none;
-  }
-}
-
-.app-header-actions-buttons {
-  display: flex;
-  border-left: 1px solid var(--c-gray-600);
-  margin-left: 2rem;
-  padding-left: 2rem;
-}
-.app-header-actions-buttons > * + * {
-  margin-left: 1rem;
-}
-
-.app-header-mobile {
-  display: none;
-}
-@media (max-width: 1200px) {
-  .app-header-mobile {
-    display: flex;
-  }
-}
-
-.app-body {
-  height: 100%;
-  display: grid;
-  grid-template-columns: minmax(-webkit-min-content, 175px) minmax(-webkit-max-content, 1fr) minmax(-webkit-min-content, 400px);
-  grid-template-columns: minmax(min-content, 175px) minmax(max-content, 1fr) minmax(min-content, 400px);
-  -moz-column-gap: 4rem;
-       column-gap: 4rem;
-  padding-top: 2.5rem;
-}
-@media (max-width: 1200px) {
-  .app-body {
-    grid-template-columns: 1fr;
-  }
-  .app-body > * {
-    margin-bottom: 3.5rem;
-  }
-}
-
-.app-body-navigation {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-@media (max-width: 1200px) {
-  .app-body-navigation {
-    display: none;
-  }
-}
-
-.footer {
-  margin-top: auto;
-}
-.footer h1 {
-  font-size: 1.5rem;
-  line-height: 1.125;
-  display: flex;
-  align-items: flex-start;
-}
-.footer h1 small {
-  font-size: 0.5em;
-  margin-left: 0.25em;
-}
-.footer div {
-  border-top: 1px solid var(--c-gray-600);
-  margin-top: 1.5rem;
-  padding-top: 1rem;
-  font-size: 0.75rem;
-  color: var(--c-text-tertiary);
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
-  border-bottom: 1px solid var(--c-gray-600);
-}
-@media (max-width: 1200px) {
-  .logo {
-    border-bottom: 0;
-  }
-}
-
-.logo-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
-}
-
-.logo-title {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.25;
-  margin-left: 0.75rem;
-}
-.logo-title span:first-child {
-  color: var(--c-text-primary);
-}
-.logo-title span:last-child {
-  color: var(--c-text-tertiary);
-}
-
-.navigation {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  color: var(--c-text-tertiary);
-}
-.navigation a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  transition: 0.25s ease;
-}
-.navigation a * {
-  transition: 0.25s ease;
-}
-.navigation a i {
-  margin-right: 0.75rem;
-  font-size: 1.25em;
-  flex-shrink: 0;
-}
-.navigation a + a {
-  margin-top: 1.25rem;
-}
-.navigation a:hover, .navigation a:focus {
-  transform: translateX(4px);
-  color: var(--c-text-primary);
-}
-
-.tabs {
-  display: flex;
-  justify-content: space-between;
-  color: var(--c-text-tertiary);
-  border-bottom: 1px solid var(--c-gray-600);
-}
-.tabs a {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  text-decoration: none;
-  border-top: 2px solid transparent;
-  display: inline-flex;
-  transition: 0.25s ease;
-}
-.tabs a.active, .tabs a:hover, .tabs a:focus {
-  color: var(--c-text-primary);
-  border-color: var(--c-text-primary);
-}
-
-.user-profile {
-  display: flex;
-  align-items: center;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-  color: var(--c-text-tertiary);
-  transition: 0.25s ease;
-}
-.user-profile:hover, .user-profile:focus {
-  color: var(--c-text-primary);
-}
-.user-profile:hover span:last-child, .user-profile:focus span:last-child {
-  box-shadow: 0 0 0 4px var(--c-gray-800), 0 0 0 5px var(--c-text-tertiary);
-}
-.user-profile span:first-child {
-  display: flex;
-  font-size: 1.125rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--c-gray-600);
-  font-weight: 300;
-}
-.user-profile span:last-child {
-  transition: 0.25s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-left: 1.5rem;
-  flex-shrink: 0;
-}
-
-.icon-button {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 0;
-  background-color: transparent;
-  border: 1px solid var(--c-gray-500);
-  color: var(--c-text-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: 0.25s ease;
-  flex-shrink: 0;
-}
-.icon-button.large {
-  width: 42px;
-  height: 42px;
-  font-size: 1.25em;
-}
-.icon-button i {
-  transition: 0.25s ease;
-}
-.icon-button:hover, .icon-button:focus {
-  background-color: var(--c-gray-600);
-  box-shadow: 0 0 0 4px var(--c-gray-800), 0 0 0 5px var(--c-text-tertiary);
-}
-
-.tiles {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
-  row-gap: 1rem;
-  margin-top: 1.25rem;
-}
-@media (max-width: 700px) {
-  .tiles {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-.tile {
-  padding: 1rem;
-  border-radius: 8px;
-  background-color: var(--c-olive-500);
-  color: var(--c-gray-900);
-  min-height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  transition: 0.25s ease;
-}
-.tile:hover {
-  transform: translateY(-5px);
-}
-.tile:focus-within {
-  box-shadow: 0 0 0 2px var(--c-gray-800), 0 0 0 4px var(--c-olive-500);
-}
-.tile:nth-child(2) {
-  background-color: var(--c-green-500);
-}
-.tile:nth-child(2):focus-within {
-  box-shadow: 0 0 0 2px var(--c-gray-800), 0 0 0 4px var(--c-green-500);
-}
-.tile:nth-child(3) {
-  background-color: var(--c-gray-300);
-}
-.tile:nth-child(3):focus-within {
-  box-shadow: 0 0 0 2px var(--c-gray-800), 0 0 0 4px var(--c-gray-300);
-}
-.tile a {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-weight: 600;
-}
-.tile a .icon-button {
-  color: inherit;
-  border-color: inherit;
-}
-.tile a .icon-button:hover, .tile a .icon-button:focus {
-  background-color: transparent;
-}
-.tile a .icon-button:hover i, .tile a .icon-button:focus i {
-  transform: none;
-}
-.tile a:focus {
-  box-shadow: none;
-}
-.tile a:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.tile-header {
-  display: flex;
-  align-items: center;
-}
-.tile-header i {
-  font-size: 2.5em;
-}
-.tile-header h3 {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.375;
-  margin-left: 0.5rem;
-}
-.tile-header h3 span:first-child {
-  font-weight: 600;
-}
-.tile-header h3 span:last-child {
-  font-size: 0.825em;
-  font-weight: 200;
-}
-
-.service-section > h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.25rem;
-}
-
-.service-section-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.service-section-header > * + * {
-  margin-left: 1.25rem;
-}
-@media (max-width: 1000px) {
-  .service-section-header {
-    display: none;
-  }
-}
-
-.service-section-footer {
-  color: var(--c-text-tertiary);
-  margin-top: 1rem;
-}
-
-.search-field {
-  display: flex;
-  flex-grow: 1;
-  position: relative;
-}
-.search-field input {
-  width: 100%;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  border: 0;
-  border-bottom: 1px solid var(--c-gray-600);
-  background-color: transparent;
-  padding-left: 1.5rem;
-}
-.search-field i {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.dropdown-field {
-  display: flex;
-  flex-grow: 1;
-  position: relative;
-}
-.dropdown-field select {
-  width: 100%;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  border: 0;
-  border-bottom: 1px solid var(--c-gray-600);
-  background-color: transparent;
-  padding-right: 1.5rem;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  color: var(--c-text-tertiary);
-  width: 100%;
-}
-.dropdown-field i {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-</style>
-
-
-<script src="../Script/nav.js"></script>
+head.innerHTML = header;
