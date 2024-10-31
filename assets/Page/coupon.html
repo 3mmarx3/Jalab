@@ -3418,10 +3418,10 @@
                 class="text-uppercase tiny text-gray-600 Montserrat-font font-weight-semibold"
                 >Pages</span
               >
-              <h1 class="h2 mb-0 lh-sm">File manager</h1>
+              <h1 class="h2 mb-0 lh-sm">Discount List</h1>
             </div>
             <div class="col-auto d-flex align-items-center my-2 my-sm-0">
-              <a href="#" class="btn btn-lg btn-warning"
+              <a href="#" class="btn btn-lg btn-warning" onclick="addDiscount()"
                 ><svg
                   class="me-2"
                   xmlns="http://www.w3.org/2000/svg"
@@ -3439,7 +3439,7 @@
                     d="M6.329,13.414l-.006-.091V7.677H.677A.677.677,0,0,1,.585,6.329l.092-.006H6.323V.677A.677.677,0,0,1,7.671.585l.006.092V6.323h5.646a.677.677,0,0,1,.091,1.348l-.091.006H7.677v5.646a.677.677,0,0,1-1.348.091Z"
                     fill="#1e1e1e"
                   /></svg
-                ><span>Settings</span>
+                ><span>Add Discount</span>
               </a>
             </div>
           </div>
@@ -3447,1769 +3447,565 @@
       </div>
       <div class="p-3 p-xxl-5">
         <div class="container-fluid px-0 pb-1 pb-md-4">
-          <div class="border-bottom border-gray-200 pb-2 pb-xl-5 mb-2 mb-xl-5">
-            <h5 class="font-weight-semibold text-black-600 mb-lg-4 pb-1">
-              Recent files
-            </h5>
-            <div class="row">
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="p-2 rounded-6 shadow-dark-80 bg-white mb-0 h-100 border border-gray-200"
-                >
-                  <div class="dropdown mb-2 text-end">
-                    <a
-                      href="#"
-                      class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        data-name="Icons/Tabler/Notification"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="10.06"
-                        height="10.06"
-                        viewBox="0 0 13.419 13.419"
-                      >
-                        <rect
-                          data-name="Icons/Tabler/Dots background"
-                          width="13.419"
-                          height="13.419"
-                          fill="none"
-                        ></rect>
-                        <path
-                          d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                          transform="translate(5.368 0.839)"
-                          fill="#6c757d"
-                        ></path>
-                      </svg>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                      <a href="#!" class="dropdown-item"> Action </a>
-                      <a href="#!" class="dropdown-item"> Another action </a>
-                      <a href="#!" class="dropdown-item">
-                        Something else here
-                      </a>
-                    </div>
-                  </div>
-                  <figcaption class="text-center">
-                    <img src="../assets/img/word-software.svg" alt="Word" />
-                    <h6 class="font-weight-semibold open-sans-font mt-3">
-                      My Resume
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base">
-                      Uploaded today by You
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="p-2 rounded-6 shadow-dark-80 bg-white mb-0 h-100 border border-gray-200"
-                >
-                  <div class="dropdown mb-2 text-end">
-                    <a
-                      href="#"
-                      class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        data-name="Icons/Tabler/Notification"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="10.06"
-                        height="10.06"
-                        viewBox="0 0 13.419 13.419"
-                      >
-                        <rect
-                          data-name="Icons/Tabler/Dots background"
-                          width="13.419"
-                          height="13.419"
-                          fill="none"
-                        ></rect>
-                        <path
-                          d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                          transform="translate(5.368 0.839)"
-                          fill="#6c757d"
-                        ></path>
-                      </svg>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                      <a href="#!" class="dropdown-item"> Action </a>
-                      <a href="#!" class="dropdown-item"> Another action </a>
-                      <a href="#!" class="dropdown-item">
-                        Something else here
-                      </a>
-                    </div>
-                  </div>
-                  <figcaption class="text-center">
-                    <img src="../assets/img/pdf.svg" alt="PDF" />
-                    <h6 class="font-weight-semibold open-sans-font mt-3">
-                      Portfolio
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base">
-                      Uploaded today by You
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="rounded-6 shadow-dark-80 bg-white position-relative mb-0 h-100 border border-gray-200"
-                >
-                  <div
-                    class="dropdown mb-2 text-end position-absolute top-0 end-0"
-                  >
-                    <a
-                      href="#"
-                      class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        data-name="Icons/Tabler/Notification"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="10.06"
-                        height="10.06"
-                        viewBox="0 0 13.419 13.419"
-                      >
-                        <rect
-                          data-name="Icons/Tabler/Dots background"
-                          width="13.419"
-                          height="13.419"
-                          fill="none"
-                        ></rect>
-                        <path
-                          d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                          transform="translate(5.368 0.839)"
-                          fill="#6c757d"
-                        ></path>
-                      </svg>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                      <a href="#!" class="dropdown-item"> Action </a>
-                      <a href="#!" class="dropdown-item"> Another action </a>
-                      <a href="#!" class="dropdown-item">
-                        Something else here
-                      </a>
-                    </div>
-                  </div>
-                  <img
-                    src="../assets/img/placeholder22.jpg"
-                    alt="Word"
-                    class="rounded-top-6 w-100"
-                  />
-                  <figcaption class="text-center p-2 p-md-3">
-                    <h6 class="font-weight-semibold open-sans-font">
-                      street-wallpaper.jpg
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base mb-0">
-                      Uploladed yesterday by you
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="p-2 rounded-6 shadow-dark-80 bg-white mb-0 h-100 border border-gray-200"
-                >
-                  <div class="dropdown mb-2 text-end">
-                    <a
-                      href="#"
-                      class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        data-name="Icons/Tabler/Notification"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="10.06"
-                        height="10.06"
-                        viewBox="0 0 13.419 13.419"
-                      >
-                        <rect
-                          data-name="Icons/Tabler/Dots background"
-                          width="13.419"
-                          height="13.419"
-                          fill="none"
-                        ></rect>
-                        <path
-                          d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                          transform="translate(5.368 0.839)"
-                          fill="#6c757d"
-                        ></path>
-                      </svg>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                      <a href="#!" class="dropdown-item"> Action </a>
-                      <a href="#!" class="dropdown-item"> Another action </a>
-                      <a href="#!" class="dropdown-item">
-                        Something else here
-                      </a>
-                    </div>
-                  </div>
-                  <figcaption class="text-center">
-                    <img src="../assets/img/excel-software.svg" alt="Word" />
-                    <h6 class="font-weight-semibold open-sans-font mt-3">
-                      Finance 2021
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base">
-                      Uploladed Jun 9 by you
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="rounded-6 shadow-dark-80 bg-white position-relative mb-0 h-100 border border-gray-200"
-                >
-                  <div
-                    class="dropdown mb-2 text-end position-absolute top-0 end-0"
-                  >
-                    <a
-                      href="#"
-                      class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        data-name="Icons/Tabler/Notification"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="10.06"
-                        height="10.06"
-                        viewBox="0 0 13.419 13.419"
-                      >
-                        <rect
-                          data-name="Icons/Tabler/Dots background"
-                          width="13.419"
-                          height="13.419"
-                          fill="none"
-                        ></rect>
-                        <path
-                          d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                          transform="translate(5.368 0.839)"
-                          fill="#6c757d"
-                        ></path>
-                      </svg>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                      <a href="#!" class="dropdown-item"> Action </a>
-                      <a href="#!" class="dropdown-item"> Another action </a>
-                      <a href="#!" class="dropdown-item">
-                        Something else here
-                      </a>
-                    </div>
-                  </div>
-                  <img
-                    src="../assets/img/placeholder23.jpg"
-                    alt="Word"
-                    class="rounded-top-6 w-100"
-                  />
-                  <figcaption class="text-center p-2 p-md-3">
-                    <h6 class="font-weight-semibold open-sans-font">
-                      IMG_332156.jpg
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base mb-0">
-                      Uploladed Jun 2 by you
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-            </div>
+          <!-- 34564567 -->
+
+          <div class="content">
+            <h1>Create a discount coupon</h1>
+            <p>Add a coupon with the name and value that suits your needs</p>
           </div>
-          <div
-            class="border-bottom border-gray-200 pb-2 pb-xl-5 mb-2 mb-xl-5 pt-3"
-          >
-            <h5 class="font-weight-semibold text-black-600 mb-lg-4 pb-1">
-              Folders
-            </h5>
-            <div class="row">
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="p-2 rounded-6 shadow-dark-80 bg-white mb-0 h-100 border border-gray-200"
-                >
-                  <div class="mb-2 d-flex align-items-center">
-                    <span class="badge badge-sm badge-soft-primary"
-                      >5 files</span
-                    >
-                    <div class="d-flex align-items-center ms-auto">
-                      <a href="#0" class="me-1">
-                        <svg
-                          data-name="icons/tabler/users"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="12"
-                          height="12"
-                          viewBox="0 0 16 16"
-                        >
-                          <rect
-                            data-name="Icons/Tabler/Users background"
-                            width="16"
-                            height="16"
-                            fill="none"
-                          />
-                          <path
-                            d="M14.774,15.468l-.005-.084V13.748a2.666,2.666,0,0,0-2-2.567.615.615,0,1,1,.308-1.192,3.9,3.9,0,0,1,2.918,3.572l.005.183v1.641a.616.616,0,0,1-1.226.084Zm-4.923,0-.005-.084V13.744a2.667,2.667,0,0,0-2.516-2.663l-.151,0H3.9a2.667,2.667,0,0,0-2.662,2.516l0,.151v1.641a.616.616,0,0,1-1.226.084L0,15.385V13.744A3.9,3.9,0,0,1,3.719,9.851l.178,0H7.179a3.9,3.9,0,0,1,3.893,3.719l0,.179v1.641a.616.616,0,0,1-1.226.084ZM1.641,3.9a3.9,3.9,0,1,1,3.9,3.9A3.9,3.9,0,0,1,1.641,3.9Zm1.231,0A2.666,2.666,0,1,0,5.538,1.231,2.669,2.669,0,0,0,2.872,3.9Zm7.814,3.336a.616.616,0,0,1,.444-.749,2.666,2.666,0,0,0,0-5.166A.615.615,0,0,1,11.435.126a3.9,3.9,0,0,1,0,7.551.614.614,0,0,1-.749-.444Z"
-                            fill="#1e1e1e"
-                          />
-                        </svg>
-                      </a>
-                      <div class="dropdown ms-2">
-                        <a
-                          href="#"
-                          class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                          role="button"
-                          data-bs-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                        >
-                          <svg
-                            data-name="Icons/Tabler/Notification"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="13.419"
-                            height="13.419"
-                            viewBox="0 0 13.419 13.419"
-                          >
-                            <rect
-                              data-name="Icons/Tabler/Dots background"
-                              width="13.419"
-                              height="13.419"
-                              fill="none"
-                            ></rect>
-                            <path
-                              d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                              transform="translate(5.368 0.839)"
-                              fill="#6c757d"
-                            ></path>
-                          </svg>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                          <a href="#!" class="dropdown-item"> Action </a>
-                          <a href="#!" class="dropdown-item">
-                            Another action
-                          </a>
-                          <a href="#!" class="dropdown-item">
-                            Something else here
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <figcaption class="text-center">
-                    <img
-                      src="../assets/img/folder.svg"
-                      alt="Folder"
-                      class="arrow-icon"
-                    />
-                    <h6 class="font-weight-semibold open-sans-font mt-3">
-                      Digital Assets
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base">
-                      Uploaded today by You
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="p-2 rounded-6 shadow-dark-80 bg-white mb-0 h-100 border border-gray-200"
-                >
-                  <div class="mb-2 d-flex align-items-center">
-                    <span class="badge badge-sm badge-soft-primary"
-                      >16 files</span
-                    >
-                    <div class="d-flex align-items-center ms-auto">
-                      <div class="dropdown ms-2">
-                        <a
-                          href="#"
-                          class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                          role="button"
-                          data-bs-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                        >
-                          <svg
-                            data-name="Icons/Tabler/Notification"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="10.06"
-                            height="10.06"
-                            viewBox="0 0 13.419 13.419"
-                          >
-                            <rect
-                              data-name="Icons/Tabler/Dots background"
-                              width="13.419"
-                              height="13.419"
-                              fill="none"
-                            ></rect>
-                            <path
-                              d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                              transform="translate(5.368 0.839)"
-                              fill="#6c757d"
-                            ></path>
-                          </svg>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                          <a href="#!" class="dropdown-item"> Action </a>
-                          <a href="#!" class="dropdown-item">
-                            Another action
-                          </a>
-                          <a href="#!" class="dropdown-item">
-                            Something else here
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <figcaption class="text-center">
-                    <img
-                      src="../assets/img/folder.svg"
-                      alt="Folder"
-                      class="arrow-icon"
-                    />
-                    <h6 class="font-weight-semibold open-sans-font mt-3">
-                      Logos
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base">
-                      updated yesterday by You
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="p-2 rounded-6 shadow-dark-80 bg-white mb-0 h-100 border border-gray-200"
-                >
-                  <div class="mb-2 d-flex align-items-center">
-                    <span class="badge badge-sm badge-soft-primary"
-                      >3 files</span
-                    >
-                    <div class="d-flex align-items-center ms-auto">
-                      <div class="dropdown ms-2">
-                        <a
-                          href="#"
-                          class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                          role="button"
-                          data-bs-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                        >
-                          <svg
-                            data-name="Icons/Tabler/Notification"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="10.06"
-                            height="10.06"
-                            viewBox="0 0 13.419 13.419"
-                          >
-                            <rect
-                              data-name="Icons/Tabler/Dots background"
-                              width="13.419"
-                              height="13.419"
-                              fill="none"
-                            ></rect>
-                            <path
-                              d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                              transform="translate(5.368 0.839)"
-                              fill="#6c757d"
-                            ></path>
-                          </svg>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                          <a href="#!" class="dropdown-item"> Action </a>
-                          <a href="#!" class="dropdown-item">
-                            Another action
-                          </a>
-                          <a href="#!" class="dropdown-item">
-                            Something else here
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <figcaption class="text-center">
-                    <img
-                      src="../assets/img/folder.svg"
-                      alt="Folder"
-                      class="arrow-icon"
-                    />
-                    <h6 class="font-weight-semibold open-sans-font mt-3">
-                      Personal stuff
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base">
-                      updated Aug 21 by Janna
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="p-2 rounded-6 shadow-dark-80 bg-white mb-0 h-100 border border-gray-200"
-                >
-                  <div class="mb-2 d-flex align-items-center">
-                    <span class="badge badge-sm badge-soft-primary"
-                      >113 files</span
-                    >
-                    <div class="d-flex align-items-center ms-auto">
-                      <a href="#0" class="me-1">
-                        <svg
-                          data-name="icons/tabler/users"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="12"
-                          height="12"
-                          viewBox="0 0 16 16"
-                        >
-                          <rect
-                            data-name="Icons/Tabler/Users background"
-                            width="16"
-                            height="16"
-                            fill="none"
-                          />
-                          <path
-                            d="M14.774,15.468l-.005-.084V13.748a2.666,2.666,0,0,0-2-2.567.615.615,0,1,1,.308-1.192,3.9,3.9,0,0,1,2.918,3.572l.005.183v1.641a.616.616,0,0,1-1.226.084Zm-4.923,0-.005-.084V13.744a2.667,2.667,0,0,0-2.516-2.663l-.151,0H3.9a2.667,2.667,0,0,0-2.662,2.516l0,.151v1.641a.616.616,0,0,1-1.226.084L0,15.385V13.744A3.9,3.9,0,0,1,3.719,9.851l.178,0H7.179a3.9,3.9,0,0,1,3.893,3.719l0,.179v1.641a.616.616,0,0,1-1.226.084ZM1.641,3.9a3.9,3.9,0,1,1,3.9,3.9A3.9,3.9,0,0,1,1.641,3.9Zm1.231,0A2.666,2.666,0,1,0,5.538,1.231,2.669,2.669,0,0,0,2.872,3.9Zm7.814,3.336a.616.616,0,0,1,.444-.749,2.666,2.666,0,0,0,0-5.166A.615.615,0,0,1,11.435.126a3.9,3.9,0,0,1,0,7.551.614.614,0,0,1-.749-.444Z"
-                            fill="#1e1e1e"
-                          />
-                        </svg>
-                      </a>
-                      <div class="dropdown ms-2">
-                        <a
-                          href="#"
-                          class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                          role="button"
-                          data-bs-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                        >
-                          <svg
-                            data-name="Icons/Tabler/Notification"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="10.06"
-                            height="10.06"
-                            viewBox="0 0 13.419 13.419"
-                          >
-                            <rect
-                              data-name="Icons/Tabler/Dots background"
-                              width="13.419"
-                              height="13.419"
-                              fill="none"
-                            ></rect>
-                            <path
-                              d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                              transform="translate(5.368 0.839)"
-                              fill="#6c757d"
-                            ></path>
-                          </svg>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                          <a href="#!" class="dropdown-item"> Action </a>
-                          <a href="#!" class="dropdown-item">
-                            Another action
-                          </a>
-                          <a href="#!" class="dropdown-item">
-                            Something else here
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <figcaption class="text-center">
-                    <img
-                      src="../assets/img/folder.svg"
-                      alt="Folder"
-                      class="arrow-icon"
-                    />
-                    <h6 class="font-weight-semibold open-sans-font mt-3">
-                      Typography
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base">
-                      updated Aug 2 by you
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="p-2 rounded-6 shadow-dark-80 bg-white mb-0 h-100 border border-gray-200"
-                >
-                  <div class="mb-2 d-flex align-items-center">
-                    <span class="badge badge-sm badge-soft-primary"
-                      >5 files</span
-                    >
-                    <div class="d-flex align-items-center ms-auto">
-                      <a href="#0" class="me-1">
-                        <svg
-                          data-name="icons/tabler/users"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="12"
-                          height="12"
-                          viewBox="0 0 16 16"
-                        >
-                          <rect
-                            data-name="Icons/Tabler/Users background"
-                            width="16"
-                            height="16"
-                            fill="none"
-                          />
-                          <path
-                            d="M14.774,15.468l-.005-.084V13.748a2.666,2.666,0,0,0-2-2.567.615.615,0,1,1,.308-1.192,3.9,3.9,0,0,1,2.918,3.572l.005.183v1.641a.616.616,0,0,1-1.226.084Zm-4.923,0-.005-.084V13.744a2.667,2.667,0,0,0-2.516-2.663l-.151,0H3.9a2.667,2.667,0,0,0-2.662,2.516l0,.151v1.641a.616.616,0,0,1-1.226.084L0,15.385V13.744A3.9,3.9,0,0,1,3.719,9.851l.178,0H7.179a3.9,3.9,0,0,1,3.893,3.719l0,.179v1.641a.616.616,0,0,1-1.226.084ZM1.641,3.9a3.9,3.9,0,1,1,3.9,3.9A3.9,3.9,0,0,1,1.641,3.9Zm1.231,0A2.666,2.666,0,1,0,5.538,1.231,2.669,2.669,0,0,0,2.872,3.9Zm7.814,3.336a.616.616,0,0,1,.444-.749,2.666,2.666,0,0,0,0-5.166A.615.615,0,0,1,11.435.126a3.9,3.9,0,0,1,0,7.551.614.614,0,0,1-.749-.444Z"
-                            fill="#1e1e1e"
-                          />
-                        </svg>
-                      </a>
-                      <div class="dropdown ms-2">
-                        <a
-                          href="#"
-                          class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                          role="button"
-                          data-bs-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                        >
-                          <svg
-                            data-name="Icons/Tabler/Notification"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="10.06"
-                            height="10.06"
-                            viewBox="0 0 13.419 13.419"
-                          >
-                            <rect
-                              data-name="Icons/Tabler/Dots background"
-                              width="13.419"
-                              height="13.419"
-                              fill="none"
-                            ></rect>
-                            <path
-                              d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                              transform="translate(5.368 0.839)"
-                              fill="#6c757d"
-                            ></path>
-                          </svg>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                          <a href="#!" class="dropdown-item"> Action </a>
-                          <a href="#!" class="dropdown-item">
-                            Another action
-                          </a>
-                          <a href="#!" class="dropdown-item">
-                            Something else here
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <figcaption class="text-center">
-                    <img
-                      src="../assets/img/folder.svg"
-                      alt="Folder"
-                      class="arrow-icon"
-                    />
-                    <h6 class="font-weight-semibold open-sans-font mt-3">
-                      Digital Assets
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base">
-                      updated Jul 9 by Janna
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
+
+          <div class="_blo">
+            <div class="container">
+              <form id="discountForm">
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  placeholder="Enter name"
+                />
+                <input
+                  type="number"
+                  id="discount"
+                  min="0"
+                  max="100"
+                  required
+                  placeholder="Enter discount percentage"
+                />
+              </form>
+
+              <ul id="discountList"></ul>
+              <!-- Added ul for the discount list -->
             </div>
-          </div>
-          <div
-            class="border-bottom border-gray-200 pb-2 pb-xl-5 mb-2 mb-xl-5 pt-3"
-          >
-            <div
-              class="bg-blue-50 p-4 p-md-5 position-relative overflow-hidden rounded-12 mb-md-4 alert alert-dismissible zIndex-0"
-              role="alert"
-            >
-              <div class="row mb-0 mb-sm-5 mb-md-0 ps-xl-3">
-                <div class="col-lg-12 col-xl-8 col-xxl-4 pb-md-2">
-                  <a
-                    href="#"
-                    class="btn btn-light btn-icon rounded-pill position-absolute top-16 end-16"
-                    data-bs-dismiss="alert"
-                    aria-label="Close"
-                  >
-                    <svg
-                      data-name="icons/tabler/close"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="15"
-                      height="15"
-                      viewBox="0 0 16 16"
-                    >
-                      <rect
-                        data-name="Icons/Tabler/Close background"
-                        width="16"
-                        height="16"
-                        fill="none"
-                      ></rect>
-                      <path
-                        d="M.82.1l.058.05L6,5.272,11.122.151A.514.514,0,0,1,11.9.82l-.05.058L6.728,6l5.122,5.122a.514.514,0,0,1-.67.777l-.058-.05L6,6.728.878,11.849A.514.514,0,0,1,.1,11.18l.05-.058L5.272,6,.151.878A.514.514,0,0,1,.75.057Z"
-                        transform="translate(2 2)"
-                        fill="#1E1E1E"
-                      ></path>
-                    </svg>
-                  </a>
-                  <span class="badge badge-lg badge-warning text-uppercase py-2"
-                    >Become a Pro</span
-                  >
-                  <h2 class="my-2">
-                    Get instant live results for only $12.99 monthly
-                    <img
-                      src="../assets/svg/icons/right-arrow.svg"
-                      class="ms-2 arrow-icon"
-                      alt="img"
-                    />
-                  </h2>
-                </div>
-                <div class="col-lg-8">
-                  <div class="get-started-img">
-                    <img
-                      src="../assets/img/get-started.png"
-                      class="img-fluid"
-                      alt="img"
-                    />
-                  </div>
+
+            <div class="swiper mySwiper" thumbsslider="">
+              <div class="swiper-wrapper" id="swiperWrapper">
+                <!-- Default Coupon Example -->
+                <div class="swiper-slide">
+                  <div class="swiper mySwiperNested swiperHomeElectric"></div>
                 </div>
               </div>
             </div>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/swiper/9.3.3/swiper-bundle.min.js"></script>
+            <script>
+              function addDiscount() {
+                const name = document.getElementById("name").value;
+                const discount = document.getElementById("discount").value;
+
+                if (name && discount) {
+                  const swiperWrapper =
+                    document.getElementById("swiperWrapper");
+                  const slide = document.createElement("div");
+                  slide.className = "swiper-slide";
+
+                  // Get current time
+                  const currentDate = new Date();
+                  const optionsTime = {
+                    hour: "numeric",
+                    minute: "numeric",
+                    second: "numeric",
+                  };
+                  const timeStr = currentDate.toLocaleTimeString(
+                    "en-US",
+                    optionsTime
+                  );
+
+                  // Format current date for coupon validity
+                  const optionsDate = {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  };
+                  const startDate = currentDate.toLocaleDateString(
+                    "en-US",
+                    optionsDate
+                  );
+                  const endDate = new Date(currentDate);
+                  endDate.setDate(currentDate.getDate() + 2); // Add two days
+                  const endDateStr = endDate.toLocaleDateString(
+                    "en-US",
+                    optionsDate
+                  );
+
+                  slide.innerHTML = `
+                  <div class="swiper mySwiperNested swiperHomeElectric">
+                      <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                              <div class="coupon__wrap">
+                                  <div class="coupon__title">
+                                      <div class="couple__category">${name}</div>
+                                      <div class="coupon__max">Maximum $5</div>
+                                  </div>
+                                  <div class="coupon__detail">
+                                      <div class="coupon__price">${discount}% Discount</div>
+                                      <div class="coupon__info">
+                                          <span id="timeInfo">${timeStr}</span> <!-- Current time when code was created -->
+                                          <span id="dateRange">${startDate} - ${endDateStr}</span> <!-- Date -->
+                                      </div>
+                                      <div class="coupon__footer">
+                                          <div class="coupon__condition">
+                                              <a href="#" onclick="deleteSlide(this)">Delete</a>
+                                          </div>
+                                          <div class="coupon__btn">
+                                              <a href="#" onclick="copyToClipboard('${name}')">Copy</a>
+                                          </div>
+                                      </div>
+                                      <div class="coupon__border"></div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              `;
+
+                  swiperWrapper.appendChild(slide);
+                  document.getElementById("discountForm").reset(); // Reset form
+
+                  // Initialize Swiper if it hasn't been initialized yet
+                  if (!Swiper.instances.length) {
+                    new Swiper(".mySwiper", {
+                      slidesPerView: 1,
+                      spaceBetween: 10,
+                      pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                      },
+                    });
+                  } else {
+                    Swiper.instances[0].update(); // Update existing Swiper instance
+                  }
+                } else {
+                  alert("Please fill in all fields!");
+                }
+              }
+
+              function deleteSlide(element) {
+                const slide = element.closest(".swiper-slide");
+                slide.remove();
+                Swiper.instances[0].update(); // Update Swiper after deletion
+              }
+
+              function copyToClipboard(name) {
+                const textToCopy = `${name}`; // Copy only the name
+                navigator.clipboard
+                  .writeText(textToCopy)
+                  .then(() => {
+                    alert("Copied to clipboard!");
+                  })
+                  .catch((err) => {
+                    alert("Copy failed: " + err);
+                  });
+              }
+            </script>
+
+            <!--  -->
+            <style>
+              * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+              }
+
+              :root {
+                --blue: #1e70ff;
+                --blueRGB: 30, 112, 255;
+                --pink: #fd3ca9;
+                --pinkRGB: 253, 60, 169;
+                --green: #029690;
+                --greenRGB: 2, 167, 160;
+                --purple: #8e30be;
+                --purpleRGB: 142, 48, 190;
+                --red: #fb4a60;
+                --redRGB: 251, 74, 96;
+              }
+
+              .mySwiperTab .swiper-slide {
+                width: auto;
+                height: auto;
+                padding: 30px;
+                font-weight: 700;
+                background-color: #fafafa;
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                transition: 0.25s;
+              }
+              @media (max-width: 991px) {
+                .mySwiperTab .swiper-slide {
+                  padding: 20px;
+                }
+              }
+              @media (max-width: 767px) {
+                .mySwiperTab .swiper-slide {
+                  padding: 15px;
+                }
+              }
+              .mySwiperTab .swiper-slide-thumb-active.tabHomeElectric {
+                color: var(--blue);
+                border-color: var(--blue);
+                background-color: rgba(var(--blueRGB), 0.1);
+              }
+              .mySwiperTab .swiper-slide-thumb-active.tabHomeLife {
+                color: var(--green);
+                border-color: var(--green);
+                background-color: rgba(var(--greenRGB), 0.1);
+              }
+              .mySwiperTab .swiper-slide-thumb-active.tabFashion {
+                color: var(--red);
+                border-color: var(--red);
+                background-color: rgba(var(--redRGB), 0.1);
+              }
+              .mySwiperTab .swiper-slide-thumb-active.tabMotherBaby {
+                color: var(--pink);
+                border-color: var(--pink);
+                background-color: rgba(var(--pinkRGB), 0.1);
+              }
+              .mySwiperTab .swiper-slide-thumb-active.tabBeauty {
+                color: var(--purple);
+                border-color: var(--purple);
+                background-color: rgba(var(--purpleRGB), 0.1);
+              }
+
+              .mySwiperNested .swiper-slide {
+                padding: 15px 0;
+              }
+
+              .mySwiperNested .coupon__wrap {
+                display: flex;
+                flex-flow: row;
+                width: 100%;
+                border-radius: 10px;
+              }
+              .mySwiperNested .coupon__wrap .coupon__title {
+                position: relative;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+                flex: 0 0 auto;
+                width: 35%;
+                padding: 10px;
+              }
+              @media (max-width: 991px) {
+                .mySwiperNested .coupon__wrap .coupon__title {
+                  width: 30%;
+                }
+              }
+              .mySwiperNested .coupon__wrap .coupon__title:before {
+                content: "";
+                position: absolute;
+                top: -10px;
+                right: -10px;
+                width: 15px;
+                height: 15px;
+                background-color: #1e1e1e;
+                border-radius: 100%;
+              }
+              .mySwiperNested .coupon__wrap .coupon__title:after {
+                content: "";
+                position: absolute;
+                top: -11px;
+                right: -10px;
+                width: 20px;
+                height: 10px;
+                background-color: #1e1e1e;
+              }
+              .mySwiperNested .coupon__wrap .coupon__title .couple__category {
+                margin-bottom: 5px;
+                font-size: 12px;
+                font-weight: 700;
+              }
+              .mySwiperNested .coupon__wrap .coupon__title .coupon__max {
+                font-size: 11px;
+              }
+              .mySwiperNested .coupon__wrap .coupon__detail {
+                position: relative;
+                display: flex;
+                flex-flow: column;
+                align-items: flex-start;
+                flex: 0 0 auto;
+                width: 65%;
+                padding: 10px 10px 10px 15px;
+              }
+              @media (max-width: 991px) {
+                .mySwiperNested .coupon__wrap .coupon__detail {
+                  width: 70%;
+                }
+              }
+              .mySwiperNested .coupon__wrap .coupon__detail:before {
+                content: "";
+                position: absolute;
+                bottom: -10px;
+                left: -10px;
+                width: 15px;
+                height: 15px;
+                background-color: #1e1e1e;
+                border-radius: 100%;
+              }
+              .mySwiperNested .coupon__wrap .coupon__detail:after {
+                content: "";
+                position: absolute;
+                bottom: -11px;
+                left: -10px;
+                width: 20px;
+                height: 10px;
+                background-color: #1e1e1e;
+              }
+              .mySwiperNested .coupon__wrap .coupon__detail .coupon__price {
+                margin-bottom: 5px;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+              }
+              @media (max-width: 991px) {
+                .mySwiperNested .coupon__wrap .coupon__detail .coupon__price {
+                  font-size: 14px;
+                }
+              }
+              .mySwiperNested .coupon__wrap .coupon__detail .coupon__info {
+                display: flex;
+                flex-flow: column;
+                align-items: flex-start;
+              }
+              .mySwiperNested .coupon__wrap .coupon__detail .coupon__info span {
+                margin-bottom: 5px;
+                font-size: 11px;
+                text-align: left;
+              }
+              .mySwiperNested .coupon__wrap .coupon__footer {
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+              }
+              .mySwiperNested
+                .coupon__wrap
+                .coupon__footer
+                .coupon__condition
+                a,
+              .mySwiperNested .coupon__wrap .coupon__footer .coupon__btn a {
+                display: inline-flex;
+                padding: 5px 10px;
+                text-decoration: none;
+              }
+              .mySwiperNested
+                .coupon__wrap
+                .coupon__footer
+                .coupon__condition
+                a {
+                border-radius: 15px;
+                font-size: 11px;
+                font-weight: 600;
+              }
+              .mySwiperNested .coupon__wrap .coupon__footer .coupon__btn a {
+                border-radius: 5px;
+                font-size: 12px;
+                color: #fff;
+                font-weight: 600;
+              }
+              .mySwiperNested .coupon__wrap .coupon__border {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 2px;
+                height: calc(100% - 30px);
+                transform: translateY(-50%);
+              }
+
+              .swiperHomeElectric .coupon__wrap {
+                border: 1px solid var(--blue);
+                background-color: rgba(var(--blueRGB), 0.1);
+              }
+              .swiperHomeElectric .coupon__wrap .coupon__title:before,
+              .swiperHomeElectric .coupon__wrap .coupon__detail:before {
+                border: 1px solid #1e1e1e;
+              }
+              .swiperHomeElectric .coupon__wrap .coupon__max,
+              .swiperHomeElectric .coupon__wrap .couple__category {
+                color: var(--blue);
+              }
+              .swiperHomeElectric .coupon__wrap .coupon__price {
+                color: var(--blue);
+              }
+              .swiperHomeElectric .coupon__wrap .coupon__info span {
+                color: var(--blue);
+              }
+              .swiperHomeElectric .coupon__wrap .coupon__condition a {
+                color: var(--blue);
+                background-color: rgba(var(--blueRGB), 0.15);
+              }
+              .swiperHomeElectric .coupon__wrap .coupon__btn a {
+                background-color: var(--blue);
+              }
+              .swiperHomeElectric .coupon__wrap .coupon__border {
+                border-left: 1px dashed var(--blue);
+              }
+
+              .swiperHomeLife .coupon__wrap {
+                border: 1px solid var(--green);
+                background-color: rgba(var(--greenRGB), 0.1);
+              }
+              .swiperHomeLife .coupon__wrap .coupon__title:before,
+              .swiperHomeLife .coupon__wrap .coupon__detail:before {
+                border: 1px solid var(--green);
+              }
+              .swiperHomeLife .coupon__wrap .coupon__max,
+              .swiperHomeLife .coupon__wrap .couple__category {
+                color: var(--green);
+              }
+              .swiperHomeLife .coupon__wrap .coupon__price {
+                color: var(--green);
+              }
+              .swiperHomeLife .coupon__wrap .coupon__info span {
+                color: var(--green);
+              }
+              .swiperHomeLife .coupon__wrap .coupon__condition a {
+                color: var(--green);
+                background-color: rgba(var(--greenRGB), 0.15);
+              }
+              .swiperHomeLife .coupon__wrap .coupon__btn a {
+                background-color: var(--green);
+              }
+              .swiperHomeLife .coupon__wrap .coupon__border {
+                border-left: 1px dashed var(--green);
+              }
+
+              .swiperFashion .coupon__wrap {
+                border: 1px solid var(--red);
+                background-color: rgba(var(--redRGB), 0.1);
+              }
+              .swiperFashion .coupon__wrap .coupon__title:before,
+              .swiperFashion .coupon__wrap .coupon__detail:before {
+                border: 1px solid var(--red);
+              }
+              .swiperFashion .coupon__wrap .coupon__max,
+              .swiperFashion .coupon__wrap .couple__category {
+                color: var(--red);
+              }
+              .swiperFashion .coupon__wrap .coupon__price {
+                color: var(--red);
+              }
+              .swiperFashion .coupon__wrap .coupon__info span {
+                color: var(--red);
+              }
+              .swiperFashion .coupon__wrap .coupon__condition a {
+                color: var(--red);
+                background-color: rgba(var(--redRGB), 0.15);
+              }
+              .swiperFashion .coupon__wrap .coupon__btn a {
+                background-color: var(--red);
+              }
+              .swiperFashion .coupon__wrap .coupon__border {
+                border-left: 1px dashed var(--red);
+              }
+
+              .swiperMotherBaby .coupon__wrap {
+                border: 1px solid var(--pink);
+                background-color: rgba(var(--pinkRGB), 0.1);
+              }
+              .swiperMotherBaby .coupon__wrap .coupon__title:before,
+              .swiperMotherBaby .coupon__wrap .coupon__detail:before {
+                border: 1px solid var(--pink);
+              }
+              .swiperMotherBaby .coupon__wrap .coupon__max,
+              .swiperMotherBaby .coupon__wrap .couple__category {
+                color: var(--pink);
+              }
+              .swiperMotherBaby .coupon__wrap .coupon__price {
+                color: var(--pink);
+              }
+              .swiperMotherBaby .coupon__wrap .coupon__info span {
+                color: var(--pink);
+              }
+              .swiperMotherBaby .coupon__wrap .coupon__condition a {
+                color: var(--pink);
+                background-color: rgba(var(--pinkRGB), 0.15);
+              }
+              .swiperMotherBaby .coupon__wrap .coupon__btn a {
+                background-color: var(--pink);
+              }
+              .swiperMotherBaby .coupon__wrap .coupon__border {
+                border-left: 1px dashed var(--pink);
+              }
+
+              .swiperBeauty .coupon__wrap {
+                border: 1px solid var(--purple);
+                background-color: rgba(var(--purpleRGB), 0.1);
+              }
+              .swiperBeauty .coupon__wrap .coupon__title:before,
+              .swiperBeauty .coupon__wrap .coupon__detail:before {
+                border: 1px solid var(--purple);
+              }
+              .swiperBeauty .coupon__wrap .coupon__max,
+              .swiperBeauty .coupon__wrap .couple__category {
+                color: var(--purple);
+              }
+              .swiperBeauty .coupon__wrap .coupon__price {
+                color: var(--purple);
+              }
+              .swiperBeauty .coupon__wrap .coupon__info span {
+                color: var(--purple);
+              }
+              .swiperBeauty .coupon__wrap .coupon__condition a {
+                color: var(--purple);
+                background-color: rgba(var(--purpleRGB), 0.15);
+              }
+              .swiperBeauty .coupon__wrap .coupon__btn a {
+                background-color: var(--purple);
+              }
+              .swiperBeauty .coupon__wrap .coupon__border {
+                border-left: 1px dashed var(--purple);
+              }
+
+              .content {
+                margin-bottom: 30px;
+              }
+              .content h1 {
+                font-size: 2rem;
+                text-align: center;
+                margin-bottom: 10px;
+              }
+              .content p {
+                text-align: center;
+              }
+              form#discountForm {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+              }
+              form#discountForm input {
+                width: 100%;
+                padding: 15px;
+                outline: none;
+                border-radius: 5px;
+                border: 1px solid #343a40 !important;
+                background: none;
+                color: white;
+              }
+              .button {
+                padding: 15px 20px;
+                border: none;
+                outline: none;
+                background-color: #151515;
+                color: #eee;
+                border-radius: 7px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.25s ease-out;
+              }
+
+              .button:hover {
+                transform: translateY(-3px);
+              }
+
+              .button-span {
+                color: #aaa;
+              }
+            </style>
           </div>
-          <div
-            class="border-bottom border-gray-200 pb-2 pb-xl-5 mb-2 mb-xl-5 pt-3"
-          >
-            <h5 class="font-weight-semibold text-black-600 mb-lg-4 pb-1">
-              Browse files by people
-            </h5>
-            <div class="row">
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="p-2 rounded-6 shadow-dark-80 bg-white mb-0 h-100 border border-gray-200"
-                >
-                  <div class="mb-2 d-flex align-items-center">
-                    <span class="badge badge-sm badge-soft-primary"
-                      >18 files</span
-                    >
-                    <div class="dropdown ms-auto">
-                      <a
-                        href="#"
-                        class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        <svg
-                          data-name="Icons/Tabler/Notification"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="10.06"
-                          height="10.06"
-                          viewBox="0 0 13.419 13.419"
-                        >
-                          <rect
-                            data-name="Icons/Tabler/Dots background"
-                            width="13.419"
-                            height="13.419"
-                            fill="none"
-                          ></rect>
-                          <path
-                            d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                            transform="translate(5.368 0.839)"
-                            fill="#6c757d"
-                          ></path>
-                        </svg>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-end">
-                        <a href="#!" class="dropdown-item"> Action </a>
-                        <a href="#!" class="dropdown-item"> Another action </a>
-                        <a href="#!" class="dropdown-item">
-                          Something else here
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <figcaption class="text-center">
-                    <div class="circle circle-xl mx-auto">
-                      <img src="../assets/img/avatar1@60.png" alt="Avatar" />
-                    </div>
-                    <h6 class="font-weight-semibold open-sans-font mt-3">
-                      Sakane Miiko
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base">
-                      updated horns.php - 13 jan 2021
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="p-2 rounded-6 shadow-dark-80 bg-white mb-0 h-100 border border-gray-200"
-                >
-                  <div class="mb-2 d-flex align-items-center">
-                    <span class="badge badge-sm badge-soft-primary"
-                      >18 files</span
-                    >
-                    <div class="dropdown ms-auto">
-                      <a
-                        href="#"
-                        class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        <svg
-                          data-name="Icons/Tabler/Notification"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="10.06"
-                          height="10.06"
-                          viewBox="0 0 13.419 13.419"
-                        >
-                          <rect
-                            data-name="Icons/Tabler/Dots background"
-                            width="13.419"
-                            height="13.419"
-                            fill="none"
-                          ></rect>
-                          <path
-                            d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                            transform="translate(5.368 0.839)"
-                            fill="#6c757d"
-                          ></path>
-                        </svg>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-end">
-                        <a href="#!" class="dropdown-item"> Action </a>
-                        <a href="#!" class="dropdown-item"> Another action </a>
-                        <a href="#!" class="dropdown-item">
-                          Something else here
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <figcaption class="text-center">
-                    <div class="circle circle-xl mx-auto">
-                      <img src="../assets/img/avatar2@60.png" alt="Avatar" />
-                    </div>
-                    <h6 class="font-weight-semibold open-sans-font mt-3">
-                      Sakane Miiko
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base">
-                      updated horns.php - 13 jan 2021
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="p-2 rounded-6 shadow-dark-80 bg-white mb-0 h-100 border border-gray-200"
-                >
-                  <div class="mb-2 d-flex align-items-center">
-                    <span class="badge badge-sm badge-soft-primary"
-                      >18 files</span
-                    >
-                    <div class="dropdown ms-auto">
-                      <a
-                        href="#"
-                        class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        <svg
-                          data-name="Icons/Tabler/Notification"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="10.06"
-                          height="10.06"
-                          viewBox="0 0 13.419 13.419"
-                        >
-                          <rect
-                            data-name="Icons/Tabler/Dots background"
-                            width="13.419"
-                            height="13.419"
-                            fill="none"
-                          ></rect>
-                          <path
-                            d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                            transform="translate(5.368 0.839)"
-                            fill="#6c757d"
-                          ></path>
-                        </svg>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-end">
-                        <a href="#!" class="dropdown-item"> Action </a>
-                        <a href="#!" class="dropdown-item"> Another action </a>
-                        <a href="#!" class="dropdown-item">
-                          Something else here
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <figcaption class="text-center">
-                    <div class="circle circle-xl mx-auto">
-                      <img src="../assets/img/avatar3@60.png" alt="Avatar" />
-                    </div>
-                    <h6 class="font-weight-semibold open-sans-font mt-3">
-                      Sakane Miiko
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base">
-                      Tiles background.jpg
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="p-2 rounded-6 shadow-dark-80 bg-white mb-0 h-100 border border-gray-200"
-                >
-                  <div class="mb-2 d-flex align-items-center">
-                    <span class="badge badge-sm badge-soft-primary"
-                      >18 files</span
-                    >
-                    <div class="dropdown ms-auto">
-                      <a
-                        href="#"
-                        class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        <svg
-                          data-name="Icons/Tabler/Notification"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="10.06"
-                          height="10.06"
-                          viewBox="0 0 13.419 13.419"
-                        >
-                          <rect
-                            data-name="Icons/Tabler/Dots background"
-                            width="13.419"
-                            height="13.419"
-                            fill="none"
-                          ></rect>
-                          <path
-                            d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                            transform="translate(5.368 0.839)"
-                            fill="#6c757d"
-                          ></path>
-                        </svg>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-end">
-                        <a href="#!" class="dropdown-item"> Action </a>
-                        <a href="#!" class="dropdown-item"> Another action </a>
-                        <a href="#!" class="dropdown-item">
-                          Something else here
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <figcaption class="text-center">
-                    <div class="circle circle-xl mx-auto">
-                      <img src="../assets/img/avatar4@60.png" alt="Avatar" />
-                    </div>
-                    <h6 class="font-weight-semibold open-sans-font mt-3">
-                      Sakane Miiko
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base">
-                      updated horns.php - 13 jan 2021
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="p-2 rounded-6 shadow-dark-80 bg-white mb-0 h-100 border border-gray-200"
-                >
-                  <div class="mb-2 d-flex align-items-center">
-                    <span class="badge badge-sm badge-soft-primary"
-                      >18 files</span
-                    >
-                    <div class="dropdown ms-auto">
-                      <a
-                        href="#"
-                        class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                      >
-                        <svg
-                          data-name="Icons/Tabler/Notification"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="10.06"
-                          height="10.06"
-                          viewBox="0 0 13.419 13.419"
-                        >
-                          <rect
-                            data-name="Icons/Tabler/Dots background"
-                            width="13.419"
-                            height="13.419"
-                            fill="none"
-                          ></rect>
-                          <path
-                            d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                            transform="translate(5.368 0.839)"
-                            fill="#6c757d"
-                          ></path>
-                        </svg>
-                      </a>
-                      <div class="dropdown-menu dropdown-menu-end">
-                        <a href="#!" class="dropdown-item"> Action </a>
-                        <a href="#!" class="dropdown-item"> Another action </a>
-                        <a href="#!" class="dropdown-item">
-                          Something else here
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <figcaption class="text-center">
-                    <div class="circle circle-xl mx-auto">
-                      <img src="../assets/img/avatar5@60.png" alt="Avatar" />
-                    </div>
-                    <h6 class="font-weight-semibold open-sans-font mt-3">
-                      Sakane Miiko
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base">
-                      updated horns.php - 13 jan 2021
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-            </div>
-          </div>
-          <div class="pt-3">
-            <h5 class="font-weight-semibold text-black-600 mb-lg-4 pb-1">
-              Files
-            </h5>
-            <div class="row">
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="p-2 rounded-6 shadow-dark-80 bg-white mb-0 h-100 border border-gray-200"
-                >
-                  <div class="dropdown mb-2 text-end">
-                    <a
-                      href="#"
-                      class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        data-name="Icons/Tabler/Notification"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="10.06"
-                        height="10.06"
-                        viewBox="0 0 13.419 13.419"
-                      >
-                        <rect
-                          data-name="Icons/Tabler/Dots background"
-                          width="13.419"
-                          height="13.419"
-                          fill="none"
-                        ></rect>
-                        <path
-                          d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                          transform="translate(5.368 0.839)"
-                          fill="#6c757d"
-                        ></path>
-                      </svg>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                      <a href="#!" class="dropdown-item"> Action </a>
-                      <a href="#!" class="dropdown-item"> Another action </a>
-                      <a href="#!" class="dropdown-item">
-                        Something else here
-                      </a>
-                    </div>
-                  </div>
-                  <figcaption class="text-center">
-                    <img
-                      src="../assets/img/zip.svg"
-                      alt="Zip"
-                      class="arrow-icon"
-                    />
-                    <h6 class="font-weight-semibold open-sans-font mt-3">
-                      2020 Results
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base">
-                      Uploaded Sep 23 by You
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="rounded-6 shadow-dark-80 bg-white position-relative mb-0 h-100 border border-gray-200"
-                >
-                  <div
-                    class="dropdown mb-2 text-end position-absolute top-0 end-0"
-                  >
-                    <a
-                      href="#"
-                      class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        data-name="Icons/Tabler/Notification"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="10.06"
-                        height="10.06"
-                        viewBox="0 0 13.419 13.419"
-                      >
-                        <rect
-                          data-name="Icons/Tabler/Dots background"
-                          width="13.419"
-                          height="13.419"
-                          fill="none"
-                        ></rect>
-                        <path
-                          d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                          transform="translate(5.368 0.839)"
-                          fill="#6c757d"
-                        ></path>
-                      </svg>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                      <a href="#!" class="dropdown-item"> Action </a>
-                      <a href="#!" class="dropdown-item"> Another action </a>
-                      <a href="#!" class="dropdown-item">
-                        Something else here
-                      </a>
-                    </div>
-                  </div>
-                  <img
-                    src="../assets/img/placeholder24.jpg"
-                    alt="Word"
-                    class="rounded-top-6 w-100"
-                  />
-                  <figcaption class="text-center p-2 p-md-3">
-                    <h6 class="font-weight-semibold open-sans-font">
-                      ps5-retouched.png
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base mb-0">
-                      Uploaded Sep 14 by You
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="rounded-6 shadow-dark-80 bg-white position-relative mb-0 h-100 border border-gray-200"
-                >
-                  <div
-                    class="dropdown mb-2 text-end position-absolute top-0 end-0"
-                  >
-                    <a
-                      href="#"
-                      class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        data-name="Icons/Tabler/Notification"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="10.06"
-                        height="10.06"
-                        viewBox="0 0 13.419 13.419"
-                      >
-                        <rect
-                          data-name="Icons/Tabler/Dots background"
-                          width="13.419"
-                          height="13.419"
-                          fill="none"
-                        ></rect>
-                        <path
-                          d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                          transform="translate(5.368 0.839)"
-                          fill="#6c757d"
-                        ></path>
-                      </svg>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                      <a href="#!" class="dropdown-item"> Action </a>
-                      <a href="#!" class="dropdown-item"> Another action </a>
-                      <a href="#!" class="dropdown-item">
-                        Something else here
-                      </a>
-                    </div>
-                  </div>
-                  <img
-                    src="../assets/img/placeholder25.jpg"
-                    alt="Word"
-                    class="rounded-top-6 w-100"
-                  />
-                  <figcaption class="text-center p-2 p-md-3">
-                    <h6 class="font-weight-semibold open-sans-font">
-                      Tiles background.jpg
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base mb-0">
-                      Uploaded Sep 2 by You
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="p-2 rounded-6 shadow-dark-80 bg-white mb-0 h-100 border border-gray-200"
-                >
-                  <div class="dropdown mb-2 text-end">
-                    <a
-                      href="#"
-                      class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        data-name="Icons/Tabler/Notification"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="10.06"
-                        height="10.06"
-                        viewBox="0 0 13.419 13.419"
-                      >
-                        <rect
-                          data-name="Icons/Tabler/Dots background"
-                          width="13.419"
-                          height="13.419"
-                          fill="none"
-                        ></rect>
-                        <path
-                          d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                          transform="translate(5.368 0.839)"
-                          fill="#6c757d"
-                        ></path>
-                      </svg>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                      <a href="#!" class="dropdown-item"> Action </a>
-                      <a href="#!" class="dropdown-item"> Another action </a>
-                      <a href="#!" class="dropdown-item">
-                        Something else here
-                      </a>
-                    </div>
-                  </div>
-                  <figcaption class="text-center">
-                    <img src="../assets/img/excel-software.svg" alt="Word" />
-                    <h6 class="font-weight-semibold open-sans-font mt-3">
-                      Roadmap 2021
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base">
-                      Uploaded Sep 1 by You
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="rounded-6 shadow-dark-80 bg-white position-relative mb-0 h-100 border border-gray-200"
-                >
-                  <div
-                    class="dropdown mb-2 text-end position-absolute top-0 end-0"
-                  >
-                    <a
-                      href="#"
-                      class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        data-name="Icons/Tabler/Notification"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="10.06"
-                        height="10.06"
-                        viewBox="0 0 13.419 13.419"
-                      >
-                        <rect
-                          data-name="Icons/Tabler/Dots background"
-                          width="13.419"
-                          height="13.419"
-                          fill="none"
-                        ></rect>
-                        <path
-                          d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                          transform="translate(5.368 0.839)"
-                          fill="#6c757d"
-                        ></path>
-                      </svg>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                      <a href="#!" class="dropdown-item"> Action </a>
-                      <a href="#!" class="dropdown-item"> Another action </a>
-                      <a href="#!" class="dropdown-item">
-                        Something else here
-                      </a>
-                    </div>
-                  </div>
-                  <img
-                    src="../assets/img/placeholder26.jpg"
-                    alt="Word"
-                    class="rounded-top-6 w-100"
-                  />
-                  <figcaption class="text-center p-2 p-md-3">
-                    <h6 class="font-weight-semibold open-sans-font">
-                      street-view.jpg
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base mb-0">
-                      Uploaded Aug 31 by You
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="p-2 rounded-6 shadow-dark-80 bg-white mb-0 h-100 border border-gray-200"
-                >
-                  <div class="dropdown mb-2 text-end">
-                    <a
-                      href="#"
-                      class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        data-name="Icons/Tabler/Notification"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="10.06"
-                        height="10.06"
-                        viewBox="0 0 13.419 13.419"
-                      >
-                        <rect
-                          data-name="Icons/Tabler/Dots background"
-                          width="13.419"
-                          height="13.419"
-                          fill="none"
-                        ></rect>
-                        <path
-                          d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                          transform="translate(5.368 0.839)"
-                          fill="#6c757d"
-                        ></path>
-                      </svg>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                      <a href="#!" class="dropdown-item"> Action </a>
-                      <a href="#!" class="dropdown-item"> Another action </a>
-                      <a href="#!" class="dropdown-item">
-                        Something else here
-                      </a>
-                    </div>
-                  </div>
-                  <figcaption class="text-center">
-                    <img src="../assets/img/word-software.svg" alt="Word" />
-                    <h6 class="font-weight-semibold open-sans-font mt-3">
-                      Content Ideas
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base">
-                      Uploaded Aug 29 by You
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="p-2 rounded-6 shadow-dark-80 bg-white mb-0 h-100 border border-gray-200"
-                >
-                  <div class="dropdown mb-2 text-end">
-                    <a
-                      href="#"
-                      class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        data-name="Icons/Tabler/Notification"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="10.06"
-                        height="10.06"
-                        viewBox="0 0 13.419 13.419"
-                      >
-                        <rect
-                          data-name="Icons/Tabler/Dots background"
-                          width="13.419"
-                          height="13.419"
-                          fill="none"
-                        ></rect>
-                        <path
-                          d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                          transform="translate(5.368 0.839)"
-                          fill="#6c757d"
-                        ></path>
-                      </svg>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                      <a href="#!" class="dropdown-item"> Action </a>
-                      <a href="#!" class="dropdown-item"> Another action </a>
-                      <a href="#!" class="dropdown-item">
-                        Something else here
-                      </a>
-                    </div>
-                  </div>
-                  <figcaption class="text-center">
-                    <img src="../assets/img/pdf.svg" alt="PDF" />
-                    <h6 class="font-weight-semibold open-sans-font mt-3">
-                      BMW Logos
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base">
-                      Uploaded Aug 14 by You
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="rounded-6 shadow-dark-80 bg-white position-relative mb-0 h-100 border border-gray-200"
-                >
-                  <div
-                    class="dropdown mb-2 text-end position-absolute top-0 end-0"
-                  >
-                    <a
-                      href="#"
-                      class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        data-name="Icons/Tabler/Notification"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="10.06"
-                        height="10.06"
-                        viewBox="0 0 13.419 13.419"
-                      >
-                        <rect
-                          data-name="Icons/Tabler/Dots background"
-                          width="13.419"
-                          height="13.419"
-                          fill="none"
-                        ></rect>
-                        <path
-                          d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                          transform="translate(5.368 0.839)"
-                          fill="#6c757d"
-                        ></path>
-                      </svg>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                      <a href="#!" class="dropdown-item"> Action </a>
-                      <a href="#!" class="dropdown-item"> Another action </a>
-                      <a href="#!" class="dropdown-item">
-                        Something else here
-                      </a>
-                    </div>
-                  </div>
-                  <img
-                    src="../assets/img/placeholder27.jpg"
-                    alt="Word"
-                    class="rounded-top-6 w-100"
-                  />
-                  <figcaption class="text-center p-2 p-md-3">
-                    <h6 class="font-weight-semibold open-sans-font">
-                      app-homepage.jpg
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base mb-0">
-                      Uploaded Aug 9 by You
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="rounded-6 shadow-dark-80 bg-white position-relative mb-0 h-100 border border-gray-200"
-                >
-                  <div
-                    class="dropdown mb-2 text-end position-absolute top-0 end-0"
-                  >
-                    <a
-                      href="#"
-                      class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        data-name="Icons/Tabler/Notification"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="10.06"
-                        height="10.06"
-                        viewBox="0 0 13.419 13.419"
-                      >
-                        <rect
-                          data-name="Icons/Tabler/Dots background"
-                          width="13.419"
-                          height="13.419"
-                          fill="none"
-                        ></rect>
-                        <path
-                          d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                          transform="translate(5.368 0.839)"
-                          fill="#6c757d"
-                        ></path>
-                      </svg>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                      <a href="#!" class="dropdown-item"> Action </a>
-                      <a href="#!" class="dropdown-item"> Another action </a>
-                      <a href="#!" class="dropdown-item">
-                        Something else here
-                      </a>
-                    </div>
-                  </div>
-                  <img
-                    src="../assets/img/placeholder28.jpg"
-                    alt="Word"
-                    class="rounded-top-6 w-100"
-                  />
-                  <figcaption class="text-center p-2 p-md-3">
-                    <h6 class="font-weight-semibold open-sans-font">
-                      IMG_33243.jpg
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base mb-0">
-                      Uploaded Aug 1 by You
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="p-2 rounded-6 shadow-dark-80 bg-white mb-0 h-100 border border-gray-200"
-                >
-                  <div class="dropdown mb-2 text-end">
-                    <a
-                      href="#"
-                      class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        data-name="Icons/Tabler/Notification"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="10.06"
-                        height="10.06"
-                        viewBox="0 0 13.419 13.419"
-                      >
-                        <rect
-                          data-name="Icons/Tabler/Dots background"
-                          width="13.419"
-                          height="13.419"
-                          fill="none"
-                        ></rect>
-                        <path
-                          d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                          transform="translate(5.368 0.839)"
-                          fill="#6c757d"
-                        ></path>
-                      </svg>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                      <a href="#!" class="dropdown-item"> Action </a>
-                      <a href="#!" class="dropdown-item"> Another action </a>
-                      <a href="#!" class="dropdown-item">
-                        Something else here
-                      </a>
-                    </div>
-                  </div>
-                  <figcaption class="text-center">
-                    <img src="../assets/img/word-software.svg" alt="Word" />
-                    <h6 class="font-weight-semibold open-sans-font mt-3">
-                      Digital Assets
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base">
-                      Uploaded Jul 5 by You
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="p-2 rounded-6 shadow-dark-80 bg-white mb-0 h-100 border border-gray-200"
-                >
-                  <div class="dropdown mb-2 text-end">
-                    <a
-                      href="#"
-                      class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        data-name="Icons/Tabler/Notification"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="10.06"
-                        height="10.06"
-                        viewBox="0 0 13.419 13.419"
-                      >
-                        <rect
-                          data-name="Icons/Tabler/Dots background"
-                          width="13.419"
-                          height="13.419"
-                          fill="none"
-                        ></rect>
-                        <path
-                          d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                          transform="translate(5.368 0.839)"
-                          fill="#6c757d"
-                        ></path>
-                      </svg>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                      <a href="#!" class="dropdown-item"> Action </a>
-                      <a href="#!" class="dropdown-item"> Another action </a>
-                      <a href="#!" class="dropdown-item">
-                        Something else here
-                      </a>
-                    </div>
-                  </div>
-                  <figcaption class="text-center">
-                    <img
-                      src="../assets/img/code2.svg"
-                      alt="Code"
-                      class="arrow-icon"
-                    />
-                    <h6 class="font-weight-semibold open-sans-font mt-3">
-                      HTML Files
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base">
-                      Uploaded Jul 2 by You
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-              <div
-                class="col-6 col-md-4 col-lg-6 col-xl-4 has-xxl-5 mb-3 mb-lg-4"
-              >
-                <figure
-                  class="p-2 rounded-6 shadow-dark-80 bg-white mb-0 h-100 border border-gray-200"
-                >
-                  <div class="dropdown mb-2 text-end">
-                    <a
-                      href="#"
-                      class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-haspopup="true"
-                      aria-expanded="false"
-                    >
-                      <svg
-                        data-name="Icons/Tabler/Notification"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="10.06"
-                        height="10.06"
-                        viewBox="0 0 13.419 13.419"
-                      >
-                        <rect
-                          data-name="Icons/Tabler/Dots background"
-                          width="13.419"
-                          height="13.419"
-                          fill="none"
-                        ></rect>
-                        <path
-                          d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                          transform="translate(5.368 0.839)"
-                          fill="#6c757d"
-                        ></path>
-                      </svg>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-end">
-                      <a href="#!" class="dropdown-item"> Action </a>
-                      <a href="#!" class="dropdown-item"> Another action </a>
-                      <a href="#!" class="dropdown-item">
-                        Something else here
-                      </a>
-                    </div>
-                  </div>
-                  <figcaption class="text-center">
-                    <img
-                      src="../assets/img/zip.svg"
-                      alt="Zip"
-                      class="arrow-icon"
-                    />
-                    <h6 class="font-weight-semibold open-sans-font mt-3">
-                      Photos
-                    </h6>
-                    <p class="text-gray-600 fs-11 lh-base">
-                      Uploaded Jul 1 by You
-                    </p>
-                  </figcaption>
-                </figure>
-              </div>
-            </div>
-          </div>
+
+          <!-- 00000 -->
         </div>
         <footer class="pt-xl-5 mt-lg-2">
           <div

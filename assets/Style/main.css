@@ -11723,7 +11723,6 @@ caption {
 .btn-group-lg > .btn,
 .btn-lg {
   font-size: 1rem;
-  height: 3rem;
   line-height: 1.875rem;
   padding: 0.5rem 1.4375rem;
 }
@@ -17989,7 +17988,6 @@ body.container .bg-blue-50.alert-dismissible .ps-xl-3 h2 {
   .sidebar-compact .signout .btn-group-lg > .btn,
   .sidebar-compact .signout .btn-lg {
     padding: 0.625rem 0.9375rem;
-    height: 3rem;
   }
   .grid-option > .dropdown-menu {
     min-width: 17.5rem;
@@ -18341,8 +18339,8 @@ input#search-barcode {
   padding: 5px;
   border-radius: 5px;
   background: no-repeat;
-  border: 1px solid #343a40;
   color: white;
+  text-align: center;
 }
 
 ul.nav.nav-segment.nav-pills.mb-7 {
@@ -18362,4 +18360,15 @@ button.exit {
   background: no-repeat;
   color: white;
   border: none;
+}
+
+.col-auto.d-flex.align-items-center.my-2.my-sm-0 {
+  gap: 10px;
+}
+
+a.btn.btn-lg.btn-warning {
+  /* height: initial; */
+  background: #2d2d2d;
+  color: #6c6c6c;
+  border: 1px solid rgb(63, 63, 63);
 }
