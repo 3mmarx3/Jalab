@@ -4,7 +4,7 @@ footer = `
             <div class="row align-items-center">
               <div class="col-md-6">
                 <p class="fs-16 text-gray-600 my-2">
-                  2020 © Fabrx Design - All rights reserved.
+                  2024 © Fabrx Design - All rights reserved.
                 </p>
               </div>
               <div class="col-md-6">
