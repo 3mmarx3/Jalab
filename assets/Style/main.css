@@ -18377,11 +18377,9 @@ a.btn.btn-lg.btn-warning {
   display: flex;
   gap: 10px;
   justify-content: end;
-  padding: 0 20px;
 }
 
 button {
-  padding: 10px 20px;
   background-color: #f0f0f0;
   border: none;
   cursor: pointer;
