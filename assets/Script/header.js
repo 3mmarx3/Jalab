@@ -20,6 +20,7 @@ header = `
         <button id="btn-ar" class="notranslate" onclick="changeLanguage('ar')">
           AR
         </button>
+        ||
         <button id="btn-en" class="notranslate" onclick="changeLanguage('en')">
           EN
         </button>

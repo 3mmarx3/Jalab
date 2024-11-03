@@ -16297,10 +16297,7 @@ body.container:not(.top-header):not(.double-header).muze-dark-mode.muze-rtl
   .border-end {
   border-right: none !important;
 }
-body.container:not(.muze-rtl) .main-content .p-xxl-5,
-body.container:not(.muze-rtl) .main-content .px-xxl-5 {
-  padding-right: 0 !important;
-}
+
 body.container.muze-rtl .main-content .p-xxl-5,
 body.container.muze-rtl .main-content .px-xxl-5 {
   padding-left: 0 !important;
@@ -17424,10 +17421,7 @@ body.container .bg-blue-50.alert-dismissible .ps-xl-3 h2 {
   .muze-rtl .form-check .form-check-input {
     margin-right: -1.5em;
   }
-  body.container:not(.muze-rtl) .main-content .p-xxl-5,
-  body.container:not(.muze-rtl) .main-content .px-xxl-5 {
-    padding-left: 0 !important;
-  }
+
   body.container.muze-rtl .main-content .p-xxl-5,
   body.container.muze-rtl .main-content .px-xxl-5 {
     padding-right: 0 !important;
@@ -17749,11 +17743,7 @@ body.container .bg-blue-50.alert-dismissible .ps-xl-3 h2 {
     max-width: 100%;
     padding: 0;
   }
-  body.container:not(.muze-rtl) .main-content .p-xxl-5,
-  body.container:not(.muze-rtl) .main-content .px-xxl-5 {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
+
   body.container.double-header .main-content .header:before {
     height: 4.6875rem;
   }
@@ -18387,8 +18377,14 @@ button {
   border-radius: 5px;
 }
 
-button.active {
+/* button.active {
   background-color: #007bff;
+  color: white;
+} */
+
+button#btn-ar,
+button#btn-en {
+  background: none;
   color: white;
 }
 
@@ -18432,4 +18428,5 @@ font {
 
 body {
   font-family: "Cairo", sans-serif !important;
+  top: 0 !important;
 }
