@@ -14,6 +14,34 @@ header = `
                     </a>
                 </div>
                 <div class="col-auto d-flex flex-wrap align-items-center icon-blue-hover ps-0">
+
+    <main>
+      <div class="switch-lang">
+        <button id="btn-ar" class="notranslate" onclick="changeLanguage('ar')">
+          AR
+        </button>
+        <button id="btn-en" class="notranslate" onclick="changeLanguage('en')">
+          EN
+        </button>
+      </div>
+
+      <!-- عنصر Google Translate (مخفي) -->
+      <div id="google_element"></div>
+
+      <div class="none" style="display: none">
+        <p
+          class="title"
+          id="title"
+          data-meaning-en="UI/UX Designer + Graphic Designer"
+          data-meaning-ar="مصمم UI/UX +  "
+        >
+          UI/UX Designer + Graphic Designer
+        </p>
+        <h2>ammar</h2>
+      </div>
+    </main>
+
+
                     <div class="dropdown grid-option">
                         <a href="#" class="text-dark ms-4 ms-xxl-5 mb-0 notification" data-bs-toggle="dropdown" aria-expanded="false" id="notification">
                             <svg id="Icons_tabler_notification" data-name="Icons/tabler/notification" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">

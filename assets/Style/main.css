@@ -554,7 +554,7 @@ progress {
   .container,
   .container-md,
   .container-sm {
-    max-width: 720px;
+    max-width: 100%;
   }
 }
 @media (min-width: 992px) {
@@ -10987,9 +10987,7 @@ hr {
 .border-cyan-900 {
   border-color: #032830 !important;
 }
-.Montserrat-font {
-  font-family: Montserrat, sans-serif;
-}
+
 .open-sans-font {
   font-family: "Open Sans", sans-serif;
 }
@@ -11006,17 +11004,8 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  font-family: Montserrat, sans-serif;
 }
-.btn,
-.display-1,
-.display-2,
-.display-3,
-.display-4,
-.display-5,
-.display-6 {
-  font-family: Montserrat, sans-serif;
-}
+
 .font-weight-semibold {
   font-weight: 600 !important;
 }
@@ -12324,7 +12313,6 @@ textarea.form-control.form-control-sm {
 .nav-tabs .nav-link {
   padding: 0.85rem 1.85rem;
   color: #495057;
-  font-family: Montserrat, sans-serif;
 }
 .nav-tabs .nav-link.active {
   border-color: #e9ecef;
@@ -13002,7 +12990,6 @@ textarea.form-control.form-control-sm {
 }
 .navbar-vertical.navbar-expand-lg .navbar-nav .nav-item.nav-subtitle .small,
 .navbar-vertical.navbar-expand-lg .navbar-nav .nav-item.nav-subtitle small {
-  font-family: Montserrat, sans-serif;
   font-size: 0.625rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -13019,7 +13006,6 @@ textarea.form-control.form-control-sm {
   padding: 0.775rem 2rem;
   font-weight: 600;
   color: #6c757d;
-  font-family: Montserrat, sans-serif;
   font-size: 0.875rem;
 }
 .navbar-vertical.navbar-expand-lg .navbar-nav .nav-link svg path {
@@ -18374,4 +18360,78 @@ a.btn.btn-lg.btn-warning {
   background: #2d2d2d;
   color: #6c6c6c;
   border: 1px solid rgb(63, 63, 63);
+}
+
+* {
+  letter-spacing: 0 !important;
+}
+
+/*  */
+
+.switch-lang {
+  display: flex;
+  gap: 10px;
+}
+
+.switch-lang {
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+  padding: 0 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+/* إخفاء واجهة Google Translate */
+#google_element {
+  display: none;
+}
+
+/* منع الترجمة على العناصر */
+.notranslate {
+  translate: no;
+}
+
+/* تطبيق خط كايرو عند اختيار اللغة العربية */
+body.arabic {
+  font-family: "Cairo", sans-serif;
+}
+
+/* إخفاء العناصر ذات الصلة بمكتبة Google Translate */
+.goog-te-banner-frame,
+.goog-te-menu-value,
+.goog-te-menu2-item,
+.goog-te-combo,
+.skiptranslate {
+  display: none !important;
+}
+
+.-VIpgJd-yAWNEb-VIpgJd-fmcms-sn540 {
+  background: none !important;
+}
+
+font {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+body {
+  font-family: "Cairo", sans-serif !important;
 }
