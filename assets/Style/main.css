@@ -7065,7 +7065,7 @@ fieldset:disabled .btn {
 .rounded-3 {
   border-radius: 0.3rem !important;
 }
-.rounded-circle {
+class="customize-sidebar".rounded-circle {
   border-radius: 50% !important;
 }
 .rounded-pill {
@@ -11341,14 +11341,7 @@ caption {
 .Fabrx-section {
   padding: 5rem 0;
 }
-.avatar {
-  position: relative;
-  display: inline-block;
-  width: 3.125rem;
-  height: 3.125rem;
-  min-width: 3.125rem;
-  border-radius: 0.375rem;
-}
+
 .avatar .avatar-img {
   border-radius: 0.375rem;
   max-width: 100%;
@@ -11422,19 +11415,7 @@ caption {
 .avatar.avatar-sm .avatar-initials {
   font-size: 0.8125rem;
 }
-.avatar.avatar-xs {
-  width: 1.75rem;
-  min-width: 1.75rem;
-  height: 1.75rem;
-}
-.avatar.avatar-xs .avatar-initials {
-  font-size: 0.75rem;
-}
-.avatar.avatar-xss {
-  width: 1.125rem;
-  min-width: 1.125rem;
-  height: 1.125rem;
-}
+
 .avatar-danger,
 .avatar-dark,
 .avatar-info,
@@ -18429,4 +18410,13 @@ font {
 body {
   font-family: "Cairo", sans-serif !important;
   top: 0 !important;
+  background: #1e1e1e !important;
+  color: white !important;
+}
+
+div.avatar.avatar-xs.avatar-circle {
+  width: 20px;
+  height: 20px;
+  background: aliceblue;
+  border: 1px solid #1a1919;
 }
