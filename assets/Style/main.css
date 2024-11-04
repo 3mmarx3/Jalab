@@ -11749,6 +11749,11 @@ caption {
   font-size: 1.125rem;
   padding: 0.25rem;
   width: 1.9375rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 .media {
   display: -ms-flexbox;
@@ -18324,13 +18329,6 @@ button.exit {
 
 .col-auto.d-flex.align-items-center.my-2.my-sm-0 {
   gap: 10px;
-}
-
-a.btn.btn-lg.btn-warning {
-  /* height: initial; */
-  background: #2d2d2d;
-  color: #6c6c6c;
-  border: 1px solid rgb(63, 63, 63);
 }
 
 * {

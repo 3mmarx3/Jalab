@@ -7,7 +7,7 @@ nav = `   <nav class="navbar navbar-vertical navbar-expand-lg navbar-light">
 
 
           <li class="nav-item">
-            <a class="nav-link collapsed" href="#">
+            <a class="nav-link collapsed" href="/Jalab/index.html">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                 <g data-name="icons/tabler/chart" transform="translate(0)">
                   <rect data-name="Icons/Tabler/Chart background" width="16" height="16" fill="none"></rect>
