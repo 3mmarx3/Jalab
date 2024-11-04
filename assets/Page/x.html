@@ -208,7 +208,8 @@
       function searchBarcode() {
         const searchValue = document
           .getElementById("search-barcode")
-          .value.trim().toLowerCase(); // تحويل القيمة إلى حروف صغيرة
+          .value.trim()
+          .toLowerCase(); // تحويل القيمة إلى حروف صغيرة
         const rows = document.querySelectorAll("#barcode-list tr");
         let found = false;
 
