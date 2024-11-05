@@ -26,21 +26,30 @@ header = `
         </button>
       </div>
 
-      <!-- عنصر Google Translate (مخفي) -->
       <div id="google_element"></div>
 
-      <div class="none" style="display: none">
-        <p
-          class="title"
-          id="title"
-          data-meaning-en="UI/UX Designer + Graphic Designer"
-          data-meaning-ar="مصمم UI/UX +  "
-        >
-          UI/UX Designer + Graphic Designer
-        </p>
-        <h2>ammar</h2>
-      </div>
+
+      
+    
     </main>
+
+<div class="muze-hamburger d-block d-lg-none col-auto">
+  <!-- أيقونة همبورجر (قبل الضغط) -->
+  <svg id="icons_tabler_hamburger" data-name="icons/tabler/hamburger" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16" class="hamburger-icon">
+    <rect id="Icons_Tabler_Hamburger_background" data-name="Icons/Tabler/Hamburger background" width="16" height="16" fill="none"/>
+    <path id="Color" d="M15.314,8H.686A.661.661,0,0,1,0,7.368a.653.653,0,0,1,.593-.625l.093-.006H15.314A.661.661,0,0,1,16,7.368a.653.653,0,0,1-.593.626Zm0-6.737H.686A.661.661,0,0,1,0,.632.654.654,0,0,1,.593.005L.686,0H15.314A.661.661,0,0,1,16,.632a.653.653,0,0,1-.593.625Z" transform="translate(0 4)" fill="#ffffff"/>
+  </svg>
+
+  <!-- أيقونة إغلاق (بعد الضغط) -->
+  <svg id="icons_tabler_close" data-name="icons/tabler/close" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" style="width:20px;" class="close-icon">
+    <rect id="Icons_Tabler_Close_background" data-name="Icons/Tabler/Close background" width="16" height="16" fill="none"/>
+    <path id="Color" d="M.82.1l.058.05L6,5.272,11.122.151A.514.514,0,0,1,11.9.82l-.05.058L6.728,6l5.122,5.122a.514.514,0,0,1-.67.777l-.058-.05L6,6.728.878,11.849A.514.514,0,0,1,.1,11.18l.05-.058L5.272,6,.151.878A.514.514,0,0,1,.75.057Z" transform="translate(2 2)" fill="#ffffff"/>
+  </svg>
+</div>
+
+
+ 
+    
 
 
                     <div class="dropdown grid-option">
@@ -107,3 +116,11 @@ header = `
 let head = document.getElementById("header");
 
 head.innerHTML = header;
+
+// إضافة حدث عند النقر على الـ div
+document
+  .querySelector(".muze-hamburger")
+  .addEventListener("click", function () {
+    // إضافة/إزالة الكلاس لتبديل الأيقونات
+    this.classList.toggle("menu-active");
+  });

@@ -18418,3 +18418,30 @@ div.avatar.avatar-xs.avatar-circle {
   background: aliceblue;
   border: 1px solid #1a1919;
 }
+
+.col-auto.d-flex.flex-wrap.align-items-center.icon-blue-hover.ps-0 {
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+/* إخفاء أيقونة الإغلاق في البداية */
+.close-icon {
+  display: none;
+}
+
+/* تخصيص الأيقونات لتكون باللون الأبيض */
+.hamburger-icon,
+.close-icon {
+  fill: #ffffff; /* تحديد اللون الأبيض */
+}
+
+/* عند النقر على div، إظهار أو إخفاء الأيقونات */
+.menu-active .hamburger-icon {
+  display: none;
+}
+
+.menu-active .close-icon {
+  display: block;
+}
