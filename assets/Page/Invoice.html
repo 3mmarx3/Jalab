@@ -1,196 +1,487 @@
-
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice Document</title>
+    <link rel="stylesheet" href="../Style/main.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #1e1e1e !important;
+        color: white;
+      }
+      h2 {
+        font-weight: 800;
+      }
+      .invoice {
+        padding: 20px;
+      }
+      .invoice-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .invoice-header-left {
+        flex: 1;
+      }
+      .invoice-header-right {
+        flex: 1;
+        text-align: right;
+      }
+      .invoice-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 5%;
+      }
+      .invoice-table th,
+      .invoice-table td {
+        border: 1px solid #000;
+        padding: 10px;
+        text-align: center;
+      }
+      .invoice-table th {
+        background-color: #1a1919;
+        color: #fff;
+        font-weight: bold;
+      }
+      .invoice-total {
+        float: right;
+      }
+      #video {
+        display: none;
+        width: 100%;
+        max-width: 400px;
+        margin: 20px 0;
+      }
+      #result {
+        margin-top: 10px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="invoice">
+      <div class="invoice-header">
+        <div class="invoice-header-left">
+          <!-- <img src="../img/logo.PNG" alt="Company Logo" width="150" /> -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invoice V1</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-
-    <link rel="stylesheet" type="text/css" href="styles.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link
-    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
-</head>
-
-<body>
-
-    <section id="invoice">
-        <div class="container ">
-            <div class="text-center">
-                <img src="images/logo_dark.png" alt="">
-            </div>
-        
-            <div class="d-md-flex justify-content-between">
-                <div>
-                    <p class="text-primary">Invoice To</p>
-                    <h4>Roger Y. Will</h4>
-                    <ul class="list-unstyled">
-                        <li>XYZ Company</li>
-                        <li>info@xyzcompany.com</li>
-                        <li>123 Main Street</li>
-                    </ul>
-                </div>
-                <div class="mt-5 mt-md-0">
-                    <p class="text-primary">Invoice From</p>
-                    <h4>William Peter</h4>
-                    <ul class="list-unstyled">
-                        <li>ABC Company</li>
-                        <li>info@abccompany.com</li>
-                        <li>456 Main Street</li>
-                    </ul>
-                </div>
-            </div>
-
-            <table class="table border my-5">
-                <thead>
-                    <tr class="bg-primary-subtle">
-                        <th scope="col">No.</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Total</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Brand Designing</td>
-                        <td>$350.00</td>
-                        <td>2</td>
-                        <td>$700.00</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Website Development</td>
-                        <td>$250.00</td>
-                        <td>1</td>
-                        <td>$250.00</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Blog Writing</td>
-                        <td>$100.00</td>
-                        <td>4</td>
-                        <td>$400.00</td>
-                    </tr>
-                    <th scope="row">4</th>
-                    <td>Logo Designing</td>
-                    <td>$350.00</td>
-                    <td>2</td>
-                    <td>$700.00</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>Wordpress Theme Development</td>
-                        <td>$250.00</td>
-                        <td>2</td>
-                        <td>$500.00</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">6</th>
-                        <td>Website Advertisement</td>
-                        <td>$100.00</td>
-                        <td>4</td>
-                        <td>$400.00</td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td></td>
-                        <td></td>
-                        <td class="">Sub-Total</td>
-                        <td>$2,350.00</td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td></td>
-                        <td></td>
-                        <td class="">TAX 20%</td>
-                        <td>$470.00</td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td></td>
-                        <td></td>
-                        <td class="text-primary fw-bold">Grand-Total</td>
-                        <td class="text-primary fw-bold">$1,880.00</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="d-md-flex justify-content-between my-5">
-                <div>
-                    <h5 class="fw-bold my-4">Contact Us</h5>
-                    <ul class="list-unstyled">
-                        <li><iconify-icon class="social-icon text-primary fs-5 me-2" icon="mdi:location"
-                                style="vertical-align:text-bottom"></iconify-icon> 30 E Lake St, Chicago, USA</li>
-                        <li><iconify-icon class="social-icon text-primary fs-5 me-2" icon="solar:phone-bold"
-                                style="vertical-align:text-bottom"></iconify-icon> (510) 710-3464</li>
-                        <li><iconify-icon class="social-icon text-primary fs-5 me-2" icon="ic:baseline-email"
-                                style="vertical-align:text-bottom"></iconify-icon> info@worldcourse.com</li>
-                    </ul>
-                </div>
-                <div>
-                    <h5 class="fw-bold my-4">Payment Info</h5>
-                    <ul class="list-unstyled">
-                        <li><span class="fw-semibold">Account No: </span> 102 3345 56938</li>
-                        <li><span class="fw-semibold">Account Name: </span> William Peter</li>
-                        <li><span class="fw-semibold">Branch Name: </span> XYZ </li>
-
-                    </ul>
-                </div>
-
-
-            </div>
-
-            <div class="text-center my-5">
-                <p class="text-muted"><span class="fw-semibold">NOTICE: </span> A finance charge of 1.5% will be made on
-                    unpaid balances after 30 days.</p>
-            </div>
-
-            <div id="footer-bottom">
-                <div class="container border-top">
-                    <div class="row mt-3">
-                        <div class="col-md-6 copyright">
-                            <p>© 2024 Invoice. <a href="#" target="_blank"
-                                    class="text-decoration-none text-black-50">Terms & Conditions</a> </p>
-                        </div>
-                        <div class="col-md-6 text-md-end">
-                            <p>Free HTML Template by: <a href="https://templatesjungle.com/" target="_blank"
-                                    class="text-decoration-none text-black-50">
-                                    TemplatesJungle</a> </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+          <h1>Company Name</h1>
+          <p>123 Main Street, Cityville, Country</p>
+          <p>Email: info@company.com</p>
+          <p>Phone: +1 234-567-8901</p>
         </div>
-    </section>
 
+        <div class="invoice-header-right">
+          <h2 style="color: white">Invoice</h2>
+          <p>Invoice Number: #123456</p>
+          <p>Date: 2023-12-03</p>
+        </div>
+      </div>
 
+      <!--  -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+      <div class="col-auto d-flex align-items-center my-2 my-sm-0">
+        <div class="messageBox">
+          <div class="fileUploadWrapper">
+            <label for="upload">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 337 337"
+              >
+                <circle
+                  stroke-width="20"
+                  stroke="#6c6c6c"
+                  fill="none"
+                  r="158.5"
+                  cy="168.5"
+                  cx="168.5"
+                ></circle>
+                <path
+                  stroke-linecap="round"
+                  stroke-width="25"
+                  stroke="#6c6c6c"
+                  d="M167.759 79V259"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-width="25"
+                  stroke="#6c6c6c"
+                  d="M79 167.138H259"
+                ></path>
+              </svg>
+              <span class="tooltip">Add an image</span>
+            </label>
+            <input
+              type="file"
+              id="upload"
+              name="upload"
+              accept="image/*"
+              onchange="handleFileSelect(event)"
+            />
+          </div>
 
+          <!-- upload -->
 
-           <!-- مكتبة Google Translate -->
-           <script
-           type="text/javascript"
-           src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-         ></script>
-     
-         <script src="../Script/app.js"></script>
+          <input
+            required=""
+            type="text"
+            id="discount"
+            placeholder="Enter Discount (%)"
+          />
 
-</body>
+          <button id="sendButton" onclick="applyDiscount()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="#6c6c6c"
+              class="bi bi-search"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+              ></path>
+            </svg>
+          </button>
 
+          <button id="sendButton" onclick="processImage()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 664 663"
+            >
+              <path
+                fill="none"
+                d="M646.293 331.888L17.7538 17.6187L155.245 331.888M646.293 331.888L17.753 646.157L155.245 331.888M646.293 331.888L318.735 330.228L155.245 331.888"
+              ></path>
+              <path
+                stroke-linejoin="round"
+                stroke-linecap="round"
+                stroke-width="33.67"
+                stroke="#6c6c6c"
+                d="M646.293 331.888L17.7538 17.6187L155.245 331.888M646.293 331.888L17.753 646.157L155.245 331.888M646.293 331.888L318.735 330.228L155.245 331.888"
+              ></path>
+            </svg>
+          </button>
+        </div>
+
+        <style>
+          /* From Uiverse.io by vinodjangid07 */
+          .messageBox {
+            width: fit-content;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #2d2d2d;
+            padding: 0 15px;
+            border-radius: 5px;
+            border: 1px solid rgb(63, 63, 63);
+          }
+          .messageBox:focus-within {
+            border: 1px solid rgb(110, 110, 110);
+          }
+          .fileUploadWrapper {
+            width: fit-content;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+          }
+
+          #upload {
+            display: none;
+          }
+          .fileUploadWrapper label {
+            cursor: pointer;
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+          }
+          .fileUploadWrapper label svg {
+            height: 18px;
+          }
+          .fileUploadWrapper label svg path {
+            transition: all 0.3s;
+          }
+          .fileUploadWrapper label svg circle {
+            transition: all 0.3s;
+          }
+          .fileUploadWrapper label:hover svg path {
+            stroke: #fff;
+          }
+          .fileUploadWrapper label:hover svg circle {
+            stroke: #fff;
+            fill: #3c3c3c;
+          }
+          .fileUploadWrapper label:hover .tooltip {
+            display: block;
+            opacity: 1;
+          }
+          .tooltip {
+            position: absolute;
+            top: -40px;
+            display: none;
+            opacity: 0;
+            color: white;
+            font-size: 10px;
+            text-wrap: nowrap;
+            background-color: #000;
+            padding: 6px 10px;
+            border: 1px solid #3c3c3c;
+            border-radius: 5px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.596);
+            transition: all 0.3s;
+          }
+          input#discount {
+            width: 200px;
+            height: 100%;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            padding-left: 10px;
+            color: white;
+          }
+          input#discount:focus ~ #sendButton svg path,
+          input#discount:valid ~ #sendButton svg path {
+            fill: #3c3c3c;
+            stroke: white;
+          }
+
+          #sendButton {
+            width: fit-content;
+            height: 100%;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+          }
+          #sendButton svg {
+            height: 18px;
+            transition: all 0.3s;
+          }
+          #sendButton svg path {
+            transition: all 0.3s;
+          }
+          #sendButton:hover svg path {
+            fill: #3c3c3c;
+            stroke: white;
+          }
+        </style>
+
+        <a href="#0" class="btn btn-lg btn-warning" onclick="startCamera()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-camera"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4z"
+            ></path>
+            <path
+              d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"
+            ></path>
+          </svg>
+        </a>
+      </div>
+      <!--  -->
+      <br />
+
+      <div>
+        <video id="video"></video>
+        <div id="result"></div>
+
+        <table id="barcode-list" class="invoice-table">
+          <thead>
+            <tr>
+              <th>Barcode</th>
+              <th>Price</th>
+              <th>Size</th>
+              <th>Color</th>
+              <th>Quantity</th>
+              <th>Price After Discount</th>
+              <th>Total</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Dynamically populated rows will go here -->
+          </tbody>
+        </table>
+      </div>
+
+      <div class="invoice-total">
+        <p>Subtotal: $<span id="subtotal">0.00</span></p>
+        <p>Total: $<span id="total">0.00</span></p>
+      </div>
+
+      <div class="invoice-footer">
+        <div class="mt-3">
+          <p>Thank you for your support</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/@zxing/library@latest"></script>
+    <script>
+      let selectedFile;
+      let codeReader = new ZXing.BrowserBarcodeReader();
+
+      function handleFileSelect(event) {
+        selectedFile = event.target.files[0];
+        document.getElementById("result").innerText = ""; // Clear previous result
+      }
+
+      async function processImage() {
+        if (selectedFile) {
+          const resultElement = document.getElementById("result");
+          resultElement.innerText = "Processing...";
+
+          const imgElement = document.createElement("img");
+          imgElement.src = URL.createObjectURL(selectedFile);
+
+          imgElement.onload = async () => {
+            try {
+              const result = await codeReader.decodeFromImageElement(
+                imgElement
+              );
+              resultElement.innerText = result.text; // Display the result
+              addBarcodeToList(result.text, "0.00", "N/A", "N/A", "0");
+              playSound(); // Play sound on success
+              updateTotals(); // Update totals after adding barcode
+            } catch (error) {
+              resultElement.innerText = "Failed to read barcode.";
+              console.error("Image scan error:", error);
+            }
+          };
+        } else {
+          document.getElementById("result").innerText =
+            "Please select an image first.";
+        }
+      }
+
+      async function startCamera() {
+        const videoElement = document.getElementById("video");
+        const resultElement = document.getElementById("result");
+        videoElement.style.display = "block";
+
+        try {
+          const stream = await navigator.mediaDevices.getUserMedia({
+            video: { facingMode: "environment" },
+          });
+          videoElement.srcObject = stream;
+          videoElement.play();
+
+          codeReader.decodeFromVideoDevice(
+            null,
+            videoElement,
+            (result, err) => {
+              if (result) {
+                resultElement.innerText = result.text;
+                addBarcodeToList(result.text, "0.00", "N/A", "N/A", "0");
+                playSound();
+                codeReader.reset();
+                stream.getTracks().forEach((track) => track.stop());
+                updateTotals(); // Update totals after scanning
+              }
+              if (err && !(err instanceof ZXing.NotFoundException)) {
+                console.error(err);
+              }
+            }
+          );
+        } catch (error) {
+          console.error("Error accessing camera:", error);
+          resultElement.innerText = "Error accessing camera.";
+        }
+      }
+
+      function playSound() {
+        const sound = new Audio("path/to/success-sound.mp3"); // Replace with your sound file
+        sound.play();
+      }
+
+      function addBarcodeToList(barcode, price, size, color, quantity) {
+        const barcodeList = document
+          .getElementById("barcode-list")
+          .getElementsByTagName("tbody")[0];
+        const row = document.createElement("tr");
+        row.innerHTML = `
+                <td>${barcode}</td>
+                <td contenteditable="true">${price}</td>
+                <td contenteditable="true">${size}</td>
+                <td contenteditable="true">${color}</td>
+                <td contenteditable="true">${quantity}</td>
+                <td class="price-after-discount">0.00</td>
+                <td class="total">0.00</td> <!-- New Total Cell -->
+                <td>
+                    <button onclick="removeBarcode(this)" class="exit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1-.708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                        </svg>
+                    </button>
+                </td>
+            `;
+        barcodeList.appendChild(row);
+        updateTotals(); // Update totals when a new barcode is added
+      }
+
+      function removeBarcode(button) {
+        const row = button.parentElement.parentElement;
+        row.parentElement.removeChild(row);
+        updateTotals(); // Update totals when a barcode is removed
+      }
+
+      function applyDiscount() {
+        const discountValue =
+          parseFloat(document.getElementById("discount").value) || 0;
+
+        const barcodeList = document.getElementById("barcode-list");
+        const rows = barcodeList.getElementsByTagName("tbody")[0].rows;
+
+        for (let i = 0; i < rows.length; i++) {
+          const row = rows[i];
+          const price = parseFloat(row.cells[1].innerText) || 0;
+          const discountAmount = (price * discountValue) / 100;
+          const priceAfterDiscount = price - discountAmount;
+
+          row.cells[5].innerText = priceAfterDiscount.toFixed(2); // Update price after discount
+          const quantity = parseFloat(row.cells[4].innerText) || 0;
+          const total = priceAfterDiscount * quantity;
+          row.cells[6].innerText = total.toFixed(2); // Update total
+        }
+
+        updateTotals(); // Update totals after applying the discount
+      }
+
+      function updateTotals() {
+        const barcodeList = document.getElementById("barcode-list");
+        const rows = barcodeList.getElementsByTagName("tbody")[0].rows;
+
+        let subtotal = 0;
+
+        for (let i = 0; i < rows.length; i++) {
+          const row = rows[i];
+          const total = parseFloat(row.cells[6].innerText) || 0;
+          subtotal += total;
+        }
+
+        document.getElementById("subtotal").innerText = subtotal.toFixed(2);
+        document.getElementById("total").innerText = subtotal.toFixed(2);
+      }
+    </script>
+  </body>
 </html>
