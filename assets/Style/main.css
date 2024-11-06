@@ -26,7 +26,7 @@
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
-  --bs-light: #212529;
+  --bs-light: #f8fcfc;
   --bs-dark: #212529;
   --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
@@ -10231,7 +10231,9 @@ select::-ms-expand {
 .bg-gray-50 {
   background-color: #e9ecef !important;
 }
-
+.bg-gray-100 {
+  background-color: #f8f9fa !important;
+}
 .bg-gray-200 {
   background-color: #e9ecef;
 }
@@ -10581,7 +10583,26 @@ select::-ms-expand {
 .btn-soft-primary {
   color: #0d6efd;
 }
-
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.display-5,
+.display-6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #1e1e1e;
+}
 .text-secondary {
   color: #495057 !important;
 }
@@ -12640,7 +12661,7 @@ textarea.form-control.form-control-sm {
   left: 16.0625rem;
   top: 0;
   right: 0;
-  background-color: #1e1e1e !important;
+  background-color: #f8f9fa;
   z-index: 16;
 }
 .header-search {
@@ -13087,11 +13108,14 @@ textarea.form-control.form-control-sm {
   right: 0;
   bottom: 0;
   padding: 0.625rem 2.125rem;
+  background-color: #fff;
 }
 .nav-sm .nav-link {
   font-size: 0.8125rem;
 }
-
+.navbar-light {
+  background-color: #fff;
+}
 .sidebar-compact .header-fixed,
 .sidebar-icons .header-fixed {
   left: 5rem;
@@ -18395,6 +18419,8 @@ div.avatar.avatar-xs.avatar-circle {
   border: 1px solid #1a1919;
 }
 
+
+
 .col-auto.d-flex.flex-wrap.align-items-center.icon-blue-hover.ps-0 {
   gap: 10px;
   align-items: center;
@@ -18402,14 +18428,14 @@ div.avatar.avatar-xs.avatar-circle {
   padding: 0;
 }
 
+
 /* إخفاء أيقونة الإغلاق في البداية */
 .close-icon {
   display: none;
 }
 
 /* تخصيص الأيقونات لتكون باللون الأبيض */
-.hamburger-icon,
-.close-icon {
+.hamburger-icon, .close-icon {
   fill: #ffffff; /* تحديد اللون الأبيض */
 }
 
