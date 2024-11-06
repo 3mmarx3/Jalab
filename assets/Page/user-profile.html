@@ -167,7 +167,7 @@
                   class="nav-link"
                   href="#general"
                   onclick="showTab(event, 'general')"
-                  >General</a
+                  >Purchases</a
                 >
               </li>
               <li class="nav-item">
@@ -175,7 +175,7 @@
                   class="nav-link active"
                   href="#activity"
                   onclick="showTab(event, 'activity')"
-                  >Activity</a
+                  >Information</a
                 >
               </li>
               <li class="nav-item">
@@ -183,7 +183,7 @@
                   class="nav-link"
                   href="#friends"
                   onclick="showTab(event, 'friends')"
-                  >Friends</a
+                  >Delivery number</a
                 >
               </li>
               <li class="nav-item">
@@ -191,7 +191,7 @@
                   class="nav-link"
                   href="#groups"
                   onclick="showTab(event, 'groups')"
-                  >Groups</a
+                  >points</a
                 >
               </li>
             </ul>
@@ -201,365 +201,124 @@
                 display: none;
               }
               .tab-content.active {
-                display: flex;
+                display: block;
               }
             </style>
             <!-- الأقسام المخفية -->
 
             <div id="friends" class="tab-content">
-              This is the Friends section.
-            </div>
-            <div id="groups" class="tab-content">
-              This is the Groups section.
-            </div>
-
-            <script>
-              function showTab(event, tabId) {
-                event.preventDefault();
-
-                // إخفاء جميع الأقسام
-                document
-                  .querySelectorAll(".tab-content")
-                  .forEach(function (tab) {
-                    tab.classList.remove("active");
-                  });
-
-                // جعل القسم المحدد مرئياً
-                document.getElementById(tabId).classList.add("active");
-              }
-
-              // جعل أول عنصر ظاهر عند تحميل الصفحة
-              document.getElementById("general").classList.add("active");
-            </script>
-          </div>
-
-          <div id="general" class="tab-content row active">
-            <div class="col-xl-7 col-xxl-8">
-              <div
-                class="card rounded-12 shadow-dark-80 border border-gray-50 mb-4"
-              >
+              <!-- merooooo -->
+              <div class="data_us">
                 <div
-                  class="d-flex flex-wrap align-items-center px-3 px-md-4 py-3 border-bottom border-gray-200"
+                  class="card rounded-12 shadow-dark-80 border border-gray-50 mb-4 mb-xl-0"
                 >
-                  <div class="col">
-                    <h5
-                      class="card-header-title mb-0 my-md-2 ps-md-3 font-weight-semibold"
+                  <div class="card-body p-0">
+                    <div
+                      class="d-flex align-items-center px-3 px-md-4 py-3 border-bottom border-gray-200"
                     >
-                      Your recent activity
-                    </h5>
-                  </div>
-                </div>
-                <div class="card-body p-0">
-                  <div class="list-group list-group-flush">
-                    <div class="list-group-item px-md-4">
-                      <div class="row px-3">
-                        <div class="col-auto">
-                          <span class="avatar avatar-xs avatar-circle">1 </span>
+                      <h5
+                        class="card-header-title my-md-2 font-weight-semibold ps-md-3"
+                      >
+                        User Data
+                      </h5>
+                    </div>
+                    <div class="list-group list-group-flush">
+                      <div class="list-group-item px-3 px-md-4">
+                        <div class="row align-items-center px-md-3">
+                          <div class="col ps-0">
+                            <p class="card-text small text-gray-600 lh-sm">
+                              User_Name
+                            </p>
+                            <h6 class="mb-1 font-weight-semibold">
+                              Ammar Ahmed
+                            </h6>
+                          </div>
                         </div>
-                        <div class="col ps-0">
-                          <span class="mb-2 d-block text-gray-800"
-                            >You left
-                            <strong class="font-weight-semibold"
-                              >Public Announcement</strong
-                            >
-                            group</span
-                          >
-                          <p class="card-text text-gray-600 lh-sm">
-                            24 December, 2021 - 12:45pm
-                          </p>
+                      </div>
+
+                      <div class="list-group-item px-3 px-md-4">
+                        <div class="row align-items-center px-md-3">
+                          <div class="col ps-0">
+                            <p class="card-text small text-gray-600 lh-sm">
+                              Address
+                            </p>
+                            <h6 class="mb-1 font-weight-semibold">
+                              Lorem ipsum dolor sit amet.
+                            </h6>
+                          </div>
                         </div>
-                        <div class="col-auto">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                              role="button"
-                              data-bs-toggle="dropdown"
-                              aria-haspopup="true"
-                              aria-expanded="false"
-                            >
-                              <svg
-                                data-name="Icons/Tabler/Notification"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="13.419"
-                                height="13.419"
-                                viewBox="0 0 13.419 13.419"
-                              >
-                                <rect
-                                  data-name="Icons/Tabler/Dots background"
-                                  width="13.419"
-                                  height="13.419"
-                                  fill="none"
-                                ></rect>
-                                <path
-                                  d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                                  transform="translate(5.368 0.839)"
-                                  fill="#6c757d"
-                                ></path>
-                              </svg>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end">
-                              <a href="#!" class="dropdown-item"> Action </a>
-                              <a href="#!" class="dropdown-item">
-                                Another action
-                              </a>
-                              <a href="#!" class="dropdown-item">
-                                Something else here
-                              </a>
-                            </div>
+                      </div>
+
+                      <div class="list-group-item px-3 px-md-4">
+                        <div class="row align-items-center px-md-3">
+                          <div class="col ps-0">
+                            <p class="card-text small text-gray-600 lh-sm">
+                              PHONE Number
+                            </p>
+                            <h6 class="mb-1 font-weight-semibold">
+                              +201070479599
+                            </h6>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="list-group-item px-3 px-md-4">
+                        <div class="row align-items-center px-md-3">
+                          <div class="col ps-0">
+                            <p class="card-text small text-gray-600 lh-sm">
+                              brithdy
+                            </p>
+                            <h6 class="mb-1 font-weight-semibold">1-3-2004</h6>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="list-group-item px-3 px-md-4">
+                        <div class="row align-items-center px-md-3">
+                          <div class="col ps-0">
+                            <p class="card-text small text-gray-600 lh-sm">
+                              ID
+                            </p>
+                            <h6 class="mb-1 font-weight-semibold">
+                              3040301022
+                            </h6>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <!-- tow -->
-                    <div class="list-group-item px-md-4">
-                      <div class="row px-3">
-                        <div class="col-auto">
-                          <span class="avatar avatar-xs avatar-circle">1 </span>
-                        </div>
-                        <div class="col ps-0">
-                          <span class="mb-2 d-block text-gray-800"
-                            >You left
-                            <strong class="font-weight-semibold"
-                              >Public Announcement</strong
-                            >
-                            group</span
-                          >
-                          <p class="card-text text-gray-600 lh-sm">
-                            24 December, 2021 - 12:45pm
-                          </p>
-                        </div>
-                        <div class="col-auto">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                              role="button"
-                              data-bs-toggle="dropdown"
-                              aria-haspopup="true"
-                              aria-expanded="false"
-                            >
-                              <svg
-                                data-name="Icons/Tabler/Notification"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="13.419"
-                                height="13.419"
-                                viewBox="0 0 13.419 13.419"
-                              >
-                                <rect
-                                  data-name="Icons/Tabler/Dots background"
-                                  width="13.419"
-                                  height="13.419"
-                                  fill="none"
-                                ></rect>
-                                <path
-                                  d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                                  transform="translate(5.368 0.839)"
-                                  fill="#6c757d"
-                                ></path>
-                              </svg>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end">
-                              <a href="#!" class="dropdown-item"> Action </a>
-                              <a href="#!" class="dropdown-item">
-                                Another action
-                              </a>
-                              <a href="#!" class="dropdown-item">
-                                Something else here
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!--  -->
-                    <div class="list-group-item px-md-4">
-                      <div class="row px-3">
-                        <div class="col-auto">
-                          <span class="avatar avatar-xs avatar-circle">1 </span>
-                        </div>
-                        <div class="col ps-0">
-                          <span class="mb-2 d-block text-gray-800"
-                            >You left
-                            <strong class="font-weight-semibold"
-                              >Public Announcement</strong
-                            >
-                            group</span
-                          >
-                          <p class="card-text text-gray-600 lh-sm">
-                            24 December, 2021 - 12:45pm
-                          </p>
-                        </div>
-                        <div class="col-auto">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                              role="button"
-                              data-bs-toggle="dropdown"
-                              aria-haspopup="true"
-                              aria-expanded="false"
-                            >
-                              <svg
-                                data-name="Icons/Tabler/Notification"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="13.419"
-                                height="13.419"
-                                viewBox="0 0 13.419 13.419"
-                              >
-                                <rect
-                                  data-name="Icons/Tabler/Dots background"
-                                  width="13.419"
-                                  height="13.419"
-                                  fill="none"
-                                ></rect>
-                                <path
-                                  d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                                  transform="translate(5.368 0.839)"
-                                  fill="#6c757d"
-                                ></path>
-                              </svg>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end">
-                              <a href="#!" class="dropdown-item"> Action </a>
-                              <a href="#!" class="dropdown-item">
-                                Another action
-                              </a>
-                              <a href="#!" class="dropdown-item">
-                                Something else here
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!--  -->
-                    <div class="list-group-item px-md-4">
-                      <div class="row px-3">
-                        <div class="col-auto">
-                          <span class="avatar avatar-xs avatar-circle">1 </span>
-                        </div>
-                        <div class="col ps-0">
-                          <span class="mb-2 d-block text-gray-800"
-                            >You left
-                            <strong class="font-weight-semibold"
-                              >Public Announcement</strong
-                            >
-                            group</span
-                          >
-                          <p class="card-text text-gray-600 lh-sm">
-                            24 December, 2021 - 12:45pm
-                          </p>
-                        </div>
-                        <div class="col-auto">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                              role="button"
-                              data-bs-toggle="dropdown"
-                              aria-haspopup="true"
-                              aria-expanded="false"
-                            >
-                              <svg
-                                data-name="Icons/Tabler/Notification"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="13.419"
-                                height="13.419"
-                                viewBox="0 0 13.419 13.419"
-                              >
-                                <rect
-                                  data-name="Icons/Tabler/Dots background"
-                                  width="13.419"
-                                  height="13.419"
-                                  fill="none"
-                                ></rect>
-                                <path
-                                  d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                                  transform="translate(5.368 0.839)"
-                                  fill="#6c757d"
-                                ></path>
-                              </svg>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end">
-                              <a href="#!" class="dropdown-item"> Action </a>
-                              <a href="#!" class="dropdown-item">
-                                Another action
-                              </a>
-                              <a href="#!" class="dropdown-item">
-                                Something else here
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!--  -->
-                    <div class="list-group-item px-md-4">
-                      <div class="row px-3">
-                        <div class="col-auto">
-                          <span class="avatar avatar-xs avatar-circle">1 </span>
-                        </div>
-                        <div class="col ps-0">
-                          <span class="mb-2 d-block text-gray-800"
-                            >You left
-                            <strong class="font-weight-semibold"
-                              >Public Announcement</strong
-                            >
-                            group</span
-                          >
-                          <p class="card-text text-gray-600 lh-sm">
-                            24 December, 2021 - 12:45pm
-                          </p>
-                        </div>
-                        <div class="col-auto">
-                          <div class="dropdown">
-                            <a
-                              href="#"
-                              class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
-                              role="button"
-                              data-bs-toggle="dropdown"
-                              aria-haspopup="true"
-                              aria-expanded="false"
-                            >
-                              <svg
-                                data-name="Icons/Tabler/Notification"
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="13.419"
-                                height="13.419"
-                                viewBox="0 0 13.419 13.419"
-                              >
-                                <rect
-                                  data-name="Icons/Tabler/Dots background"
-                                  width="13.419"
-                                  height="13.419"
-                                  fill="none"
-                                ></rect>
-                                <path
-                                  d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
-                                  transform="translate(5.368 0.839)"
-                                  fill="#6c757d"
-                                ></path>
-                              </svg>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end">
-                              <a href="#!" class="dropdown-item"> Action </a>
-                              <a href="#!" class="dropdown-item">
-                                Another action
-                              </a>
-                              <a href="#!" class="dropdown-item">
-                                Something else here
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                    <div
+                      class="d-flex align-items-center p-3 p-md-4 border-top border-gray-200"
+                    >
+                      <a
+                        href="#"
+                        class="my-1 font-weight-semibold mx-auto btn btn-link link-dark"
+                        >+34 more<svg
+                          class="ms-1"
+                          data-name="icons/tabler/chevron right"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="10"
+                          height="10"
+                          viewBox="0 0 16 16"
+                        >
+                          <rect
+                            data-name="Icons/Tabler/Chevron Right background"
+                            width="16"
+                            height="16"
+                            fill="none"
+                          ></rect>
+                          <path
+                            d="M.26.26A.889.889,0,0,1,1.418.174l.1.086L8.629,7.371a.889.889,0,0,1,.086,1.157l-.086.1L1.517,15.74A.889.889,0,0,1,.174,14.582l.086-.1L6.743,8,.26,1.517A.889.889,0,0,1,.174.36Z"
+                            transform="translate(4)"
+                            fill="#1e1e1e"
+                          ></path></svg
+                      ></a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-xl-5 col-xxl-4">
+            <div id="groups" class="tab-content">
+              <!-- mero -->
               <div
                 class="bg-blue-50 p-4 position-relative overflow-hidden rounded-12 zIndex-0 mb-4"
               >
@@ -569,8 +328,8 @@
                   >
                     <div class="mb-2 d-flex align-items-center">
                       <!-- <span class="badge badge-sm badge-soft-primary"
-                        >18 files</span
-                      > -->
+                      >18 files</span
+                    > -->
                       <div class="dropdown ms-auto">
                         <a
                           href="#"
@@ -997,104 +756,350 @@
                   </figure>
                 </div>
               </div>
+            </div>
 
+            <script>
+              function showTab(event, tabId) {
+                event.preventDefault();
+
+                // إخفاء جميع الأقسام
+                document
+                  .querySelectorAll(".tab-content")
+                  .forEach(function (tab) {
+                    tab.classList.remove("active");
+                  });
+
+                // جعل القسم المحدد مرئياً
+                document.getElementById(tabId).classList.add("active");
+              }
+
+              // جعل أول عنصر ظاهر عند تحميل الصفحة
+              document.getElementById("general").classList.add("active");
+            </script>
+          </div>
+
+          <div id="general" class="tab-content row active">
+            <div class="invoice_day">
               <div
-                class="card rounded-12 shadow-dark-80 border border-gray-50 mb-4 mb-xl-0"
+                class="card rounded-12 shadow-dark-80 border border-gray-50 mb-4"
               >
-                <div class="card-body p-0">
-                  <div
-                    class="d-flex align-items-center px-3 px-md-4 py-3 border-bottom border-gray-200"
-                  >
+                <div
+                  class="d-flex flex-wrap align-items-center px-3 px-md-4 py-3 border-bottom border-gray-200"
+                >
+                  <div class="col">
                     <h5
-                      class="card-header-title my-md-2 font-weight-semibold ps-md-3"
+                      class="card-header-title mb-0 my-md-2 ps-md-3 font-weight-semibold"
                     >
-                      User Data
+                      Your recent activity
                     </h5>
                   </div>
+                </div>
+                <div class="card-body p-0">
                   <div class="list-group list-group-flush">
-                    <div class="list-group-item px-3 px-md-4">
-                      <div class="row align-items-center px-md-3">
+                    <div class="list-group-item px-md-4">
+                      <div class="row px-3">
+                        <div class="col-auto">
+                          <span class="avatar avatar-xs avatar-circle">1 </span>
+                        </div>
                         <div class="col ps-0">
-                          <p class="card-text small text-gray-600 lh-sm">
-                            User_Name
+                          <span class="mb-2 d-block text-gray-800"
+                            >You left
+                            <strong class="font-weight-semibold"
+                              >Public Announcement</strong
+                            >
+                            group</span
+                          >
+                          <p class="card-text text-gray-600 lh-sm">
+                            24 December, 2021 - 12:45pm
                           </p>
-                          <h6 class="mb-1 font-weight-semibold">Ammar Ahmed</h6>
+                        </div>
+                        <div class="col-auto">
+                          <div class="dropdown">
+                            <a
+                              href="#"
+                              class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <svg
+                                data-name="Icons/Tabler/Notification"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="13.419"
+                                height="13.419"
+                                viewBox="0 0 13.419 13.419"
+                              >
+                                <rect
+                                  data-name="Icons/Tabler/Dots background"
+                                  width="13.419"
+                                  height="13.419"
+                                  fill="none"
+                                ></rect>
+                                <path
+                                  d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
+                                  transform="translate(5.368 0.839)"
+                                  fill="#6c757d"
+                                ></path>
+                              </svg>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a href="#!" class="dropdown-item"> Action </a>
+                              <a href="#!" class="dropdown-item">
+                                Another action
+                              </a>
+                              <a href="#!" class="dropdown-item">
+                                Something else here
+                              </a>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-
-                    <div class="list-group-item px-3 px-md-4">
-                      <div class="row align-items-center px-md-3">
+                    <!-- tow -->
+                    <div class="list-group-item px-md-4">
+                      <div class="row px-3">
+                        <div class="col-auto">
+                          <span class="avatar avatar-xs avatar-circle">1 </span>
+                        </div>
                         <div class="col ps-0">
-                          <p class="card-text small text-gray-600 lh-sm">
-                            Address
+                          <span class="mb-2 d-block text-gray-800"
+                            >You left
+                            <strong class="font-weight-semibold"
+                              >Public Announcement</strong
+                            >
+                            group</span
+                          >
+                          <p class="card-text text-gray-600 lh-sm">
+                            24 December, 2021 - 12:45pm
                           </p>
-                          <h6 class="mb-1 font-weight-semibold">
-                            Lorem ipsum dolor sit amet.
-                          </h6>
+                        </div>
+                        <div class="col-auto">
+                          <div class="dropdown">
+                            <a
+                              href="#"
+                              class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <svg
+                                data-name="Icons/Tabler/Notification"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="13.419"
+                                height="13.419"
+                                viewBox="0 0 13.419 13.419"
+                              >
+                                <rect
+                                  data-name="Icons/Tabler/Dots background"
+                                  width="13.419"
+                                  height="13.419"
+                                  fill="none"
+                                ></rect>
+                                <path
+                                  d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
+                                  transform="translate(5.368 0.839)"
+                                  fill="#6c757d"
+                                ></path>
+                              </svg>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a href="#!" class="dropdown-item"> Action </a>
+                              <a href="#!" class="dropdown-item">
+                                Another action
+                              </a>
+                              <a href="#!" class="dropdown-item">
+                                Something else here
+                              </a>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-
-                    <div class="list-group-item px-3 px-md-4">
-                      <div class="row align-items-center px-md-3">
+                    <!--  -->
+                    <div class="list-group-item px-md-4">
+                      <div class="row px-3">
+                        <div class="col-auto">
+                          <span class="avatar avatar-xs avatar-circle">1 </span>
+                        </div>
                         <div class="col ps-0">
-                          <p class="card-text small text-gray-600 lh-sm">
-                            PHONE Number
+                          <span class="mb-2 d-block text-gray-800"
+                            >You left
+                            <strong class="font-weight-semibold"
+                              >Public Announcement</strong
+                            >
+                            group</span
+                          >
+                          <p class="card-text text-gray-600 lh-sm">
+                            24 December, 2021 - 12:45pm
                           </p>
-                          <h6 class="mb-1 font-weight-semibold">
-                            +201070479599
-                          </h6>
+                        </div>
+                        <div class="col-auto">
+                          <div class="dropdown">
+                            <a
+                              href="#"
+                              class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <svg
+                                data-name="Icons/Tabler/Notification"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="13.419"
+                                height="13.419"
+                                viewBox="0 0 13.419 13.419"
+                              >
+                                <rect
+                                  data-name="Icons/Tabler/Dots background"
+                                  width="13.419"
+                                  height="13.419"
+                                  fill="none"
+                                ></rect>
+                                <path
+                                  d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
+                                  transform="translate(5.368 0.839)"
+                                  fill="#6c757d"
+                                ></path>
+                              </svg>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a href="#!" class="dropdown-item"> Action </a>
+                              <a href="#!" class="dropdown-item">
+                                Another action
+                              </a>
+                              <a href="#!" class="dropdown-item">
+                                Something else here
+                              </a>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-
-                    <div class="list-group-item px-3 px-md-4">
-                      <div class="row align-items-center px-md-3">
+                    <!--  -->
+                    <div class="list-group-item px-md-4">
+                      <div class="row px-3">
+                        <div class="col-auto">
+                          <span class="avatar avatar-xs avatar-circle">1 </span>
+                        </div>
                         <div class="col ps-0">
-                          <p class="card-text small text-gray-600 lh-sm">
-                            brithdy
+                          <span class="mb-2 d-block text-gray-800"
+                            >You left
+                            <strong class="font-weight-semibold"
+                              >Public Announcement</strong
+                            >
+                            group</span
+                          >
+                          <p class="card-text text-gray-600 lh-sm">
+                            24 December, 2021 - 12:45pm
                           </p>
-                          <h6 class="mb-1 font-weight-semibold">1-3-2004</h6>
+                        </div>
+                        <div class="col-auto">
+                          <div class="dropdown">
+                            <a
+                              href="#"
+                              class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <svg
+                                data-name="Icons/Tabler/Notification"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="13.419"
+                                height="13.419"
+                                viewBox="0 0 13.419 13.419"
+                              >
+                                <rect
+                                  data-name="Icons/Tabler/Dots background"
+                                  width="13.419"
+                                  height="13.419"
+                                  fill="none"
+                                ></rect>
+                                <path
+                                  d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
+                                  transform="translate(5.368 0.839)"
+                                  fill="#6c757d"
+                                ></path>
+                              </svg>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a href="#!" class="dropdown-item"> Action </a>
+                              <a href="#!" class="dropdown-item">
+                                Another action
+                              </a>
+                              <a href="#!" class="dropdown-item">
+                                Something else here
+                              </a>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-
-                    <div class="list-group-item px-3 px-md-4">
-                      <div class="row align-items-center px-md-3">
+                    <!--  -->
+                    <div class="list-group-item px-md-4">
+                      <div class="row px-3">
+                        <div class="col-auto">
+                          <span class="avatar avatar-xs avatar-circle">1 </span>
+                        </div>
                         <div class="col ps-0">
-                          <p class="card-text small text-gray-600 lh-sm">ID</p>
-                          <h6 class="mb-1 font-weight-semibold">3040301022</h6>
+                          <span class="mb-2 d-block text-gray-800"
+                            >You left
+                            <strong class="font-weight-semibold"
+                              >Public Announcement</strong
+                            >
+                            group</span
+                          >
+                          <p class="card-text text-gray-600 lh-sm">
+                            24 December, 2021 - 12:45pm
+                          </p>
+                        </div>
+                        <div class="col-auto">
+                          <div class="dropdown">
+                            <a
+                              href="#"
+                              class="btn btn-dark-100 btn-icon btn-sm rounded-circle"
+                              role="button"
+                              data-bs-toggle="dropdown"
+                              aria-haspopup="true"
+                              aria-expanded="false"
+                            >
+                              <svg
+                                data-name="Icons/Tabler/Notification"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="13.419"
+                                height="13.419"
+                                viewBox="0 0 13.419 13.419"
+                              >
+                                <rect
+                                  data-name="Icons/Tabler/Dots background"
+                                  width="13.419"
+                                  height="13.419"
+                                  fill="none"
+                                ></rect>
+                                <path
+                                  d="M0,10.4a1.342,1.342,0,1,1,1.342,1.342A1.344,1.344,0,0,1,0,10.4Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,10.4ZM0,5.871A1.342,1.342,0,1,1,1.342,7.213,1.344,1.344,0,0,1,0,5.871Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,5.871ZM0,1.342A1.342,1.342,0,1,1,1.342,2.684,1.344,1.344,0,0,1,0,1.342Zm1.15,0a.192.192,0,1,0,.192-.192A.192.192,0,0,0,1.15,1.342Z"
+                                  transform="translate(5.368 0.839)"
+                                  fill="#6c757d"
+                                ></path>
+                              </svg>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                              <a href="#!" class="dropdown-item"> Action </a>
+                              <a href="#!" class="dropdown-item">
+                                Another action
+                              </a>
+                              <a href="#!" class="dropdown-item">
+                                Something else here
+                              </a>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div
-                    class="d-flex align-items-center p-3 p-md-4 border-top border-gray-200"
-                  >
-                    <a
-                      href="#"
-                      class="my-1 font-weight-semibold mx-auto btn btn-link link-dark"
-                      >+34 more<svg
-                        class="ms-1"
-                        data-name="icons/tabler/chevron right"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="10"
-                        height="10"
-                        viewBox="0 0 16 16"
-                      >
-                        <rect
-                          data-name="Icons/Tabler/Chevron Right background"
-                          width="16"
-                          height="16"
-                          fill="none"
-                        ></rect>
-                        <path
-                          d="M.26.26A.889.889,0,0,1,1.418.174l.1.086L8.629,7.371a.889.889,0,0,1,.086,1.157l-.086.1L1.517,15.74A.889.889,0,0,1,.174,14.582l.086-.1L6.743,8,.26,1.517A.889.889,0,0,1,.174.36Z"
-                          transform="translate(4)"
-                          fill="#1e1e1e"
-                        ></path></svg
-                    ></a>
                   </div>
                 </div>
               </div>

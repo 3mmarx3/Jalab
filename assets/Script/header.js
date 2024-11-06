@@ -117,10 +117,10 @@ let head = document.getElementById("header");
 
 head.innerHTML = header;
 
-// إضافة حدث عند النقر على الـ div
-document
-  .querySelector(".muze-hamburger")
-  .addEventListener("click", function () {
-    // إضافة/إزالة الكلاس لتبديل الأيقونات
-    this.classList.toggle("menu-active");
-  });
+// // إضافة حدث عند النقر على الـ div
+// document
+//   .querySelector(".muze-hamburger")
+//   .addEventListener("click", function () {
+//     // إضافة/إزالة الكلاس لتبديل الأيقونات
+//     this.classList.toggle("menu-active");
+//   });
