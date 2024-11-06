@@ -10583,26 +10583,7 @@ select::-ms-expand {
 .btn-soft-primary {
   color: #0d6efd;
 }
-.display-1,
-.display-2,
-.display-3,
-.display-4,
-.display-5,
-.display-6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: #1e1e1e;
-}
+
 .text-secondary {
   color: #495057 !important;
 }
@@ -13108,14 +13089,11 @@ textarea.form-control.form-control-sm {
   right: 0;
   bottom: 0;
   padding: 0.625rem 2.125rem;
-  background-color: #fff;
 }
 .nav-sm .nav-link {
   font-size: 0.8125rem;
 }
-.navbar-light {
-  background-color: #fff;
-}
+
 .sidebar-compact .header-fixed,
 .sidebar-icons .header-fixed {
   left: 5rem;
