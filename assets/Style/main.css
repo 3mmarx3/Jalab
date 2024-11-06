@@ -12640,7 +12640,7 @@ textarea.form-control.form-control-sm {
   left: 16.0625rem;
   top: 0;
   right: 0;
-  background-color: #f8f9fa;
+  background-color: #1e1e1e !important;
   z-index: 16;
 }
 .header-search {
