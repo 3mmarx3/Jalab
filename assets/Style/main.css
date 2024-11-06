@@ -3836,9 +3836,7 @@ fieldset:disabled .btn {
   flex-grow: 1;
   text-align: center;
 }
-.tab-content > .tab-pane {
-  display: none;
-}
+
 .tab-content > .active {
   display: block;
 }
@@ -18373,9 +18371,7 @@ button:hover {
 }
 
 /* إخفاء واجهة Google Translate */
-#google_element {
-  display: none;
-}
+
 
 /* منع الترجمة على العناصر */
 .notranslate {
@@ -18457,9 +18453,7 @@ svg.ml-1 {
   width: 18px;
 }
 
-.tab-content {
-  display: none;
-}
+
 .tab-content.active {
   display: block;
 }
