@@ -6,7 +6,7 @@ function changeLanguage(language) {
     currentLanguage = language;
     localStorage.setItem("selectedLanguage", language);
     updateCurrentLanguage();
-    setTimeout(updateGoogleTranslateLanguage, 1000);
+    setTimeout(updateGoogleTranslateLanguage, 1000); // Wait for Google Translate to load
   }
 }
 
@@ -42,16 +42,13 @@ function updateGoogleTranslateLanguage() {
     googleTranslateSelect.value = currentLanguage;
     googleTranslateSelect.dispatchEvent(new Event("change"));
     localStorage.setItem("googleTranslateLang", googleTranslateSelect.value);
+  } else {
+    console.log("Google Translate select element not found.");
   }
 }
 
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement(
-    { defaultLanguage: "en", includedLanguages: "en,ar" },
-    "google_element"
-  );
+// Load the current language from localStorage on window load
+window.onload = function () {
   updateCurrentLanguage();
-  setTimeout(updateGoogleTranslateLanguage, 1000);
-}
-
-window.onload = updateCurrentLanguage;
+  setTimeout(updateGoogleTranslateLanguage, 1000); // Wait for Google Translate to load
+};

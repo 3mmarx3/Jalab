@@ -3,297 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Barcode Scanner</title>
-    <script src="https://unpkg.com/@zxing/library@latest"></script>
+    <title>Language Switch Example</title>
     <style>
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
+      body.arabic {
+        direction: rtl;
+        font-family: "Arial", sans-serif;
       }
-      th,
-      td {
-        border: 1px solid #ccc;
-        padding: 8px;
-        text-align: left;
-      }
-      th {
-        background-color: #f2f2f2;
+      .active {
+        font-weight: bold;
+        color: red;
       }
     </style>
   </head>
-  <body>
-    <h1>Scan Barcode</h1>
+  <body id="body">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, quas.</p>
 
-    <h2>Upload Image</h2>
-    <input
-      type="file"
-      accept="image/*"
-      id="upload"
-      onchange="handleFileSelect(event)"
-    />
-    <button onclick="processImage()" style="margin-top: 10px">Submit</button>
+    <div id="google_element"></div>
 
-    <h2>Scan with Camera</h2>
-    <button onclick="startCamera()" style="margin-top: 10px">
-      Start Camera
-    </button>
-    <video id="video" width="300" height="200" style="display: none"></video>
-
-    <h2>Search Barcode</h2>
-    <input
-      type="text"
-      id="search-barcode"
-      placeholder="Enter barcode to search"
-    />
-    <button onclick="searchBarcode()" style="margin-top: 10px">Search</button>
-
-    <p>Result: <span id="result"></span></p>
-
-    <audio
-      id="success-sound"
-      src="https://www.soundjay.com/button/beep-07.wav"
-      preload="auto"
-    ></audio>
-
-    <h2>Barcode List</h2>
-    <table id="barcode-table">
-      <thead>
-        <tr>
-          <th>Barcode</th>
-          <th>Price</th>
-          <th>Size</th>
-          <th>Color</th>
-          <th>Quantity</th>
-          <th>Fit Name</th>
-          <th>Style</th>
-          <th>Notes</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody id="barcode-list"></tbody>
-    </table>
-
-    <button onclick="saveData()" style="margin-top: 10px">Save Data</button>
-    <button onclick="loadData()" style="margin-top: 10px">Load Data</button>
-
-    <script>
-      let selectedFile;
-      let codeReader = new ZXing.BrowserBarcodeReader();
-
-      function handleFileSelect(event) {
-        selectedFile = event.target.files[0];
-        document.getElementById("result").innerText = ""; // Clear previous result
-      }
-
-      async function processImage() {
-        if (selectedFile) {
-          const resultElement = document.getElementById("result");
-          resultElement.innerText = "Processing...";
-
-          try {
-            const imgElement = document.createElement("img");
-            imgElement.src = URL.createObjectURL(selectedFile);
-
-            imgElement.onload = async () => {
-              try {
-                const result = await codeReader.decodeFromImageElement(
-                  imgElement
-                );
-                resultElement.innerText = result.text; // Display the result
-                // Add barcode to list with additional fields
-                addBarcodeToList(
-                  result.text,
-                  "0.00",
-                  "N/A",
-                  "N/A",
-                  "0",
-                  "N/A",
-                  "N/A"
-                );
-                playSound(); // Play sound on success
-              } catch (error) {
-                resultElement.innerText = "Failed to read barcode.";
-                console.error("Image scan error:", error);
-              }
-            };
-          } catch (error) {
-            resultElement.innerText = "Failed to read barcode.";
-            console.error("Error initializing barcode reader:", error);
-          }
-        } else {
-          document.getElementById("result").innerText =
-            "Please select an image first.";
-        }
-      }
-
-      async function startCamera() {
-        const videoElement = document.getElementById("video");
-        const resultElement = document.getElementById("result");
-        videoElement.style.display = "block";
-
-        try {
-          const stream = await navigator.mediaDevices.getUserMedia({
-            video: { facingMode: "environment" },
-          });
-          videoElement.srcObject = stream;
-          videoElement.play();
-
-          codeReader.decodeFromVideoDevice(
-            null,
-            videoElement,
-            (result, err) => {
-              if (result) {
-                resultElement.innerText = result.text; // Display the result
-                // Add barcode to list with additional fields
-                addBarcodeToList(
-                  result.text,
-                  "0.00",
-                  "N/A",
-                  "N/A",
-                  "0",
-                  "N/A",
-                  "N/A"
-                );
-                playSound(); // Play sound on success
-                codeReader.reset(); // Stop scanning
-                stream.getTracks().forEach((track) => track.stop()); // Stop video stream
-              }
-              if (err && !(err instanceof ZXing.NotFoundException)) {
-                console.error(err);
-              }
-            }
-          );
-        } catch (error) {
-          console.error("Error accessing camera:", error);
-          resultElement.innerText = "Error accessing camera.";
-        }
-      }
-
-      function playSound() {
-        const sound = document.getElementById("success-sound");
-        sound.play();
-      }
-
-      function addBarcodeToList(
-        barcode,
-        price,
-        size,
-        color,
-        quantity,
-        fitName,
-        style
-      ) {
-        const barcodeList = document.getElementById("barcode-list");
-        const row = document.createElement("tr");
-        row.innerHTML = `
-          <td>${barcode}</td>
-          <td contenteditable="true">${price}</td>
-          <td contenteditable="true">${size}</td>
-          <td contenteditable="true">${color}</td>
-          <td contenteditable="true">${quantity}</td>
-          <td contenteditable="true">${fitName}</td>
-          <td contenteditable="true">${style}</td>
-          <td contenteditable="true">N/A</td>
-          <td><button onclick="removeBarcode(this)">Remove</button></td>
-        `;
-        barcodeList.appendChild(row);
-      }
-
-      function removeBarcode(button) {
-        const row = button.parentElement.parentElement;
-        row.remove();
-      }
-
-      function searchBarcode() {
-        const searchValue = document
-          .getElementById("search-barcode")
-          .value.trim()
-          .toLowerCase(); // تحويل القيمة إلى حروف صغيرة
-        const rows = document.querySelectorAll("#barcode-list tr");
-        let found = false;
-
-        rows.forEach((row) => {
-          const barcodeCell = row.cells[0].innerText.toLowerCase(); // تحويل القيمة إلى حروف صغيرة
-
-          // إذا كانت قيمة الباركود تحتوي على السلسلة المدخلة، نضيء الصف
-          if (barcodeCell.includes(searchValue)) {
-            row.style.backgroundColor = "#e0ffe0"; // تمييز الصف الذي تم العثور عليه
-            found = true;
-          } else {
-            row.style.backgroundColor = ""; // إعادة تعيين خلفية الصفوف الأخرى
-          }
-        });
-
-        if (!found) {
-          alert("Barcode not found.");
-        }
-      }
-
-      function saveData() {
-        const barcodeList = [];
-        const rows = document.querySelectorAll("#barcode-list tr");
-
-        rows.forEach((row) => {
-          const barcode = row.cells[0].innerText;
-          const price = row.cells[1].innerText;
-          const size = row.cells[2].innerText;
-          const color = row.cells[3].innerText;
-          const quantity = row.cells[4].innerText;
-          const fitName = row.cells[5].innerText;
-          const style = row.cells[6].innerText;
-          const notes = row.cells[7].innerText;
-
-          barcodeList.push({
-            barcode,
-            price,
-            size,
-            color,
-            quantity,
-            fitName,
-            style,
-            notes,
-          });
-        });
-
-        localStorage.setItem("barcodeData", JSON.stringify(barcodeList));
-        alert("Data saved successfully!");
-      }
-
-      function loadData() {
-        const barcodeData = JSON.parse(localStorage.getItem("barcodeData"));
-        const barcodeList = document.getElementById("barcode-list");
-        barcodeList.innerHTML = ""; // Clear existing rows
-
-        if (barcodeData) {
-          barcodeData.forEach(
-            ({
-              barcode,
-              price,
-              size,
-              color,
-              quantity,
-              fitName,
-              style,
-              notes,
-            }) => {
-              const row = document.createElement("tr");
-              row.innerHTML = `
-              <td>${barcode}</td>
-              <td contenteditable="true">${price}</td>
-              <td contenteditable="true">${size}</td>
-              <td contenteditable="true">${color}</td>
-              <td contenteditable="true">${quantity}</td>
-              <td contenteditable="true">${fitName}</td>
-              <td contenteditable="true">${style}</td>
-              <td contenteditable="true">${notes}</td>
-              <td><button onclick="removeBarcode(this)">Remove</button></td>
-            `;
-              barcodeList.appendChild(row);
-            }
-          );
-        }
+    <!-- Adding Google Translate Script -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { defaultLanguage: "en", includedLanguages: "en,ar" },
+          "google_element"
+        );
       }
     </script>
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
   </body>
 </html>

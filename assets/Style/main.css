@@ -18452,3 +18452,7 @@ div.avatar.avatar-xs.avatar-circle {
     flex-direction: column;
   }
 }
+
+svg.ml-1 {
+  width: 18px;
+}
