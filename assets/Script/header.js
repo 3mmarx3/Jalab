@@ -123,57 +123,38 @@ document
     this.classList.toggle("menu-active");
   });
 
-const body = document.getElementById("body");
-let currentLanguage = localStorage.getItem("selectedLanguage") || "en";
+var muzeNavItem = document
+  .querySelectorAll(".navbar-vertical .nav-item")
+  .forEach((muzeNavItem) => {
+    muzeNavItem.addEventListener("mouseover", (e) => {
+      var muzePosition = muzeNavItem.getBoundingClientRect();
+      muzeNavItem.style.top = muzePosition.top + "px";
+    });
 
-function changeLanguage(language) {
-  if (currentLanguage !== language) {
-    currentLanguage = language;
-    localStorage.setItem("selectedLanguage", language);
-    updateCurrentLanguage();
-    setTimeout(updateGoogleTranslateLanguage, 1000); // Wait for Google Translate to load
-  }
-}
+    muzeNavItem.addEventListener("mouseout", (e) => {
+      muzeNavItem.style.top = ""; // إعادة الوضع إلى الحالة الأصلية عند إيقاف التمرير
+    });
+  });
 
-function updateCurrentLanguage() {
-  const element = document.getElementById("title");
-  if (currentLanguage === "en") {
-    body.classList.remove("arabic");
-    element.textContent = element.getAttribute("data-meaning-en");
-  } else if (currentLanguage === "ar") {
-    body.classList.add("arabic");
-    element.textContent = element.getAttribute("data-meaning-ar");
-  }
-  highlightActiveButton();
-}
+document.querySelectorAll(".muze-hamburger").forEach((muzeHamburger) => {
+  muzeHamburger.addEventListener("click", (e) => {
+    document.querySelector("body").classList.toggle("sidebar-menu");
+  });
+});
 
-function highlightActiveButton() {
-  const btnAr = document.getElementById("btn-ar");
-  const btnEn = document.getElementById("btn-en");
-  if (currentLanguage === "en") {
-    btnEn.classList.add("active");
-    btnAr.classList.remove("active");
-  } else {
-    btnAr.classList.add("active");
-    btnEn.classList.remove("active");
-  }
-}
+document
+  .querySelectorAll(".dropdown-menu, .dropdown-toggle")
+  .forEach((dropdownMenu) => {
+    dropdownMenu.addEventListener("click", (e) => {
+      e.stopPropagation(); // إيقاف انتشار النقر لتجنب تأثيره على باقي الصفحة
+    });
+  });
 
-function updateGoogleTranslateLanguage() {
-  const googleTranslateSelect = document.querySelector(
-    "#google_element select.goog-te-combo"
-  );
-  if (googleTranslateSelect) {
-    googleTranslateSelect.value = currentLanguage;
-    googleTranslateSelect.dispatchEvent(new Event("change"));
-    localStorage.setItem("googleTranslateLang", googleTranslateSelect.value);
-  } else {
-    console.log("Google Translate select element not found.");
-  }
-}
-
-// Load the current language from localStorage on window load
-window.onload = function () {
-  updateCurrentLanguage();
-  setTimeout(updateGoogleTranslateLanguage, 1000); // Wait for Google Translate to load
-};
+document
+  .querySelectorAll(".customize-btn, .customize-close")
+  .forEach((muzeCustomizerToggle) => {
+    muzeCustomizerToggle.addEventListener("click", (e) => {
+      e.stopPropagation(); // إيقاف انتشار الحدث
+      document.querySelector("body").classList.toggle("customize-box"); // فتح أو غلق صندوق التخصيص
+    });
+  });
