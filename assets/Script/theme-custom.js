@@ -410,3 +410,9 @@ var tooltipInit = function tooltipInit() {
 docReady(tooltipInit);
 docReady(popoverInit);
 docReady(toastInit);
+
+
+
+
+// 
+
