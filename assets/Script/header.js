@@ -122,39 +122,3 @@ document
   .addEventListener("click", function () {
     this.classList.toggle("menu-active");
   });
-
-var muzeNavItem = document
-  .querySelectorAll(".navbar-vertical .nav-item")
-  .forEach((muzeNavItem) => {
-    muzeNavItem.addEventListener("mouseover", (e) => {
-      var muzePosition = muzeNavItem.getBoundingClientRect();
-      muzeNavItem.style.top = muzePosition.top + "px";
-    });
-
-    muzeNavItem.addEventListener("mouseout", (e) => {
-      muzeNavItem.style.top = ""; // إعادة الوضع إلى الحالة الأصلية عند إيقاف التمرير
-    });
-  });
-
-document.querySelectorAll(".muze-hamburger").forEach((muzeHamburger) => {
-  muzeHamburger.addEventListener("click", (e) => {
-    document.querySelector("body").classList.toggle("sidebar-menu");
-  });
-});
-
-document
-  .querySelectorAll(".dropdown-menu, .dropdown-toggle")
-  .forEach((dropdownMenu) => {
-    dropdownMenu.addEventListener("click", (e) => {
-      e.stopPropagation(); // إيقاف انتشار النقر لتجنب تأثيره على باقي الصفحة
-    });
-  });
-
-document
-  .querySelectorAll(".customize-btn, .customize-close")
-  .forEach((muzeCustomizerToggle) => {
-    muzeCustomizerToggle.addEventListener("click", (e) => {
-      e.stopPropagation(); // إيقاف انتشار الحدث
-      document.querySelector("body").classList.toggle("customize-box"); // فتح أو غلق صندوق التخصيص
-    });
-  });
