@@ -18456,3 +18456,10 @@ div.avatar.avatar-xs.avatar-circle {
 svg.ml-1 {
   width: 18px;
 }
+
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}

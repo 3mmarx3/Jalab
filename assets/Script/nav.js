@@ -80,8 +80,12 @@ nav = `   <nav class="navbar navbar-vertical navbar-expand-lg navbar-light">
               </ul>
             </div>
           </li>
-          <li class="nav-item" style="top: 284.391px;">
-            <a class="nav-link collapsed" href="../Page/Shop.html">
+       
+          <li class="nav-item">
+            <hr class="my-0 bg-gray-50 opacity-100">
+          </li>
+          <li class="nav-item" style="top: 351.188px;">
+         <a class="nav-link collapsed" href="../Page/Shop.html">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                 <g data-name="Icons/Tabler/Paperclip" transform="translate(0 0)">
                   <rect data-name="Icons/Tabler/apps background" width="16" height="16" fill="none"></rect>
@@ -91,20 +95,6 @@ nav = `   <nav class="navbar navbar-vertical navbar-expand-lg navbar-light">
               &nbsp;<span class="ms-2 position-relative">Shop
              
             </span></a>
-   
-          </li>
-          <li class="nav-item">
-            <hr class="my-0 bg-gray-50 opacity-100">
-          </li>
-          <li class="nav-item" style="top: 351.188px;">
-            <a class="nav-link" href="../documentation/index.html" target="_blank">
-              <svg data-name="Icons/Tabler/Paperclip" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
-                <rect data-name="Icons/Tabler/Paperclip background" width="16" height="16" fill="none"></rect>
-                <path d="M6.766,1.178A4.018,4.018,0,0,1,12.591,6.71l-.147.155-5.1,5.11A2.352,2.352,0,0,1,3.9,8.77l.114-.123,5.1-5.11a.685.685,0,0,1,1.035.893l-.066.077-5.1,5.11a.981.981,0,0,0,1.3,1.465l.086-.076,5.1-5.11A2.648,2.648,0,0,0,7.861,2.028l-.127.119-5.1,5.11a4.315,4.315,0,0,0,5.941,6.255l.156-.149,5.1-5.11a.685.685,0,0,1,1.035.893l-.066.077-5.1,5.11A5.685,5.685,0,0,1,1.5,6.457l.162-.169Z" transform="translate(1)" fill="#1e1e1e"></path>
-              </svg>
-              &nbsp;<span class="ms-2">Docs</span>
-              <span class="docs-version">v1.0</span>
-            </a>
           </li>
         </div></div></div></div><div class="simplebar-placeholder" style="width: auto; height: 389px;"></div></div><div class="simplebar-track simplebar-horizontal" style="visibility: hidden;"><div class="simplebar-scrollbar" style="width: 0px; display: none;"></div></div><div class="simplebar-track simplebar-vertical" style="visibility: hidden;"><div class="simplebar-scrollbar" style="height: 0px; display: none;"></div></div></ul>
         <div class="mt-3 mt-md-auto mb-3 signout d-grid">
