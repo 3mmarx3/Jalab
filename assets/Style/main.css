@@ -18419,8 +18419,6 @@ div.avatar.avatar-xs.avatar-circle {
   border: 1px solid #1a1919;
 }
 
-
-
 .col-auto.d-flex.flex-wrap.align-items-center.icon-blue-hover.ps-0 {
   gap: 10px;
   align-items: center;
@@ -18428,14 +18426,14 @@ div.avatar.avatar-xs.avatar-circle {
   padding: 0;
 }
 
-
 /* إخفاء أيقونة الإغلاق في البداية */
 .close-icon {
   display: none;
 }
 
 /* تخصيص الأيقونات لتكون باللون الأبيض */
-.hamburger-icon, .close-icon {
+.hamburger-icon,
+.close-icon {
   fill: #ffffff; /* تحديد اللون الأبيض */
 }
 
@@ -18446,4 +18444,11 @@ div.avatar.avatar-xs.avatar-circle {
 
 .menu-active .close-icon {
   display: block;
+}
+
+@media screen and (max-width: 767px) {
+  form#discountForm {
+    display: flex;
+    flex-direction: column;
+  }
 }
